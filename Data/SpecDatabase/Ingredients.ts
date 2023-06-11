@@ -83,6 +83,7 @@ export const Ingredients = {
             blueCheeseMayo : <ingredient>{name:'Blue Cheese Mayo',amount:'30 g'},
             franks: <ingredient>{name:"Frank's Buffalo Wing Sauce",amount:'75ml'},
             relish: <ingredient>{name:"Revolution Relish",amount:"30 g"},
+            relish10: <ingredient>{name:"Revolution Relish",amount:"10 g"},
         },
         seasoning:{
             rs: <ingredient>{name:'RS 4:1 Seasoning Bulk',amount:'1g'},
@@ -91,7 +92,8 @@ export const Ingredients = {
             seasoning : <ingredient>{name:'Seasoning',amount:'1 g'}
         },
         veg:{
-            iceberg : <ingredient>{name:"Iceberg Lettuce",amount:"20 g"}
+            iceberg : <ingredient>{name:"Iceberg Lettuce",amount:"20 g"},
+            iceberg5 : <ingredient>{name:"Iceberg Lettuce",amount:"5 g"},
         }
     },
     dessert:{
@@ -142,6 +144,7 @@ export const Ingredients = {
         oil :{
             rapeseed10 : <ingredient>{name : 'Rapeseed Oil',amount:'10 ml'},
             rapeseed20g : <ingredient>{name : 'Rapeseed Oil',amount:'20 g'},
+            rapeseed50g : <ingredient>{name : 'Rapeseed Oil',amount:'50 g'},
             olive : <ingredient>{name :'Olive Oil',amount:'5 g'},
             truffle3:<ingredient>{name:'Black Truffle Oil',amount:'3 ml'},
             truffle:<ingredient>{name:'Black Truffle Oil',amount:'2 ml'},
@@ -211,6 +214,7 @@ export const Ingredients = {
     },
     fish:{
         fingers:{
+            fingers4 : <ingredient>{name:'Fish Fingers',amount:'4 each'},
             fingers5 : <ingredient>{name:'Fish Fingers',amount:'5 each'}
         },
         fillet : <ingredient>{name:'Pengasius Fillet',amount:'300 g (1 piece)'}
@@ -328,6 +332,7 @@ export const Ingredients = {
             standard : <ingredient>{name:'Fries',amount:'1 serving'},
             fries200 : <ingredient>{name:'Fries',amount:'200 g'},
             fries150 : <ingredient>{name:'Fries',amount:'150 g'},
+            fries100 : <ingredient>{name:'Fries',amount:'100 g'},
         },
         houseSalad:<ingredient>{name:'House Salad',amount:'1 serving'},
         onionRings : {
@@ -338,7 +343,8 @@ export const Ingredients = {
             jalapenoPopper4: <ingredient>{name:'Jalapeno Popper',amount:'4 update pls'}
         },
         rice: <ingredient>{name:'Rice',amount:'200 g'},
-        mushyPeas: <ingredient>{name:'Mushy Peas',amount:'100 g'}
+        mushyPeas: <ingredient>{name:'Mushy Peas',amount:'100 g'},
+        chosenSide:<ingredient>{name:'Chosen side',amount:'1'}
     },
     nachos:{
         nacho150 : <ingredient>{name:'Tortilla Chips',amount:'150 g'},
@@ -474,6 +480,9 @@ export const Ingredients = {
                 slaw55 : <ingredient> {name:'Red Star Coleslaw',amount:'55 g'}
             }
         },
+        sweetcorn:{
+            sweetcorn50 : <ingredient>{name:'Sweetcorn',amount:'50 g'}
+        },
         pineapple:{
             pineapple60 : <ingredient> {name:'Pineapple',amount:'60 g'}
         }
@@ -491,8 +500,12 @@ export const Ingredients = {
         },
         tortilla : <ingredient>{name:'12" Flour Tortilla',amount:'1 each'},
         halloumi:<ingredient>{name:'Breaded Halloumi Fries',amount:'75 g (4 each)'},
-        sausage:<ingredient>{name:'Frozen Cooked Sausage',amount:'60g (1 each)'},
-        sausageHalf:<ingredient>{name:'Frozen Cooked Sausage',amount:'30g (0.5 each)'},
+        sausage:{
+            sausage2:<ingredient>{name:'Frozen Cooked Sausage',amount:'120g (2 each)'},
+            sausage:<ingredient>{name:'Frozen Cooked Sausage',amount:'60g (1 each)'},
+            sausageHalf:<ingredient>{name:'Frozen Cooked Sausage',amount:'30g (0.5 each)'},
+            
+        },
         bacon:{
             bacon5 : <ingredient>{name:'Cooked Bacon',amount:'5 g'},
             bacon2 : <ingredient>{name:'Cooked Bacon',amount:'2 g'},
@@ -510,7 +523,7 @@ export const Ingredients = {
         },
         macNCheese : {
             mac450:<ingredient>{name:"Mac'n'Cheese",amount:'450 g'},
-
-        }
+            mac225:<ingredient>{name:"Mac'n'Cheese",amount:'225 g'},
+        },
     }
 }
