@@ -305,6 +305,7 @@ const SpecTitles = {
     bulk:{
         sauce:{
             beerBBQ : 'Beer & BBQ Sauce',
+            blueMayo: 'Blue Cheese Mayo',
             bbqMustardMayo:'BBQ Mustard Mayo',
             blueCheeseMayo:'Blue Cheese Mayo',
             salsa:'Chilli Vodka Salsa',
@@ -317,10 +318,26 @@ const SpecTitles = {
         croutons:'Croutons',
         chicken:{
             pulledChicken:'Cooked Pulled Chicken',
-            cajunChicken:'Cajun Marinated Chicken',
-            cajunChickenVE:`Cajun Marinated Chicken ${vegan}`,
-            friedChicken:`Fried Chicken`,
-            friedChickenVE:`Fried Chicken Breast ${vegan}`,
+            cajunChicken:{
+                main : 'Cajun Marinated Chicken Main',
+                burger : 'Cajun Marinated Chicken Burger',
+                strip : 'Cajun Marinated Chicken Strip',
+            },
+            cajunChickenVe:{
+                main : `Cajun Marinated Chicken Main ${vegan}`,
+                strip : `Cajun Marinated Chicken Strip ${vegan}`,
+            },
+            // friedChicken:`Fried Chicken`,
+            friedChicken:{
+                main : 'Fried Chicken Main',
+                breast : 'Fried Chicken Breast',
+                strip : 'Fried Chicken Strip',
+            },
+            // friedChickenVE:`Fried Chicken Breast ${vegan}`,
+            friedChickenVe:{
+                main : `Fried Chicken Main ${vegan}`,
+                strip : `Fried Chicken Strip ${vegan}`,
+            },
         },
         coleslaw:{
             standard:'coleslaw',

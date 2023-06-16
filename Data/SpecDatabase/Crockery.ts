@@ -41,6 +41,6 @@ export const Crockery = {
     napkin:'Napkin (to stop slipping)',
     jug:{
         small:'Small White Jug'
-    }
-
+    },
+    jamJar : ' Jam Jar'
 }

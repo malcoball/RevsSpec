@@ -11,6 +11,7 @@ export const Ingredients = {
             breast:{
                 breast150: <ingredient>{name:'Chicken Breast',amount:'150g (1 piece)'},
                 breast200: <ingredient>{name:'Chicken Breast',amount:'200g (1 piece)'},
+                breast600: <ingredient>{name:'Chicken Breast',amount:'600g (3 pieces)'},
             },
             cajun:{
                 cajun150 : <ingredient>{name:'Cajun Marinated Chicken',amount:'150g (1 breast)'},
@@ -35,6 +36,7 @@ export const Ingredients = {
         },
         nonMeat:{
             breast : <ingredient>{name:'Arleys Plant Based Chicken Breast',amount:'100g (1 each)'},
+            breast600 : <ingredient>{name:'Arleys Plant Based Chicken Breast',amount:'600g (1 each)'},
             cajun : <ingredient>{name:'Cajun Marinated Chicken (V)',amount:'1 piece bulk'},
             goujon:{
                 strips3 : <ingredient>{name:'Fried Chicken Strips (VE)',amount:'3 strips'},
@@ -51,6 +53,7 @@ export const Ingredients = {
                 meatless:{name:'Meatless Burger',amount : '1 each'},
                 slider :{name:'Beef Steak Burger',amount:'1/2'}, 
                 slider2 :{name:'Beef Steak Burger',amount:'2 1/2'}, 
+                sliderV1:{name:'Meatless Burger',amount : '1/2'},
                 sliderV2:{name:'Meatless Burger',amount : '2 1/2'},
             }
         },
@@ -62,7 +65,7 @@ export const Ingredients = {
         },
         garnish:{
             friedOnion:<ingredient>{name:'Crispy fried onion',amount:'10 g'},
-            crushedChillis:<ingredient>{name:'Crushed Chillies',amount:'2 g'},
+            crushedChillis1:<ingredient>{name:'Crushed Chillies',amount:'1 g'},
             jalapenos:{
                 jal5 : <ingredient>{name:'Jalapenos',amount:'5 each (12 g)'},
                 jal8 : <ingredient>{name:'Jalapenos',amount:'8 each (20 g)'},
@@ -87,6 +90,7 @@ export const Ingredients = {
         },
         seasoning:{
             rs: <ingredient>{name:'RS 4:1 Seasoning Bulk',amount:'1g'},
+            rs2: <ingredient>{name:'RS 4:1 Seasoning Bulk',amount:'2g'},
             crushedChillies : <ingredient>{name:'Crushed Chillies',amount:'2g'},
             cajun : <ingredient>{name:'Cajun Seasoning',amount:'2 g'},
             seasoning : <ingredient>{name:'Seasoning',amount:'1 g'}
@@ -96,8 +100,16 @@ export const Ingredients = {
             iceberg5 : <ingredient>{name:"Iceberg Lettuce",amount:"5 g"},
         }
     },
+    cheese:{
+        blueCheese:{
+            slices150 : <ingredient>{name:'Blue Cheese Slices',amount:'150 g'}
+        }
+    },
     dessert:{
         // brownie : <ingredient> {name:'Chocolate Brownie',amount:'1.5 each'},
+        cream:{
+            aerosolCream30 : <ingredient>{name:'Aerosol Cream',amount:'30 g'}
+        },
         brownie : {
             brownie15 : <ingredient> {name:'Chocolate Brownie',amount:'1.5 each'}
         },
@@ -115,12 +127,16 @@ export const Ingredients = {
         waffle:{
             waffle1:<ingredient>{name:'Belgian Waffles',amount:'1 each'}
         },
-        torte: <ingredient>{name:' Chocolate & Clementine Torte',amount:'1 slice'}
+        torte: <ingredient>{name:' Chocolate & Clementine Torte',amount:'1 slice'},
+        pancake:{
+            pancake3 : <ingredient>{name:'American Pancakes',amount:'3 each'}
+        }
 
     },
     dip:{
         hummus :{
             hummus : <ingredient> {name:'Hummus',amount:'55 g'},
+            hummus300 : <ingredient> {name:'Hummus',amount:'300 g'},
             haissa : <ingredient> {name:'Harissa Hummus',amount:'55 g'},
         },
         saucePot : {
@@ -131,7 +147,8 @@ export const Ingredients = {
             blueCheeseMayo : <ingredient> {name:'Blue Cheese Mayo',amount:'35 g'},
             srirachaMayo : <ingredient> {name:'Sriracha Mayo',amount:'35 g'},
             sriracha : <ingredient> {name:'Sriracha',amount:'35 g'},
-            buffalo : <ingredient> {name:'Franks Buffalo Wing sauce',amount:'35 g'}
+            buffalo : <ingredient> {name:'Franks Buffalo Wing sauce',amount:'35 g'},
+            mapleSyrup:<ingredient>{name:'Maple Syrup',amount:'40 ml'}
         },
         ramekin:{
             katsu50:<ingredient>{name:'Katsu Sauce',amount:'50 g'},
@@ -142,10 +159,17 @@ export const Ingredients = {
         blackPepper:<ingredient>{name:'Black Pepper',amount:'1 g'},
         sourCream : <ingredient>{name:'Sour Cream',amount:'10 g'},
         oil :{
+            rapeseed5 : <ingredient>{name : 'Rapeseed Oil',amount:'5 ml'},
+            rapeseed7 : <ingredient>{name : 'Rapeseed Oil',amount:'7 ml'},
             rapeseed10 : <ingredient>{name : 'Rapeseed Oil',amount:'10 ml'},
+            rapeseed15 : <ingredient>{name : 'Rapeseed Oil',amount:'15 ml'},
             rapeseed20g : <ingredient>{name : 'Rapeseed Oil',amount:'20 g'},
             rapeseed50g : <ingredient>{name : 'Rapeseed Oil',amount:'50 g'},
+            rapeseed60g : <ingredient>{name : 'Rapeseed Oil',amount:'60 g'},
             olive : <ingredient>{name :'Olive Oil',amount:'5 g'},
+            olive20 : <ingredient>{name :'Olive Oil',amount:'20 g'},
+            olive30 : <ingredient>{name :'Olive Oil',amount:'30 g'},
+            truffle5:<ingredient>{name:'Black Truffle Oil',amount:'5 g'},
             truffle3:<ingredient>{name:'Black Truffle Oil',amount:'3 ml'},
             truffle:<ingredient>{name:'Black Truffle Oil',amount:'2 ml'},
             truffleHalf:<ingredient>{name:'Black Truffle Oil',amount:'1 ml'}
@@ -170,9 +194,13 @@ export const Ingredients = {
             basil:<ingredient>{name:'Basil',amount:'2 g'},
             basilHalf:<ingredient>{name:'Basil',amount:'1 g'},
             corianderGrazer : <ingredient> {name:'Coriander',amount:'3 g'},
+            coriander5 : <ingredient> {name:'Coriander',amount:'5 g'},
             coriander2 : <ingredient> {name:'Coriander',amount:'2 g'},
             coriander : <ingredient> {name:'Coriander',amount:'1 g'},
             corianderHalf : <ingredient> {name:'Coriander',amount:'0.5 g'},
+            corianderGround :{
+                coriander5 : <ingredient>{name:'Ground Coriander', amount:'5 g'}
+            },
             parsley : <ingredient> {name:'Flat Leaf Parsley',amount:'1 g'},
             parsleyHalf : <ingredient> {name:'Flat Leaf Parsley',amount:'0.5 g'},
         },
@@ -181,8 +209,12 @@ export const Ingredients = {
             pomegranate5 : <ingredient> {name:'Pomegranate',amount:'5 g'},
             pomegranate10 : <ingredient> {name:'Pomegranate',amount:'10 g'},
         },
-        mint: <ingredient>{name:'Mint', amount:'2 g'},
+        mint:{
+            mint2g: <ingredient>{name:'Mint', amount:'2 g'},
+            mint3g : <ingredient>{name:'Mint', amount:'3 g'}
+        },
         crushedChilli:<ingredient>{name:'Crushed Chillies',amount:'1 g'},
+        crushedChilli2:<ingredient>{name:'Crushed Chillies',amount:'2 g'},
         friedOnion:{
             friedOnion025:<ingredient>{name:'Crispy fried onion',amount:'2.5 g'},
             friedOnion3:<ingredient>{name:'Crispy fried onion',amount:'3 g'},
@@ -220,8 +252,12 @@ export const Ingredients = {
         fillet : <ingredient>{name:'Pengasius Fillet',amount:'300 g (1 piece)'}
     },
     fruit:{
+        banana:{
+            banana1 : <ingredient> {name:'Bananas',amount:'1 each'}
+        },
         strawberry:{
             strawberry20 : <ingredient> {name:'Strawberries',amount:'20 g'},
+            strawberry30 : <ingredient> {name:'Strawberries',amount:'30 g'},
             strawberry60 : <ingredient> {name:'Strawberries',amount:'60 g'},
         }
     },
@@ -233,6 +269,7 @@ export const Ingredients = {
         dressing:{
             caesar:<ingredient>{name:'Caesar Dressing',amount:'15 g'},
             caesarHalf:<ingredient>{name:'Caesar Dressing',amount:'7 g'},
+            french10:<ingredient>{name:'French Dressing',amount:'10 ml'},
             french15:<ingredient>{name:'French Dressing',amount:'15 ml'},
             soyChilli:{
                 soy40:<ingredient>{name:'Soy Chilli Dressing',amount:'40 g'}
@@ -255,8 +292,10 @@ export const Ingredients = {
         chocolate:{
             chocolate10 : <ingredient>{name:'Chocolate Sauce',amount:'10 g'},
             chocolate20 : <ingredient>{name:'Chocolate Sauce',amount:'20 g'},
+            chocolate25 : <ingredient>{name:'Chocolate Sauce',amount:'25 g'},
             nutella:{
-                nutella60 : <ingredient>{name:'Nutella', amount:'60 g'}
+                nutella40 : <ingredient>{name:'Nutella', amount:'40 g'},
+                nutella60 : <ingredient>{name:'Nutella', amount:'60 g'},
             }
         },
         caramel:{
@@ -266,17 +305,36 @@ export const Ingredients = {
             cheese120: <ingredient>{name:'Cheese Sauce',amount:'120 g'},
             cheese60 : <ingredient>{name:'Cheese Sauce',amount:'60 g'},
         },
-        garlicButter : <ingredient> {name:'Garlic Butter',amount:'10 g'},
+        strawberry : {
+            strawberry25:<ingredient>{name:'Strawberry Puree',amount:'25 g'}  
+        },
+        garlicButter :{
+            garlicButter10 : <ingredient> {name:'Garlic Butter',amount:'10 g'},
+            garlicButter30 : <ingredient> {name:'Garlic Butter',amount:'30 g'},
+        },
+        hollandaise:{
+            hollandaise60:<ingredient>{name:'Hollandaise',amount:'60 g'}
+        },
         bbq:{
+            bbq15 : <ingredient> {name:'BBQ Sauce',amount:'15 g'},
             bbq20 : <ingredient> {name:'BBQ Sauce',amount:'20 g'},
             bbq50 : <ingredient> {name:'BBQ Sauce',amount:'50 g'},
+            bbq100 : <ingredient> {name:'BBQ Sauce',amount:'100 g'},
+            beerbbq50: <ingredient>{name:'Beer & BBQ sauce',amount:'50 g'}
         },
         mayo:{
             mayo20: <ingredient>{name:'Mayonnaise',amount:'20 g'},
+            mayo30: <ingredient>{name:'Mayonnaise',amount:'30 g'},
             mayo35: <ingredient>{name:'Mayonnaise',amount:'35 g'},
+            mayo100: <ingredient>{name:'Mayonnaise',amount:'100 g'},
+            mayo200: <ingredient>{name:'Mayonnaise',amount:'200 g'},
+            mayo300: <ingredient>{name:'Mayonnaise',amount:'300 g'},
             limePickle : {
                 lime15 : <ingredient>{name:'Lime Pickle Mayo',amount:'15 g'},
             }
+        },
+        limePickle : {
+            limePickle50 : <ingredient>{name:'Lime Pickle',amount:'50 g'}
         },
         pizza:{
             bbq80:<ingredient>{name:'BBQ Sauce',amount:'80 g'},
@@ -296,18 +354,37 @@ export const Ingredients = {
             salsa50 : <ingredient> {name:'Vodka Salsa',amount:'50 g'},
             salsa20 : <ingredient> {name:'Vodka Salsa',amount:'20 g'},
         },
+        sriracha:{
+            sriracha30 : <ingredient> {name:'Sriracha Sauce', amount:'30 g'},
+            sriracha10 : <ingredient> {name:'Sriracha Sauce', amount:'10 g'}
+        },
         franks: <ingredient> {name:'Franks Buffalo Wing Sauce',amount:'20 g'},
-        franksHalf: <ingredient> {name:'Franks Buffalo Wing Sauce',amount:'10 g'}
+        franksHalf: <ingredient> {name:'Franks Buffalo Wing Sauce',amount:'10 g'},
+        mustard:{
+            french25:<ingredient>{name:'French Mustard',amount:'50 g'}
+        }
     },
     seasoning:{
         cajun:{
             cajun1:<ingredient>{name:'Cajun Seasoning',amount:'1 g'},
             cajun2:<ingredient>{name:'Cajun Seasoning',amount:'2g'},
+            cajun10:<ingredient>{name:'Cajun Seasoning',amount:'10 g'},
+        },
+        cumin:{
+            cumin3 : <ingredient>{name:'Cumin',amount:'3 g'},
+        },
+        curry:{
+            curry2: <ingredient>{name:'Madras Curry Powder',amount:'2 g'}
         },
         tableSalt : <ingredient>{name:'Table Salt',amount:'0.5 g'},
+        salt05 : <ingredient>{name:'Salt',amount:'0.5 g'},
         salt : <ingredient>{name:'Salt',amount:'1 g'},
+        salt2 : <ingredient>{name:'Salt',amount:'2 g'},
+        salt5 : <ingredient>{name:'Salt',amount:'5 g'},
         saltPepperFry:<ingredient> {name:'Salt & Pepper Fry Seasoning',amount:'1.5 g'},
-        crackedBlackPepper:<ingredient>{name:'Cracked black pepper',amount:'1 g'}
+        crackedBlackPepper:<ingredient>{name:'Cracked black pepper',amount:'1 g'},
+        crackedBlackPepper05:<ingredient>{name:'Cracked black pepper',amount:'0.5 g'},
+
     },
     side :{
         coleslaw:{
@@ -321,8 +398,9 @@ export const Ingredients = {
             },
         },
         beans:{
+            beans100 : <ingredient>{name:'Baked Beans',amount:'100 g'},
             bbq:{
-                bbq115 : <ingredient>{name:'BBQ Beans',amount:'115 g'}
+                bbq115 : <ingredient>{name:'BBQ Beans',amount:'115 g'},
             },
         },
         falafel:{
@@ -362,6 +440,7 @@ export const Ingredients = {
                 mozzarella25 : <ingredient>{name:'Grated Mozzarella',amount:'25 g'},
                 mozzarella35 : <ingredient>{name:'Grated Mozzarella',amount:'35 g'},
                 mozzarella40 : <ingredient>{name:'Grated Mozzarella',amount:'40 g'},
+                mozzarella50 : <ingredient>{name:'Grated Mozzarella',amount:'50 g'},
                 mozzarella60 : <ingredient>{name:'Grated Mozzarella',amount:'60 g'},
                 mozzarella70 : <ingredient>{name:'Grated Mozzarella',amount:'70 g'},
             },
@@ -382,6 +461,7 @@ export const Ingredients = {
                 friedOnion:<ingredient>{name:'Crispy Fried Onion',amount:'5 g'},
                 friedOnionHalf:<ingredient>{name:'Crispy Fried Onion',amount:'3 g'},
                 redOnion : <ingredient>{name:'Red Onions',amount:'10 g'},
+                redOnion40 : <ingredient>{name:'Red Onions',amount:'40 g'},
                 redOnionHalf : <ingredient>{name:'Red Onions',amount:'50 g'},
                 sweetcorn:<ingredient>{name:'Sweet Corn', amount:'20 g'},
                 sweetcornHalf:<ingredient>{name:'Sweet Corn', amount:'10 g'},
@@ -409,6 +489,9 @@ export const Ingredients = {
             flakes1: <ingredient>{name:'Chilli Flakes',amount:'1g'},
         },
         gravy:{
+            gravy:{
+                gravy200: <ingredient>{name:'Gravy', amount : '200 ml'}
+            },
             truffle:{
                 truffle100: <ingredient>{name:'Truffle Gravy',amount:'100g'},
                 truffle50: <ingredient>{name:'Truffle Gravy',amount:'50g'},
@@ -428,7 +511,12 @@ export const Ingredients = {
     veg :{
         avo:{
             avocado20: <ingredient>{name:'Avocado (fresh)',amount:'20 g'},
-            avocado60: <ingredient>{name:'Avocado (fresh)',amount:'60 g (0.25 each)'}
+            avocado60: <ingredient>{name:'Avocado (fresh)',amount:'60 g (0.25 each)'},
+            avocado100: <ingredient>{name:'Avocado (fresh)',amount:'100 g'},
+            smashed:{
+                smashed100 : <ingredient>{name:'Seasoned Avocado Chunky Smash',amount:'100 g'}
+            }
+
         },
         cucumber : {
             cucumber10: <ingredient> {name:'Cucumber',amount:'10 g'},
@@ -445,19 +533,22 @@ export const Ingredients = {
             }
         },
         redPepper : {
+            pepper135:<ingredient>{name:'Red Pepper',amount:'135 g'},
             pepper30 : <ingredient> {name:'Red Peppers',amount:'30 g'},
             pepper20 : <ingredient> {name:'Red Peppers',amount:'20 g'},
             pepper25 : <ingredient> {name:'Red Peppers',amount:'25 g'},
             pepper15 : <ingredient> {name:'Red Peppers',amount:'15 g'},
         },
         rocket : {
-            rocket5 : <ingredient> {name:'Rocket Washed', amount:'5 g'}
+            rocket5 : <ingredient> {name:'Rocket Washed', amount:'5 g'},
+            rocket10 : <ingredient> {name:'Rocket Washed', amount:'10 g'},
         },
         tomato:{
             plum:{
                 plum20: <ingredient>{name:'Plum Tomatoes',amount:'20 g'},
                 plum30: <ingredient>{name:'Plum Tomatoes',amount:'30 g'},
                 plum40: <ingredient>{name:'Plum Tomatoes',amount:'40 g'},
+                plum80: <ingredient>{name:'Plum Tomatoes',amount:'80 g'},
             }
         },
         onion:{
@@ -477,7 +568,8 @@ export const Ingredients = {
             slaw:{
                 slaw100 : <ingredient> {name:'Red Star Coleslaw',amount:'100 g'},
                 slaw80 : <ingredient> {name:'Red Star Coleslaw',amount:'80 g'},
-                slaw55 : <ingredient> {name:'Red Star Coleslaw',amount:'55 g'}
+                slaw55 : <ingredient> {name:'Red Star Coleslaw',amount:'55 g'},
+                slaw50 : <ingredient> {name:'Red Star Coleslaw',amount:'50 g'},
             }
         },
         sweetcorn:{
@@ -485,6 +577,9 @@ export const Ingredients = {
         },
         pineapple:{
             pineapple60 : <ingredient> {name:'Pineapple',amount:'60 g'}
+        },
+        mushroom:{
+            mushrooms60 : <ingredient>{name:'Flat Mushrooms',amount:'60 g'},
         }
     },
     dough:{
@@ -506,24 +601,71 @@ export const Ingredients = {
             sausageHalf:<ingredient>{name:'Frozen Cooked Sausage',amount:'30g (0.5 each)'},
             
         },
+        egg :{
+            egg1 : <ingredient>{name:'Free Range Eggs',amount:'1'},
+            egg2 : <ingredient>{name:'Free Range Eggs',amount:'2'},
+        },
         bacon:{
+            bacon1k : <ingredient>{name:'Cooked Bacon',amount:'1 kg'},
             bacon5 : <ingredient>{name:'Cooked Bacon',amount:'5 g'},
             bacon2 : <ingredient>{name:'Cooked Bacon',amount:'2 g'},
+            bacon2Slice : <ingredient>{name:'Cooked Bacon',amount:'2 slices'},
             bacon3Slice : <ingredient>{name:'Cooked Bacon',amount:'3 slices'},
+            bacon4Slice : <ingredient>{name:'Cooked Bacon',amount:'4 slices'},
+        },
+        butter :{
+
+        },
+        gravy:{
+            granules80 : <ingredient>{name:'Savoury Gravy Granules', amount:'80 g'}
         },
         macCheese:{
             full : <ingredient>{name:"Mac'n'Cheese",amount:'1 serv'},// needs updating
             half : <ingredient>{name:"Mac'n'Cheese",amount:'0.5 serv'}
         },
         sourdough:{
-            sourdough120 : <ingredient>{name:'Sourdough Bloomer',amount:'120 g (1 slice)'}
+            sourdough120 : <ingredient>{name:'Sourdough Bloomer',amount:'120 g (1 slice)'},
+            sourdough70 : <ingredient>{name:'Sourdough Bloomer',amount:'70 g'}
         },
         batter:{
             batter100: <ingredient>{name:'Beer Batter Mix',amount:'100 g'},
+            batter500: <ingredient>{name:'Beer Batter Mix',amount:'500 g'},
+        },
+        breading:{
+            breading90: <ingredient>{name:'GF Chicken Breading',amount:'90 g'}
         },
         macNCheese : {
             mac450:<ingredient>{name:"Mac'n'Cheese",amount:'450 g'},
             mac225:<ingredient>{name:"Mac'n'Cheese",amount:'225 g'},
         },
+        milk:{
+            milk200:<ingredient>{name:'Semi Skimmed Milk',amount:'200ml'}
+        },
+        water:{
+            water800:<ingredient>{name:'Water',amount:'800 ml'},
+            water1000:<ingredient>{name:'Water',amount:'1 l'},
+        },
+        salsa:{
+            salsa500:<ingredient>{name:'Tomato Salsa',amount:'500 g'}
+        },
+        yoghurt:{
+            yoghurt110:<ingredient>{name:'Alpro Soy Yogurt',amount:'110 g'}
+        },
+        breadCrumbs:{
+            breadCrumbs100 : <ingredient>{name:'Panko Breadcrumbs', amount:'100 g'},
+        },
+        hashbrown:{
+            hashbrown1 : <ingredient>{name:'Hash Brown', amount:'1 each'}
+        }
+    },
+    lager:{
+        amstel:{
+            amstel25:<ingredient>{name:'Amstel lager',amount:'25 ml'},
+            amstel50:<ingredient>{name:'Amstel lager',amount:'50 ml'},
+            amstel200:<ingredient>{name:'Amstel lager',amount:'200 g'}
+        }
+    },
+    vodka:{
+        chilli35:<ingredient>{name:'Chilli Vodka',amount:'35 g'}
     }
 }

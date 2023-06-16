@@ -98,6 +98,12 @@ import friedChicken from '../assets/images/specExamples/Main/FriedChicken.png';
 import friedChickenVe from '../assets/images/specExamples/Main/FriedChickenVe.png';
 import cajunChicken from '../assets/images/specExamples/Main/cajunChicken.png';
 import cajunChickenVe from '../assets/images/specExamples/Main/cajunChickenVe.png';
+// Brunch
+import avoToast from '../assets/images/specExamples/Brunch/avoToast.png';
+import avoToastEgg from '../assets/images/specExamples/Brunch/avoToastEgg.png';
+import eggBenedict from '../assets/images/specExamples/Brunch/eggBenedict.png';
+import chickenWaffle from '../assets/images/specExamples/Brunch/chickenWaffle.png';
+import pancake from '../assets/images/specExamples/Brunch/pancakes.png';
 
 
 
@@ -127,6 +133,13 @@ const Images = {
         null : nullIco
     },
     specs:{
+        brunch:{
+            avoToast : avoToast,
+            avoToastEgg : avoToastEgg,
+            eggsBenedict:eggBenedict,
+            chickenWaffle : chickenWaffle,
+            pancake : pancake,
+        },
         sandwich:{
             chickenBacon : chickenBacon,
             fishFinger : fishFinger,

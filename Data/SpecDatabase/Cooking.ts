@@ -37,11 +37,30 @@ const Cooking = {
             fried:'Coat the chicken in the soy yoghurt, coat the chicken in the gluten free breading, fry for 3-4 mins untill golden and crispy.',
             vegan:'Cook the vegan chicken as per the spec. Ensure a core temperature of 75°C (82°C in Scotland)',
             franks:'Toss the chicken in the Franks sauce'
+        },
+        strips:{
+            fried : 'Deep fry the 3 chicken strips as per the spec.'
         }
     },
     gravy:'Re-heat the truffle gravy in the microwave',
     sauce : {
-        cheese : 'Re-heat the cheese sauce in the microwave.'
-    }
+        cheese : 'Re-heat the cheese sauce in the microwave.',
+        hollandaise : 'Re-heat the hollandaise in the microwave for 30 secs',
+    },
+    egg :{
+        poached :[
+            `Whisk the water, when it is spinning well pour the eggs one
+            at a time in to the water. As the water returns to the boil skim
+            off the excess white and discard.`,
+            `Turn the heat off from under the water and leave the eggs
+            for 1-2 minutes depending on size checking them by lifting hem
+            out with a slotted spoon, they should be a little bit firm with
+            runny yolk.`,
+            `Plunge in to ice water if they are not being used straight
+            away.`,
+        ]
+    },
+    waffle :' Drizzle the waffle with rapeseed oil and bake in the oven until lightly golden.',
+    pancake:'. Re-heat the pancakes in the oven for 3-4 minutes until warmed through.'
 }
 export default Cooking;

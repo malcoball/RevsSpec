@@ -318,4 +318,44 @@ const iceCream1 : specInput = {
 }
 const iceCream2 = {...iceCream1}; iceCream2.ingredients = [Ingredients.dessert.iceCream.iceCream2];
 
-const 
+const chocMilk : specInput = {
+    title:SpecTitles.kids.milk.chocolate,
+    ingredients:[
+        Ingredients.sauce.chocolate.chocolate25,
+        Ingredients.other.milk.milk200
+    ],
+    builds:[
+        {title:'Prep',items:[
+            'Ice up a boston tin, then add the chocolate sauce and milk',
+            'Shake thoroughly and strain into a freshly iced jam jar',
+            'Serve with straw'
+        ]}
+    ],
+    image:Images.specs.default,
+    crockery:[
+        Crockery.jamJar
+    ],
+    type:['dessert','kids']
+}
+const strawberryMilk = {...chocMilk};
+strawberryMilk.ingredients[0] = Ingredients.sauce.strawberry.strawberry25;
+strawberryMilk.builds[0].items[0] = 'Ice up a boston tin, then add the strawberry puree and milk';
+
+const kid1 = new SpecItem(burger,1)
+const kid2 = new SpecItem(chickenBurger,1);
+const kid3 = new SpecItem(macNCheese,1);
+const kid4 = new SpecItem(fishFingers,1);
+const kid5 = new SpecItem(friedChicken,1);
+const kid6 = new SpecItem(sausages,1);
+const kid7 = new SpecItem(margherita,1);
+const kid8 = new SpecItem(pepperoni,1);
+const kid9 = new SpecItem(fries,1);
+const kid10 = new SpecItem(sweetcorn,1);
+const kid11 = new SpecItem(salad,1);
+const kid12 = new SpecItem(brownie,1);
+const kid13 = new SpecItem(iceCream1,1);
+const kid14 = new SpecItem(iceCream2,1);
+const kid15 = new SpecItem(chocMilk,1);
+const kid16 = new SpecItem(strawberryMilk,1);
+
+export default [kid1,kid2,kid3,kid4,kid5,kid6,kid7,kid8,kid9,kid10,kid11,kid12,kid13,kid14,kid15,kid16];

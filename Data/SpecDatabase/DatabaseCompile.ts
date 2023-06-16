@@ -2,6 +2,7 @@ import { ingredient, specItem, variantType } from "../@types/types";
 import Burgers  from "./Inputs/Burgers";
 import Desserts from "./Inputs/Desserts";
 import Grazers from "./Inputs/Grazers";
+import Kids from "./Inputs/Kids";
 import Mains from "./Inputs/Mains";
 import Other from './Inputs/Other';
 import Pizzas  from "./Inputs/Pizzas";
@@ -11,7 +12,7 @@ import Sides from "./Inputs/Sides";
 import Wraps from "./Inputs/Wraps";
 import { StringMethods } from "../StringMethods";
 
-let DataBase = [...Burgers,...Desserts,...Grazers,...Mains,...Other,...Pizzas,...Sandwiches,...Sharers,
+let DataBase = [...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Pizzas,...Sandwiches,...Sharers,
 ...Sides,...Wraps];
 
 export const specItemCont = {
