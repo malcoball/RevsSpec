@@ -19,7 +19,7 @@ let DataBase = [...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...P
 export const specItemCont = {
     sort:{
         index: ()=>{
-            console.log(DataBase);
+            // console.log(DataBase);
             let dataNew = [...DataBase];
             dataNew.forEach((elm,ind)=>{
                 elm.index = ind;
@@ -118,8 +118,12 @@ export const specItemCont = {
             return specItemCont.getItem.byName(out);
 
         },
-        all:():void=>{
-            // console.log(DataBase);
+        all:{
+            name:() : string[] =>{
+                const out : string[] = [];
+                DataBase.forEach(elm=>out.push(elm.title));
+                return out;
+            }
         }
     },
 }

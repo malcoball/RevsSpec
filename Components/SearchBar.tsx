@@ -5,7 +5,7 @@ import { useState } from "react"
 import { AppContext } from "../Data/Context/AppContext"
 import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile"
 
-const SearchBar = (props:{style:{width:number,height:number}})=>{
+const SearchBar = (props:{style:{width:number,height:number},updateParent:any})=>{
     const context = useContext(AppContext)
     const styles = StyleSheet.create({
         container:{
@@ -37,8 +37,9 @@ const SearchBar = (props:{style:{width:number,height:number}})=>{
     })
     const [text,setText] = useState('');
     const submit = ()=>{
-        const test = specItemCont.getItem.byName(text);
+        // const test = specItemCont.getItem.byName(text);
         // console.log("test : ",test)
+        props.updateParent(text)
     }
     return (
         <View style={styles.container}>
@@ -53,7 +54,6 @@ const SearchBar = (props:{style:{width:number,height:number}})=>{
                 value={text}
                 onSubmitEditing={submit}
             />
-            {/* <Text style={styles.text}>Search</Text> */}
         </View>
     )
 }
