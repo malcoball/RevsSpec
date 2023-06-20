@@ -12,6 +12,7 @@ import Sides from "./Inputs/Sides";
 import Wraps from "./Inputs/Wraps";
 import { StringMethods } from "../StringMethods";
 
+
 let DataBase = [...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Pizzas,...Sandwiches,...Sharers,
 ...Sides,...Wraps];
 
@@ -46,10 +47,12 @@ export const specItemCont = {
     },
     getItem:{
         byName:(name:string):specItem=> {
-            name = StringMethods.case.capitalizeFirstLetter(name);
-            if (name.charAt(name.length) === " ") name.slice(0,name.length-1);
+            // name = StringMethods.case.capitalizeFirstLetter(name);
+            if (name.charAt(name.length) === " ") name.slice(0,name.length-1); // Trim down extra white space, not sure why this is needed
+            const inp = name.toLowerCase();
             for (let i = 0; i < DataBase.length; i++){
-                if (name === DataBase[i].title){
+                 const match = DataBase[i].title.toLowerCase();
+                if (inp === match){
                     return DataBase[i];
                 } 
             }

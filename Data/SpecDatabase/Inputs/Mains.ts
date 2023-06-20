@@ -119,7 +119,7 @@ const flatBreadVe : specInput = {
     ingredients:[
         Ingredients.chicken.meat.stripCajun,
         Ingredients.dough.half,
-        Ingredients.sauce.garlicButter,
+        Ingredients.sauce.garlicButter.garlicButter30,
         Ingredients.veg.lettuce.cos.cos30,
         Ingredients.side.coleslaw.md.mayo,
         Ingredients.sauce.mayo.limePickle.lime15,
@@ -161,7 +161,7 @@ const flatBreadFalafel : specInput = {
     ingredients:[
         Ingredients.chicken.meat.stripCajun,
         Ingredients.dough.half,
-        Ingredients.sauce.garlicButter,
+        Ingredients.sauce.garlicButter.garlicButter30,
         Ingredients.veg.lettuce.cos.cos30,
         Ingredients.side.coleslaw.md.mayo,
         Ingredients.sauce.mayo.limePickle.lime15,

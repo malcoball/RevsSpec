@@ -30,7 +30,7 @@ const garlicBread : specInput = {
     ingredients:[
         Ingredients.dough.half,
         Ingredients.other.flour.flour10,
-        Ingredients.sauce.garlicButter,
+        Ingredients.sauce.garlicButter.garlicButter30,
         Ingredients.topping.pizza.mozzarella.mozzarella40
     ],
     type:'side'
@@ -52,7 +52,7 @@ const cheeseGarlicBread : specInput = {
     ingredients:[
         Ingredients.dough.half,
         Ingredients.other.flour.flour10,
-        Ingredients.sauce.garlicButter,
+        Ingredients.sauce.garlicButter.garlicButter30,
         Ingredients.topping.pizza.mozzarella.mozzarella40
     ],
     type:'side'
@@ -99,7 +99,7 @@ const onionRings : specInput = {
     crockery:[Crockery.bowl.enamelDish],
     ingredients:[
         Ingredients.side.onionRings.onion8,
-        Ingredients.garnish.oil.rapeseed,
+        Ingredients.garnish.oil.rapeseed10,
         Ingredients.seasoning.salt
     ],
     type:'side'
@@ -185,7 +185,7 @@ const saltPepperFries : specInput = {
         Ingredients.side.fries.fries200,
         Ingredients.seasoning.saltPepperFry,
         Ingredients.topping.chilli.flakes05,
-        Ingredients.sauce.garlicButter,
+        Ingredients.sauce.garlicButter.garlicButter10,
         Ingredients.garnish.wedge.lime
     ],
     type:'side'

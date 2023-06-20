@@ -94,16 +94,23 @@ import katsuCurryVe from '../assets/images/specExamples/Main/katsuCurryVe.png';
 import macCheeseMain from '../assets/images/specExamples/Main/macNCheese.png';
 import macCheeseMainTruffle from '../assets/images/specExamples/Main/macNCheeseTruffle.png';
 import macCheeseMainChicken from '../assets/images/specExamples/Main/macNCheeseChicken.png';
-import friedChicken from '../assets/images/specExamples/Main/FriedChicken.png';
-import friedChickenVe from '../assets/images/specExamples/Main/FriedChickenVe.png';
+import friedChicken from '../assets/images/specExamples/Main/friedChicken.png';
+import friedChickenVe from '../assets/images/specExamples/Main/friedChickenVe.png';
 import cajunChicken from '../assets/images/specExamples/Main/cajunChicken.png';
 import cajunChickenVe from '../assets/images/specExamples/Main/cajunChickenVe.png';
 // Brunch
 import avoToast from '../assets/images/specExamples/Brunch/avoToast.png';
 import avoToastEgg from '../assets/images/specExamples/Brunch/avoToastEgg.png';
 import eggBenedict from '../assets/images/specExamples/Brunch/eggBenedict.png';
+import eggBenedictGF from '../assets/images/specExamples/Brunch/eggBenedictGF.png';
 import chickenWaffle from '../assets/images/specExamples/Brunch/chickenWaffle.png';
 import pancake from '../assets/images/specExamples/Brunch/pancakes.png';
+import brunchGrill from '../assets/images/specExamples/Brunch/grill.png';
+import brunchGrillGF from '../assets/images/specExamples/Brunch/grillGF.png';
+import brunchGrillV from '../assets/images/specExamples/Brunch/grillV.png';
+import brunchGrillVe from '../assets/images/specExamples/Brunch/grillVe.png';
+import brunchPizza from '../assets/images/specExamples/Brunch/pizza.png';
+import brunchBurger from '../assets/images/specExamples/Brunch/burger.png'
 
 
 
@@ -136,9 +143,24 @@ const Images = {
         brunch:{
             avoToast : avoToast,
             avoToastEgg : avoToastEgg,
-            eggsBenedict:eggBenedict,
+            eggsBenedict:{
+                eggsBenedict:eggBenedict,
+                eggsBenedictGF:eggBenedictGF,
+            },
             chickenWaffle : chickenWaffle,
             pancake : pancake,
+            grill:{
+                standard : brunchGrill,
+                GF : brunchGrillGF,
+                veggie : brunchGrillV,
+                vegan : brunchGrillVe,
+            },
+            pizza:{
+                standard : brunchPizza
+            },
+            burger:{
+                standard: brunchBurger,
+            }
         },
         sandwich:{
             chickenBacon : chickenBacon,

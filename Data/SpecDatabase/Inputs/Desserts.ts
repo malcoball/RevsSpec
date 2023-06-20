@@ -112,7 +112,7 @@ const torte : specInput = {
     crockery:[Crockery.plate.blueRim],
     ingredients:[
         Ingredients.dessert.torte,
-        Ingredients.garnish.mint,
+        Ingredients.garnish.mint.mint2g,
         Ingredients.sauce.chocolate.chocolate10
     ],
     type:'dessert'

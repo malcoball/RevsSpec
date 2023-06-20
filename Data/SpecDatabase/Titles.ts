@@ -291,7 +291,9 @@ const SpecTitles = {
             standard : 'Brunch Grill',
             GF : `Brunch Grill ${glutenFree}`,
             veggie : `Brunch Grill ${veggie}`,
+            veggieGF : `Brunch Grill ${veggie} ${glutenFree}`,
             vegan : `Brunch Grill ${vegan}`,
+            veganGF : `Brunch Grill ${vegan} ${glutenFree}`,
         },
         pizza : {
             standard : 'Brunch Pizza',

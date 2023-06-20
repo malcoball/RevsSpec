@@ -27,7 +27,7 @@ const SearchBar = (props:{style:{width:number,height:number}})=>{
         text:{
             color:context?.colorScheme.text1,
             fontSize:16,
-            textTransform:'capitalize',
+            // textTransform:'capitalize',
             height:'60%',
             borderLeftWidth:1,
             borderColor:'white',

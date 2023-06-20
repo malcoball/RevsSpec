@@ -10,8 +10,8 @@ export default function App() {
   return (
         <AppContextProvider>
           <Header/>
-          {/* <NavMenu/> */}
-          <SpecScreen/>
+          <NavMenu/>
+          {/* <SpecScreen/> */}
         </AppContextProvider>
   );
 }

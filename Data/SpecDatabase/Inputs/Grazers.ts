@@ -127,7 +127,7 @@ const cajChick: specInput  = {
     ],
     ingredients :[
         Ingredients.grazer.skewers.cajun,
-        Ingredients.sauce.garlicButter,
+        Ingredients.sauce.garlicButter.garlicButter10,
         Ingredients.dip.saucePot.sourCream,
     ],
     type:'grazer'
@@ -195,7 +195,7 @@ const cajChickV: specInput  = {
     ],
     ingredients :[
         Ingredients.grazer.skewers.cajunV,
-        Ingredients.sauce.garlicButter,
+        Ingredients.sauce.garlicButter.garlicButter10,
         Ingredients.dip.saucePot.sourCream
     ],
     type:['grazer','vegetarian']
@@ -252,7 +252,7 @@ const breadedMushrooms : specInput = {
     ingredients :[
         Ingredients.grazer.breadedMushrooms,
         Ingredients.dip.saucePot.blueCheeseMayo,
-        Ingredients.garnish.oil.rapeseed,
+        Ingredients.garnish.oil.rapeseed13g,
         Ingredients.garnish.leaf.parsleyHalf
     ],
     type:'grazer'
@@ -339,8 +339,8 @@ const doughballs : specInput = {
     ],
     ingredients:[
         Ingredients.dough.half,
-        Ingredients.sauce.garlicButter,
-        Ingredients.sauce.salsa
+        Ingredients.sauce.garlicButter.garlicButter30,
+        Ingredients.sauce.salsa.salsa50
     ],
     type:'grazer'
 }
@@ -376,7 +376,7 @@ const hummus : specInput = {
         Ingredients.veg.cucumber.cucumber30,
         Ingredients.garnish.leaf.coriander,
         Ingredients.garnish.oil.olive,
-        Ingredients.garnish.nigellaSeeds
+        Ingredients.garnish.nigellaSeeds05
     ],
     type:'grazer'
 }
@@ -407,7 +407,7 @@ const falafel :specInput = {
     ingredients:[
         Ingredients.grazer.falafel,
         Ingredients.veg.rocket.rocket5,
-        Ingredients.garnish.pomegranate
+        Ingredients.garnish.pomegranate.pomegranate5
     ],
     type:'grazer'
 }
@@ -437,7 +437,7 @@ const falafelV :specInput = {
     ingredients:[
         Ingredients.grazer.falafel,
         Ingredients.veg.rocket.rocket5,
-        Ingredients.garnish.pomegranate
+        Ingredients.garnish.pomegranate.pomegranate5
     ],
     type:'grazer'
 }
@@ -519,11 +519,11 @@ const nachos : specInput = {
     ],
     ingredients:[
         Ingredients.tortilla.grazer,
-        Ingredients.sauce.cheese,
-        Ingredients.sauce.nacho.sourCream,
-        Ingredients.sauce.nacho.salsa,
-        Ingredients.sauce.nacho.avocado,
-        Ingredients.garnish.jalapenos,
+        Ingredients.sauce.cheese.cheese60,
+        Ingredients.sauce.nacho.sourCream.sourCream25,
+        Ingredients.sauce.nacho.salsa.salsa25,
+        Ingredients.sauce.nacho.avocado.avocado25,
+        Ingredients.garnish.jalapenos.jalapenos5,
         Ingredients.garnish.leaf.corianderGrazer
     ],
     type:'grazer'
@@ -556,11 +556,11 @@ const nachosVegan : specInput = {
     ],
     ingredients:[
         Ingredients.tortilla.grazer,
-        Ingredients.sauce.cheese,
-        Ingredients.sauce.nacho.sourCream,
-        Ingredients.sauce.nacho.salsa,
-        Ingredients.sauce.nacho.avocado,
-        Ingredients.garnish.jalapenos,
+        Ingredients.sauce.cheese.cheese60,
+        Ingredients.sauce.nacho.sourCream.sourCream25,
+        Ingredients.sauce.nacho.salsa.salsa25,
+        Ingredients.sauce.nacho.avocado.avocado25,
+        Ingredients.garnish.jalapenos.jalapenos5,
         Ingredients.garnish.leaf.corianderGrazer
     ],
     type:['grazer','vegan']

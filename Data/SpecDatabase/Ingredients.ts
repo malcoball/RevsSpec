@@ -163,6 +163,7 @@ export const Ingredients = {
             rapeseed7 : <ingredient>{name : 'Rapeseed Oil',amount:'7 ml'},
             rapeseed10 : <ingredient>{name : 'Rapeseed Oil',amount:'10 ml'},
             rapeseed15 : <ingredient>{name : 'Rapeseed Oil',amount:'15 ml'},
+            rapeseed13g : <ingredient>{name : 'Rapeseed Oil',amount:'13 g'},
             rapeseed20g : <ingredient>{name : 'Rapeseed Oil',amount:'20 g'},
             rapeseed50g : <ingredient>{name : 'Rapeseed Oil',amount:'50 g'},
             rapeseed60g : <ingredient>{name : 'Rapeseed Oil',amount:'60 g'},
@@ -513,6 +514,7 @@ export const Ingredients = {
             avocado20: <ingredient>{name:'Avocado (fresh)',amount:'20 g'},
             avocado60: <ingredient>{name:'Avocado (fresh)',amount:'60 g (0.25 each)'},
             avocado100: <ingredient>{name:'Avocado (fresh)',amount:'100 g'},
+            avocado115: <ingredient>{name:'Avocado (fresh)',amount:'115 g (0.5 each)'},
             smashed:{
                 smashed100 : <ingredient>{name:'Seasoned Avocado Chunky Smash',amount:'100 g'}
             }
@@ -547,6 +549,7 @@ export const Ingredients = {
             plum:{
                 plum20: <ingredient>{name:'Plum Tomatoes',amount:'20 g'},
                 plum30: <ingredient>{name:'Plum Tomatoes',amount:'30 g'},
+                plum35: <ingredient>{name:'Plum Tomatoes',amount:'35 g'},
                 plum40: <ingredient>{name:'Plum Tomatoes',amount:'40 g'},
                 plum80: <ingredient>{name:'Plum Tomatoes',amount:'80 g'},
             }
@@ -580,6 +583,7 @@ export const Ingredients = {
         },
         mushroom:{
             mushrooms60 : <ingredient>{name:'Flat Mushrooms',amount:'60 g'},
+            mushrooms50 : <ingredient>{name:'Flat Mushrooms',amount:'50 g'},
         }
     },
     dough:{
@@ -596,6 +600,9 @@ export const Ingredients = {
         tortilla : <ingredient>{name:'12" Flour Tortilla',amount:'1 each'},
         halloumi:<ingredient>{name:'Breaded Halloumi Fries',amount:'75 g (4 each)'},
         sausage:{
+            vegan:{
+                vegan2 : <ingredient>{name:'Quorn Vegan Sausage',amount:'2 each'}
+            },
             sausage2:<ingredient>{name:'Frozen Cooked Sausage',amount:'120g (2 each)'},
             sausage:<ingredient>{name:'Frozen Cooked Sausage',amount:'60g (1 each)'},
             sausageHalf:<ingredient>{name:'Frozen Cooked Sausage',amount:'30g (0.5 each)'},
@@ -614,7 +621,7 @@ export const Ingredients = {
             bacon4Slice : <ingredient>{name:'Cooked Bacon',amount:'4 slices'},
         },
         butter :{
-
+            butter15 : <ingredient>{name:'English Unsalted Butter',amount:'15 g'}
         },
         gravy:{
             granules80 : <ingredient>{name:'Savoury Gravy Granules', amount:'80 g'}
@@ -655,7 +662,8 @@ export const Ingredients = {
             breadCrumbs100 : <ingredient>{name:'Panko Breadcrumbs', amount:'100 g'},
         },
         hashbrown:{
-            hashbrown1 : <ingredient>{name:'Hash Brown', amount:'1 each'}
+            hashbrown1 : <ingredient>{name:'Hash Brown', amount:'1 each'},
+            hashbrown2 : <ingredient>{name:'Hash Brown', amount:'2 each'},
         }
     },
     lager:{

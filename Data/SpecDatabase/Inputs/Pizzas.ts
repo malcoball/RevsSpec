@@ -299,7 +299,7 @@ const bbqMeaty : specInput = {
         Ingredients.topping.pizza.mozzarella.mozzarella70,
         Ingredients.chicken.meat.pulled,
         Ingredients.topping.pizza.pepperoni.pepperoni6,
-        Ingredients.other.sausage,
+        Ingredients.other.sausage.sausage,
         Ingredients.topping.pizza.veg.redOnion,
         Ingredients.other.bacon.bacon5
     ],
@@ -333,7 +333,7 @@ const bbqMeatySkinny : specInput = {
         Ingredients.topping.pizza.mozzarella.mozzarella35,
         Ingredients.chicken.meat.pulledHalf,
         Ingredients.topping.pizza.pepperoni.pepperoni3,
-        Ingredients.other.sausageHalf,
+        Ingredients.other.sausage.sausageHalf,
         Ingredients.topping.pizza.veg.redOnionHalf,
         Ingredients.other.bacon.bacon2,
         Ingredients.side.houseSalad
@@ -366,7 +366,7 @@ const bbqMeatyGF : specInput = {
         Ingredients.topping.pizza.mozzarella.mozzarella60,
         Ingredients.chicken.meat.pulled,
         Ingredients.topping.pizza.pepperoni.pepperoni5,
-        Ingredients.other.sausage,
+        Ingredients.other.sausage.sausageHalf,
         Ingredients.topping.pizza.veg.redOnion,
         Ingredients.other.bacon.bacon5
     ],
@@ -468,7 +468,7 @@ const mushroom : specInput = {
         Ingredients.dough.full,
         Ingredients.other.flour.flour10,
         Ingredients.topping.pizza.mozzarella.mozzarella70,
-        Ingredients.topping.pizza.veg.mushrooms,
+        Ingredients.topping.pizza.veg.mushrooms70,
         Ingredients.garnish.oil.truffle,
         Ingredients.sauce.pizza.garlicButter20,
         Ingredients.garnish.blackPepper,

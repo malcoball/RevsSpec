@@ -75,34 +75,65 @@ const AvoToast : {noEgg:specInput,egg:specInput} = {
         ]
     },
 }
-const eggsBenedict : specInput = {
-    title:Titles.eggsBenedict.standard, image:Images.specs.brunch.eggsBenedict,
-    crockery:[Crockery.plate.blueRim],type:'brunch',
-    ingredients:[
-        Ingredients.other.egg.egg2,
-        Ingredients.burger.bun.standard,
-        Ingredients.veg.rocket.rocket10,
-        Ingredients.other.bacon.bacon4Slice,
-        Ingredients.sauce.hollandaise.hollandaise60,
-        Ingredients.seasoning.crackedBlackPepper
-    ],
-    builds:[
-        {title:'Cooking',items:[
-            ...Cooking.egg.poached,
-            Cooking.bun.regular,
-            Cooking.sauce.hollandaise,
-            Cooking.bacon,
-        ]},
-        {title:'Plating',items:[
-            '2 Bases',
-            'Rocket',
-            'Bacon (2 slices each bun)',
-            'Eggs',
-            'Hollandaise',
-            'Black pepper'
-        ]}
-    ]
+const eggsBenedict : {standard : specInput,GF : specInput} = {
+    standard:{
+        title:Titles.eggsBenedict.standard, image:Images.specs.brunch.eggsBenedict.eggsBenedict,
+        crockery:[Crockery.plate.blueRim],type:'brunch',
+        ingredients:[
+            Ingredients.other.egg.egg2,
+            Ingredients.burger.bun.standard,
+            Ingredients.veg.rocket.rocket10,
+            Ingredients.other.bacon.bacon4Slice,
+            Ingredients.sauce.hollandaise.hollandaise60,
+            Ingredients.seasoning.crackedBlackPepper
+        ],
+        builds:[
+            {title:'Cooking',items:[
+                ...Cooking.egg.poached,
+                Cooking.bun.regular,
+                Cooking.sauce.hollandaise,
+                Cooking.bacon,
+            ]},
+            {title:'Plating',items:[
+                '2 Bases',
+                'Rocket',
+                'Bacon (2 slices each bun)',
+                'Eggs',
+                'Hollandaise',
+                'Black pepper'
+            ]}
+        ]
+    },
+    GF:{
+        title:Titles.eggsBenedict.GF, image:Images.specs.brunch.eggsBenedict.eggsBenedictGF,
+        crockery:[Crockery.plate.blueRim,Crockery.stick.GF],type:['brunch','glutenFree'],
+        ingredients:[
+            Ingredients.other.egg.egg2,
+            Ingredients.burger.bun.GF,
+            Ingredients.veg.rocket.rocket10,
+            Ingredients.other.bacon.bacon4Slice,
+            Ingredients.sauce.hollandaise.hollandaise60,
+            Ingredients.seasoning.crackedBlackPepper
+        ],
+        builds:[
+            {title:'Cooking',items:[
+                ...Cooking.egg.poached,
+                Cooking.bun.regular,
+                Cooking.sauce.hollandaise,
+                Cooking.bacon,
+            ]},
+            {title:'Plating',items:[
+                '2 Bases',
+                'Rocket',
+                'Bacon (2 slices each bun)',
+                'Eggs',
+                'Hollandaise',
+                'Black pepper'
+            ]}
+        ]
+    },
 }
+
 const chickenWaffle : specInput = {
     title:Titles.waffles, image:Imgs.chickenWaffle, 
     crockery:[Crockery.bowl.speckledSaladBowl,Crockery.dipPot],
@@ -168,8 +199,385 @@ const grill : {standard:specInput,GF:specInput} = {
             Ingredients.other.hashbrown.hashbrown1,
             Ingredients.other.sausage.sausage,
             Ingredients.other.sourdough.sourdough70,
-            
+            Ingredients.other.butter.butter15,
+            Ingredients.garnish.leaf.parsleyHalf,
+            Ingredients.side.beans.beans100
         ],
+        builds:[
+            {title:'Prep',items:[
+                'Cut the tomato in half',
+                'Thick slice the mushrooms',
+            ]},
+            {title:'Cooking',items:[
+                Cooking.veg.tomato,
+                Cooking.veg.mushroom,
+                Cooking.sausage.meat,
+                Cooking.bacon+". Do not use pre-cooked bacon",
+                Cooking.hashbrown.single,
+                Cooking.egg.fried,
+                Cooking.beans,
+                Cooking.toast,
+            ]},
+            {title:'Plating',items:[
+                'Place all of the items onto the plate as shown',
+                'Season the eggs with salt and pepper and garnish with parsley'
+            ]}
+        ],
+        image:Images.specs.brunch.grill.standard
+    },
+    GF :{
+        title:Titles.grill.GF, type:['brunch','glutenFree'],
+        crockery:[
+            Crockery.plate.speckledRectangle,
+            Crockery.ramekin
+        ],
+        ingredients:[
+            Ingredients.other.bacon.bacon2Slice,
+            Ingredients.veg.tomato.plum.plum80,
+            Ingredients.veg.mushroom.mushrooms60,
+            Ingredients.other.egg.egg2,
+            Ingredients.burger.seasoning.rs2,
+            Ingredients.other.hashbrown.hashbrown2,
+            Ingredients.other.sausage.sausage,
+            Ingredients.garnish.leaf.parsleyHalf,
+            Ingredients.side.beans.beans100
+        ],
+        builds:[
+            {title:'Prep',items:[
+                'Cut the tomato in half',
+                'Thick slice the mushrooms',
+            ]},
+            {title:'Cooking',items:[
+                Cooking.veg.tomato,
+                Cooking.veg.mushroom,
+                Cooking.sausage.meat,
+                Cooking.bacon+". Do not use pre-cooked bacon",
+                Cooking.hashbrown.single,
+                Cooking.egg.fried,
+                Cooking.beans,
+            ]},
+            {title:'Plating',items:[
+                'Place all of the items onto the plate as shown',
+                'Season the eggs with salt and pepper and garnish with parsley'
+            ]}
+        ],
+        image:Images.specs.brunch.grill.GF
+    },
+}
+const grillV : {standard:specInput,GF:specInput} = {
+    standard :{
+        title:Titles.grill.veggie, type:['brunch','vegetarian'],
+        crockery:[
+            Crockery.plate.speckledRectangle,
+            Crockery.ramekin
+        ],
+        ingredients:[
+            Ingredients.veg.tomato.plum.plum80,
+            Ingredients.veg.mushroom.mushrooms60,
+            Ingredients.other.egg.egg2,
+            Ingredients.burger.seasoning.rs2,
+            Ingredients.other.hashbrown.hashbrown1,
+            Ingredients.other.sausage.vegan.vegan2,
+            Ingredients.other.sourdough.sourdough70,
+            Ingredients.other.butter.butter15,
+            Ingredients.garnish.leaf.parsleyHalf,
+            Ingredients.side.beans.beans100
+        ],
+        builds:[
+            {title:'Prep',items:[
+                'Cut the tomato in half',
+                'Thick slice the mushrooms',
+            ]},
+            {title:'Cooking',items:[
+                Cooking.veg.tomato,
+                Cooking.veg.mushroom,
+                Cooking.sausage.vegan,
+                Cooking.hashbrown.single,
+                Cooking.egg.fried,
+                Cooking.beans,
+                Cooking.toast,
+            ]},
+            {title:'Plating',items:[
+                'Place all of the items onto the plate as shown',
+                'Season the eggs with salt and pepper and garnish with parsley'
+            ]}
+        ],
+        image:Images.specs.brunch.grill.veggie
+    },
+    GF :{
+        title:Titles.grill.veggieGF, type:['brunch','vegetarian','glutenFree'],
+        crockery:[
+            Crockery.plate.speckledRectangle,
+            Crockery.ramekin
+        ],
+        ingredients:[
+            Ingredients.veg.tomato.plum.plum80,
+            Ingredients.veg.mushroom.mushrooms60,
+            Ingredients.other.egg.egg2,
+            Ingredients.burger.seasoning.rs2,
+            Ingredients.other.hashbrown.hashbrown2,
+            Ingredients.other.sausage.vegan.vegan2,
+            Ingredients.garnish.leaf.parsleyHalf,
+            Ingredients.side.beans.beans100
+        ],
+        builds:[
+            {title:'Prep',items:[
+                'Cut the tomato in half',
+                'Thick slice the mushrooms',
+            ]},
+            {title:'Cooking',items:[
+                Cooking.veg.tomato,
+                Cooking.veg.mushroom,
+                Cooking.sausage.vegan,
+                Cooking.hashbrown.multiple,
+                Cooking.egg.fried,
+                Cooking.beans,
+            ]},
+            {title:'Plating',items:[
+                'Place all of the items onto the plate as shown',
+                'Season the eggs with salt and pepper and garnish with parsley'
+            ]}
+        ],
+        image:Images.specs.default
+    },
+    
+}
+const grillVe : {standard:specInput,GF:specInput} = {
+    standard :{
+        title:Titles.grill.veggie, type:['brunch','vegan'],
+        crockery:[
+            Crockery.plate.speckledRectangle,
+            Crockery.ramekin
+        ],
+        ingredients:[
+            Ingredients.veg.tomato.plum.plum80,
+            Ingredients.veg.mushroom.mushrooms60,
+            Ingredients.veg.avo.avocado115,
+            Ingredients.other.hashbrown.hashbrown1,
+            Ingredients.other.sausage.vegan.vegan2,
+            Ingredients.other.sourdough.sourdough70,
+            Ingredients.other.butter.butter15,
+            Ingredients.garnish.leaf.parsleyHalf,
+            Ingredients.side.beans.beans100
+        ],
+        builds:[
+            {title:'Prep',items:[
+                'Cut the tomato in half',
+                'Thick slice the mushrooms',
+            ]},
+            {title:'Cooking',items:[
+                Cooking.veg.tomato,
+                Cooking.veg.mushroom,
+                Cooking.sausage.vegan,
+                Cooking.hashbrown.single,
+                Cooking.egg.fried,
+                Cooking.beans,
+                Cooking.toast,
+            ]},
+            {title:'Plating',items:[
+                'Place all of the items onto the plate as shown',
+                'Season the eggs with salt and pepper and garnish with parsley'
+            ]}
+        ],
+        image:Images.specs.brunch.grill.vegan
+    },
+    GF :{
+        title:Titles.grill.veggieGF, type:['brunch','vegan','glutenFree'],
+        crockery:[
+            Crockery.plate.speckledRectangle,
+            Crockery.ramekin
+        ],
+        ingredients:[
+            Ingredients.veg.tomato.plum.plum80,
+            Ingredients.veg.mushroom.mushrooms60,
+            Ingredients.veg.avo.avocado115,
+            Ingredients.other.hashbrown.hashbrown2,
+            Ingredients.other.sausage.vegan.vegan2,
+            Ingredients.garnish.leaf.parsleyHalf,
+            Ingredients.side.beans.beans100
+        ],
+        builds:[
+            {title:'Prep',items:[
+                'Cut the tomato in half',
+                'Thick slice the mushrooms',
+            ]},
+            {title:'Cooking',items:[
+                Cooking.veg.tomato,
+                Cooking.veg.mushroom,
+                Cooking.sausage.vegan,
+                Cooking.hashbrown.multiple,
+                Cooking.egg.fried,
+                Cooking.beans,
+            ]},
+            {title:'Plating',items:[
+                'Place all of the items onto the plate as shown',
+                'Season the eggs with salt and pepper and garnish with parsley'
+            ]}
+        ],
+        image:Images.specs.default
+    },
+    
+}
 
+const brunchPizza : {standard:specInput,GF:specInput}={
+    standard:{
+        title:Titles.pizza.standard, crockery:[Crockery.pizza.paddle,Crockery.cutlery.pizza],
+        type:['pizza','brunch'],image:Imgs.pizza.standard,
+        ingredients:[
+            Ingredients.dough.full,
+            Ingredients.other.flour.flour10,
+            Ingredients.sauce.pizza.pizza70,
+            Ingredients.veg.mushroom.mushrooms50,
+            Ingredients.other.sausage.sausage,
+            Ingredients.veg.tomato.plum.plum35,
+            Ingredients.other.bacon.bacon2Slice,
+            Ingredients.topping.pizza.mozzarella.mozzarella70,
+            Ingredients.other.egg.egg1
+        ],
+        builds:[
+            {title:'Prep',items:[
+                'De-frost the dough & prove in the fridge for 12 hours or over night. Bring to room temp before use',
+                'hand stretch to 12"',
+                'Cut sausage down'
+            ]},
+            {title:'Cooking',items:[
+                Cooking.egg.fried,
+                Cooking.pizza
+            ]},
+            {title:'Pizza Build',items:[
+                'Pizza sauce',
+                'Mushrooms',
+                'Sausage to rings',
+                'Mozzarella',
+                'Diced tomato',
+                'Cook',
+                'Add large peices of broken bacon strips',
+                'Add fried egg'
+            ]},
+            {title:'Plating',items:[
+                'Serve on a pizza paddle with a pizza wheel'
+            ]}
+        ]
+    },
+    GF:{
+        title:Titles.pizza.GF, crockery:[Crockery.pizza.paddle,Crockery.cutlery.pizza,Crockery.stick.GF],
+        type:['pizza','brunch','glutenFree'],image:Imgs.pizza.standard,
+        ingredients:[
+            Ingredients.dough.gf,
+            Ingredients.other.flour.flour10,
+            Ingredients.sauce.pizza.pizza70,
+            Ingredients.veg.mushroom.mushrooms50,
+            Ingredients.other.sausage.sausage,
+            Ingredients.veg.tomato.plum.plum35,
+            Ingredients.other.bacon.bacon2Slice,
+            Ingredients.topping.pizza.mozzarella.mozzarella70,
+            Ingredients.other.egg.egg1
+        ],
+        builds:[
+            {title:'Prep',items:[
+                'Place the GF pizza base on a clean tray',
+                'Cut sausage down'
+            ]},
+            {title:'Cooking',items:[
+                Cooking.egg.fried,
+                Cooking.pizza
+            ]},
+            {title:'Pizza Build',items:[
+                'Pizza sauce',
+                'Mushrooms',
+                'Sausage to rings',
+                'Mozzarella',
+                'Diced tomato',
+                'Cook',
+                'Add large peices of broken bacon strips',
+                'Add fried egg'
+            ]},
+            {title:'Plating',items:[
+                'Serve on a pizza paddle with a pizza wheel'
+            ]}
+        ]
+    },
+}
+
+const brunchBurger : {standard:specInput,GF:specInput}={
+    standard:{
+        title:Titles.burger.standard, type:['brunch','burger'],
+        image:Imgs.burger, 
+        crockery:[Crockery.plate.blueRim,Crockery.bowl.enamelDish,Crockery.stick.small],
+        ingredients:[
+            Ingredients.burger.bun.standard,
+            Ingredients.burger.sauce.relish,
+            Ingredients.burger.burger.beef.meat,
+            Ingredients.burger.seasoning.rs,
+            Ingredients.other.bacon.bacon2Slice,
+            Ingredients.burger.cheese.standard,
+            Ingredients.other.egg.egg1,
+            Ingredients.other.hashbrown.hashbrown1,
+            Ingredients.side.fries.standard
+        ],
+        builds:[
+            {title:'Cooking',items:[
+                Cooking.burger.beef.meat.regular,
+                Cooking.bun.regular,
+                Cooking.burger.cheese.regular,
+                Cooking.fries.regular,
+                Cooking.hashbrown.single,
+                Cooking.egg.fried,
+            ]},
+            {title:'Burger Build',items:[
+                'Toasted base',
+                'Burger sauce',
+                'Burger with melted cheese',
+                'Bacon (2 slices)',
+                'Fried egg',
+                'Lid',
+                'Hash brown on top',
+                'Skewer'
+            ]},
+            {title:'Plating',items:[
+                'Serve burger on plate',
+                'Serve fries on plate'
+            ]}
+        ]
+    },
+    GF:{
+        title:Titles.burger.GF, type:['brunch','burger','glutenFree'],
+        image:Imgs.burger, 
+        crockery:[Crockery.plate.blueRim,Crockery.bowl.enamelDish,Crockery.stick.small],
+        ingredients:[
+            Ingredients.burger.bun.GF,
+            Ingredients.burger.sauce.relish,
+            Ingredients.burger.burger.beef.meat,
+            Ingredients.burger.seasoning.rs,
+            Ingredients.other.bacon.bacon2Slice,
+            Ingredients.burger.cheese.standard,
+            Ingredients.other.egg.egg1,
+            Ingredients.other.hashbrown.hashbrown1,
+            Ingredients.side.fries.standard
+        ],
+        builds:[
+            {title:'Cooking',items:[
+                Cooking.burger.beef.meat.regular,
+                Cooking.bun.regular,
+                Cooking.burger.cheese.regular,
+                Cooking.fries.regular,
+                Cooking.hashbrown.single,
+                Cooking.egg.fried,
+            ]},
+            {title:'Burger Build',items:[
+                'Toasted base',
+                'Burger sauce',
+                'Burger with melted cheese',
+                'Bacon (2 slices)',
+                'Fried egg',
+                'Lid',
+                'Hash brown on top',
+                'Skewer'
+            ]},
+            {title:'Plating',items:[
+                'Serve burger on plate',
+                'Serve fries on plate'
+            ]}
+        ]
     }
 }

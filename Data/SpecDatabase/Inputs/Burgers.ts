@@ -38,7 +38,7 @@ const FriedOnion = Ingredients.burger.garnish.friedOnion;
 const CajunSeasoning = Ingredients.seasoning.cajun.cajun1;
 const BeefChilli = Ingredients.topping.chilli.beef;
 const VeggieChilli = Ingredients.topping.chilli.veggie;
-const CrushedChilli = Ingredients.burger.garnish.crushedChillis;
+const CrushedChilli = Ingredients.burger.garnish.crushedChillis1;
 const seasoning = Ingredients.burger.seasoning.seasoning;
 const rsSeasoning = Ingredients.burger.seasoning.rs;
 // Ingredients

@@ -95,7 +95,7 @@ const macNCheese : specInput = {
     ingredients:[
         Ingredients.other.macNCheese.mac225,
         Ingredients.dough.half,
-        Ingredients.sauce.garlicButter
+        Ingredients.sauce.garlicButter.garlicButter30
     ],
     type:'kids'
 }

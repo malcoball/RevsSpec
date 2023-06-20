@@ -1,4 +1,6 @@
 const Cooking = {
+    beans:'Microwave the beans for 30 seconds',
+    toast:'Toast the sourdough until golden & spread the button onto it',
     bun : {
         regular : 'Toast the bun',
         GF : 'Toast the bun',
@@ -31,6 +33,10 @@ const Cooking = {
         chilli: 'Re-heat the chilli in the microwave and stir in the chilli flakes.'
         
     },
+    hashbrown:{
+        single : 'Deep fry the hash brown until golden and crispy',
+        multiple : 'Deep fry the hash browns until golden and crispy',
+    },
     chicken :{
         breast:{
             cajun:'In a hot pan with no oil, sear the chicken on both sides until blackened, transfer to a tray if not cooked through to finish in the oven',
@@ -58,9 +64,19 @@ const Cooking = {
             runny yolk.`,
             `Plunge in to ice water if they are not being used straight
             away.`,
-        ]
+        ],
+        fried:'Fry the eggs leaving the yolks runny',
+    },
+    pizza : 'Bake built pizza in oven for 2-3 minutes, turning half way through',
+    sausage :{
+        meat:'Heat the sausage in the microwave and finish off in the  oven if not up to temperature. Ensure a core temperature of 75°C (82°C in Scotland).',
+        vegan:'Heat through the sausages in the oven, colouring all sides brown all over',
     },
     waffle :' Drizzle the waffle with rapeseed oil and bake in the oven until lightly golden.',
-    pancake:'. Re-heat the pancakes in the oven for 3-4 minutes until warmed through.'
+    pancake:'. Re-heat the pancakes in the oven for 3-4 minutes until warmed through.',
+    veg:{
+        mushroom : 'Sautee the mushroom until just cooked in a hot pan',
+        tomato:'Cook the tomato under the grill with a little oil and salt'
+    }
 }
 export default Cooking;
