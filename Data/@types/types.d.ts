@@ -48,3 +48,10 @@ export type build = {
     items : string[] 
 }
 type buildTypes = "Burger Build" | "Prep"| "Pizza Build" | "Cooking"| "Plating" |"Error";
+
+
+export type RootStackParamList = {
+    Home: undefined;
+    Profile: { userId: string };
+    Feed: { sort: 'latest' | 'top' } | undefined;
+  };

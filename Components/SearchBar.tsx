@@ -6,7 +6,7 @@ import { AppContext } from "../Data/Context/AppContext"
 import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile";
 import SearchItem from './SearchItem';
 
-const SearchBar = (props:{style:{width:number,height:number},updateParent:any})=>{
+const SearchBar = (props:{style:{width:number,height:number},nav:any})=>{
     const context = useContext(AppContext)
     const styles = StyleSheet.create({
         container:{
@@ -49,7 +49,7 @@ const SearchBar = (props:{style:{width:number,height:number},updateParent:any})=
     // const itemList = filteredItems.map((item,ind) =>{return<Text key={ind}>{item}</Text>})
     const itemList = <FlatList
         data={filteredItems}
-        renderItem={({item}) => <SearchItem title={item}/>}
+        renderItem={({item}) => <SearchItem title={item} clickFunc={props.nav}/>}
     />
 
 

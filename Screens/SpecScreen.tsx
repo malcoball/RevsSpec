@@ -8,8 +8,8 @@ import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile"
 import { variant, variantType, variants } from "../Data/@types/types"
 
 import SpecBuild from "../Components/SpecBuild"
-const SpecScreen = ()=>{
-    const [title,setTitle] = useState('Calamari');
+const SpecScreen = (props:{title:string})=>{
+    const [title,setTitle] = useState(props.title);
     const data = specItemCont.getItem.byName(title);
     const context = useContext(AppContext);
 

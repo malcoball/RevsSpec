@@ -6,11 +6,9 @@ import NavMenuContainer from "../Components/NavMenu/NavMenuContainer";
 import { specItemCont } from '../Data/SpecDatabase/DatabaseCompile';
 import { Button } from 'react-native';
 
-const NavMenu = ()=>{
+const NavMenu = (props:{nav:any})=>{
     const [width] = useState(0.8);
     const [height] = useState(64);
-    const [databaseNames] = useState(specItemCont.getItem.all.name());
-    const [searchText,setSearchText] = useState('Brunch burger');
     const context = useContext(AppContext);
 
     const styles = StyleSheet.create({
@@ -22,7 +20,7 @@ const NavMenu = ()=>{
     return (
         <View style={styles.container}>
 
-            <SearchBar style={{width:Dimensions.get('window').width*width,height:height}} updateParent={setSearchText}/>
+            <SearchBar nav={props.nav} style={{width:Dimensions.get('window').width*width,height:height}}/>
             <NavMenuContainer style={{width:Dimensions.get('window').width*width,height:height}}/>
         </View>
     )

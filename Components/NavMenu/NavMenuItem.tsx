@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Image, View, Text, StyleSheet } from "react-native"
 
 const NavMenuItem = (props:{color:any,title:string,image:any,imageSize:number,height:number})=>{
@@ -23,6 +24,9 @@ const NavMenuItem = (props:{color:any,title:string,image:any,imageSize:number,he
             textTransform:'capitalize'
         }
     })
+    const [data] = useState([
+        'item1','item2','item3'
+    ])
     return (
         <View style={styles.container}>
             <Image
