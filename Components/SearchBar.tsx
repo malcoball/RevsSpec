@@ -36,11 +36,11 @@ const SearchBar = (props:{style:{width:number,height:number},updateParent:any})=
             paddingLeft:12,
         }
     })
-    const [items,setItems] = useState(specItemCont.getItem.all.name());
+    const [items,setItems] = useState(specItemCont.getItem.all.name()); // Can be optimised
     const [query,setQuery] = useState('')
 
     const filteredItems = useMemo(()=>{
-        const output = query === '' ? '' : 
+        const output = query === '' ? '' : // Doesn't show the output if there's nothing typed in, could limit this to length for performance
         items.filter(item =>{
             return item.toLowerCase().includes(query.toLowerCase())
         })
