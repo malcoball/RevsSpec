@@ -1,9 +1,10 @@
-import {useContext} from 'react';
-import { Image, View, Text, StyleSheet, TouchableOpacity, TextInput, } from "react-native"
+import {useContext, useMemo, useRef} from 'react';
+import { Image, View, Text, StyleSheet, TouchableOpacity, TextInput, FlatList, } from "react-native"
 import Images from "../Data/Images"
 import { useState } from "react"
 import { AppContext } from "../Data/Context/AppContext"
-import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile"
+import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile";
+import SearchItem from './SearchItem';
 
 const SearchBar = (props:{style:{width:number,height:number},updateParent:any})=>{
     const context = useContext(AppContext)
@@ -35,13 +36,26 @@ const SearchBar = (props:{style:{width:number,height:number},updateParent:any})=
             paddingLeft:12,
         }
     })
-    const [text,setText] = useState('');
-    const submit = ()=>{
-        // const test = specItemCont.getItem.byName(text);
-        // console.log("test : ",test)
-        props.updateParent(text)
-    }
+    const [items,setItems] = useState(specItemCont.getItem.all.name());
+    const [query,setQuery] = useState('')
+
+    const filteredItems = useMemo(()=>{
+        const output = query === '' ? '' : 
+        items.filter(item =>{
+            return item.toLowerCase().includes(query.toLowerCase())
+        })
+        return output;
+    },[items,query]);
+    // const itemList = filteredItems.map((item,ind) =>{return<Text key={ind}>{item}</Text>})
+    const itemList = <FlatList
+        data={filteredItems}
+        renderItem={({item}) => <SearchItem title={item}/>}
+    />
+
+
+    
     return (
+        <>
         <View style={styles.container}>
             <Image
             style={styles.searchImg}
@@ -49,12 +63,13 @@ const SearchBar = (props:{style:{width:number,height:number},updateParent:any})=
             />
             <TextInput
                 style={styles.text}
-                onChangeText={setText}
+                onChangeText={e => setQuery(e)}
                 placeholder="search"
-                value={text}
-                onSubmitEditing={submit}
+                value={query}
             />
         </View>
+        {itemList}
+        </>
     )
 }
 export default SearchBar;

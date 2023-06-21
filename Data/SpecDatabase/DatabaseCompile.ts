@@ -1,4 +1,5 @@
 import { ingredient, specItem, variantType } from "../@types/types";
+import Brunch from './Inputs/Brunch';
 import Burgers  from "./Inputs/Burgers";
 import Desserts from "./Inputs/Desserts";
 import Grazers from "./Inputs/Grazers";
@@ -13,8 +14,8 @@ import Wraps from "./Inputs/Wraps";
 import { StringMethods } from "../StringMethods";
 
 
-let DataBase = [...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Pizzas,...Sandwiches,...Sharers,
-...Sides,...Wraps];
+let DataBase = [...Brunch,...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Pizzas,...Sandwiches,...Sharers,
+...Sides,...Pizzas,...Wraps];
 
 export const specItemCont = {
     sort:{

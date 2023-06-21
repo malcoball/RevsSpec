@@ -164,44 +164,44 @@ const SpecTitles = {
     pizza:{
         buffaloChicken:{
             standard : {
-                full : 'Buffalo Crispy Chicken',
-                skinny : `Buffalo Crispy Chicken ${skinny}`
+                full : 'Buffalo Crispy Chicken Pizza',
+                skinny : `Buffalo Crispy Chicken Pizza ${skinny}`
             },
             veggie : {
-                full : `Buffalo Crispy Chicken ${veggie}`,
-                skinny : `Buffalo Crispy Chicken ${skinny} ${veggie}`
+                full : `Buffalo Crispy Chicken Pizza ${veggie}`,
+                skinny : `Buffalo Crispy Chicken Pizza ${skinny} ${veggie}`
             },
-            GF : `Buffalo Cripsy Chicken ${glutenFree}`
+            GF : `Buffalo Cripsy Chicken Pizza ${glutenFree}`
         },
         marg : {
             standard : {
-                full : `Margherita`,
-                skinny : `Margherita ${skinny}`
+                full : `Margherita Pizza`,
+                skinny : `Margherita Pizza ${skinny}`
             },
             vegan :{
-                full : `Margherita ${vegan}`,
-                skinny : `Margherita ${skinny} ${vegan}`
+                full : `Margherita Pizza ${vegan}`,
+                skinny : `Margherita Pizza ${skinny} ${vegan}`
             },
             GF : {
-                standard : `Margherita ${glutenFree}`,
-                vegan : `Margherita ${glutenFree} ${vegan}`
+                standard : `Margherita Pizza ${glutenFree}`,
+                vegan : `Margherita Pizza ${glutenFree} ${vegan}`
             }
 
         },
         bbqMeaty:{
-            full: `BBQ Meaty One`,
-            skinny: `BBQ Meaty One ${skinny}`,
-            GF: `BBQ Meaty One ${glutenFree}`
+            full: `BBQ Meaty One Pizza`,
+            skinny: `BBQ Meaty One Pizza ${skinny}`,
+            GF: `BBQ Meaty One Pizza ${glutenFree}`
         },
         pepperoni:{
-            full:`Pepperoni`,
-            skinny : `Pepperoni ${skinny}`,
-            GF : `Pepperoni ${glutenFree}`
+            full:`Pepperoni Pizza`,
+            skinny : `Pepperoni Pizza ${skinny}`,
+            GF : `Pepperoni Pizza ${glutenFree}`
         },
         mushroom:{
-            full: `Mushroom & Truffle Bianco`,
-            skinny: `Mushroom & Truffle Bianco ${skinny}`,
-            GF: `Mushroom & Truffle Bianco ${glutenFree}`,
+            full: `Mushroom & Truffle Bianco Pizza`,
+            skinny: `Mushroom & Truffle Bianco Pizza ${skinny}`,
+            GF: `Mushroom & Truffle Bianco Pizza ${glutenFree}`,
         }
     },
     side:{
