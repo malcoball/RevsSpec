@@ -1,4 +1,4 @@
-import { ingredient, specItem, variantType } from "../@types/types";
+import { ingredient, specItem,specType, variantType } from "../@types/types";
 import Brunch from './Inputs/Brunch';
 import Burgers  from "./Inputs/Burgers";
 import Desserts from "./Inputs/Desserts";
@@ -14,8 +14,28 @@ import Wraps from "./Inputs/Wraps";
 import { StringMethods } from "../StringMethods";
 
 
-let DataBase = [...Brunch,...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Pizzas,...Sandwiches,...Sharers,
+let DataBase = [...Brunch,...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Pizzas,...Sandwiches,
 ...Sides,...Pizzas,...Wraps];
+
+const typeObj = { // Mostly used to group titles into categories.
+    burger : <string[]>[],
+    grazer : <string[]>[],
+    kids :<string[]>[],
+    dessert :<string[]>[],
+    brunch :<string[]>[],
+    main:<string[]>[],
+    pizza : <string[]>[],
+    sandwich:<string[]>[],
+    prep:<string[]>[],
+    party:<string[]>[],
+    vegan:<string[]>[],
+    veggie:<string[]>[],
+    glutenFree:<string[]>[],
+    side:<string[]>[],
+    wrap:<string[]>[],
+    skinny:<string[]>[],
+    other:<string[]>[]
+}
 
 export const specItemCont = {
     sort:{
@@ -120,13 +140,36 @@ export const specItemCont = {
 
         },
         all:{
-            name:() : string[] =>{
-                const out : string[] = [];
-                DataBase.forEach(elm=>out.push(elm.title));
+            name:{
+                string : () : string[] =>{
+                    const out : string[] = [];
+                    DataBase.forEach(elm=>out.push(elm.title));
+                    return out;
+                },
+                objTypes : ()=>{
+                    const out = {...typeObj};
+                    DataBase.forEach(item=>{
+                        const type  = typeof(item.type) === 'string' ? item.type : item.type[0];
+                        const objInd = type as keyof typeof typeObj;
+                        out[objInd].push(item.title);
+                    })
+                    return out;
+                }
+            }
+        },
+        category:{
+            title: (typeObjProp:specType)=>{
+                const out :string[] = []
+                DataBase.forEach(item=>{
+                    const type  = typeof(item.type) === 'string' ? item.type : item.type[0];
+                    const objInd = type as keyof typeof typeObj;
+                    if (objInd === typeObjProp) out.push(item.title);
+                })
                 return out;
             }
         }
     },
 }
 specItemCont.sort.index();
+
 // specItemCont.sort.byOrder.alphabet();

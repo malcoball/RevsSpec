@@ -6,7 +6,7 @@ import { AppContext } from "../Data/Context/AppContext"
 import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile";
 import SearchItem from './SearchItem';
 
-const SearchBar = (props:{style:{width:number,height:number},nav:any})=>{
+const SearchBar = (props:{style:{width:number,height:number},items:string[],nav:any})=>{
     const context = useContext(AppContext)
     const styles = StyleSheet.create({
         container:{
@@ -36,7 +36,8 @@ const SearchBar = (props:{style:{width:number,height:number},nav:any})=>{
             paddingLeft:12,
         }
     })
-    const [items,setItems] = useState(specItemCont.getItem.all.name()); // Can be optimised
+    // const [items,setItems] = useState(specItemCont.getItem.all.name()); // Can be optimised
+    const [items] = useState(props.items);
     const [query,setQuery] = useState('')
 
     const filteredItems = useMemo(()=>{
@@ -46,29 +47,26 @@ const SearchBar = (props:{style:{width:number,height:number},nav:any})=>{
         })
         return output;
     },[items,query]);
-    // const itemList = filteredItems.map((item,ind) =>{return<Text key={ind}>{item}</Text>})
     const itemList = <FlatList
         data={filteredItems}
         renderItem={({item}) => <SearchItem title={item} clickFunc={props.nav}/>}
     />
 
-
-    
     return (
         <>
-        <View style={styles.container}>
-            <Image
-            style={styles.searchImg}
-                source={Images.other.search}
-            />
-            <TextInput
-                style={styles.text}
-                onChangeText={e => setQuery(e)}
-                placeholder="search"
-                value={query}
-            />
-        </View>
-        {itemList}
+            <View style={styles.container}>
+                <Image
+                style={styles.searchImg}
+                    source={Images.other.search}
+                />
+                <TextInput
+                    style={styles.text}
+                    onChangeText={e => setQuery(e)}
+                    placeholder="search"
+                    value={query}
+                />
+            </View>
+            {itemList}
         </>
     )
 }

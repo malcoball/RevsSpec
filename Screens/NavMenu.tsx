@@ -20,8 +20,8 @@ const NavMenu = (props:{nav:any})=>{
     return (
         <View style={styles.container}>
 
-            <SearchBar nav={props.nav} style={{width:Dimensions.get('window').width*width,height:height}}/>
-            <NavMenuContainer style={{width:Dimensions.get('window').width*width,height:height}}/>
+            {/* <SearchBar items={items} nav={props.nav} style={{width:Dimensions.get('window').width*width,height:height}}/> */}
+            <NavMenuContainer nav={props.nav} style={{width:Dimensions.get('window').width*width,height:height}}/>
         </View>
     )
 }

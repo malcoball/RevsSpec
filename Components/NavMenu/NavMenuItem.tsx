@@ -1,7 +1,10 @@
-import { useState } from "react"
-import { Image, View, Text, StyleSheet } from "react-native"
+import { useEffect, useState } from "react"
+import { Image, View, Text, StyleSheet,TouchableOpacity, FlatList } from "react-native";
+import SearchItem from "../SearchItem";
+import { specItemCont } from "../../Data/SpecDatabase/DatabaseCompile";
+import { specType } from "../../Data/@types/types";
 
-const NavMenuItem = (props:{color:any,title:string,image:any,imageSize:number,height:number})=>{
+const NavMenuItem = (props:{nav:any,index:number,color:any,title:specType,image:any,imageSize:number,height:number,showItems:boolean,showItemFunc:(index:number,close:boolean)=>void})=>{
     const styles = StyleSheet.create({
         container:{
             height:props.height,
@@ -24,17 +27,29 @@ const NavMenuItem = (props:{color:any,title:string,image:any,imageSize:number,he
             textTransform:'capitalize'
         }
     })
-    const [data] = useState([
-        'item1','item2','item3'
-    ])
+    const [items] = useState(specItemCont.getItem.category.title(props.title))
+    // const itemList = <FlatList
+    //     data={items}
+    //     renderItem={({item}) => <SearchItem title={item} clickFunc={props.nav}/>}
+    // />
+    useEffect(()=>{
+        console.log("listen")
+    },[])
+
     return (
-        <View style={styles.container}>
-            <Image
-                style={styles.image}
-                source={props.image}
-            />
-            <Text style={styles.text}>{props.title}</Text>
-        </View>
+        <>
+            <TouchableOpacity style={styles.container} onPress={()=>{props.showItemFunc(props.index,props.showItems)}}>
+                <Image
+                    style={styles.image}
+                    source={props.image}
+                />
+                <Text style={styles.text}>{props.title}</Text>
+            </TouchableOpacity>
+            <FlatList
+        data={['1','2','3','4','5']}
+        renderItem={({item}) => <SearchItem title={item} clickFunc={props.nav}/>}
+    />
+        </>
     )
 }
 export default NavMenuItem
