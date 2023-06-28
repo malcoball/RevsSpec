@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 // So fontFamily is good, color is bad as color is subject to change by the user.
 const GlobalStyles = StyleSheet.create({
     titleFont : {
-        fontFamily:'Sansita'
+        // fontFamily:'Sansita'
     }
 })
 

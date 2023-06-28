@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { Image, View, Text, StyleSheet,TouchableOpacity, FlatList } from "react-native";
 import SearchItem from "../SearchItem";
-import { specItemCont } from "../../Data/SpecDatabase/DatabaseCompile";
 import { specType } from "../../Data/@types/types";
 
-const NavMenuItem = (props:{nav:any,index:number,color:any,title:specType,image:any,imageSize:number,height:number,showItems:boolean,showItemFunc:(index:number,close:boolean)=>void})=>{
+const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:specType,image:any,imageSize:number,width:number,height:number,showItems:boolean,showItemFunc:(index:number,close:boolean)=>void})=>{
     const styles = StyleSheet.create({
+        outterContainer:{
+            width:props.width,
+            marginHorizontal:12
+        },
         container:{
             height:props.height,
             flexDirection:'row',
@@ -27,17 +30,14 @@ const NavMenuItem = (props:{nav:any,index:number,color:any,title:specType,image:
             textTransform:'capitalize'
         }
     })
-    const [items] = useState(specItemCont.getItem.category.title(props.title))
-    // const itemList = <FlatList
-    //     data={items}
-    //     renderItem={({item}) => <SearchItem title={item} clickFunc={props.nav}/>}
-    // />
-    useEffect(()=>{
-        console.log("listen")
-    },[])
+    const [items] = useState(props.items);
+
+    const renderItem = useCallback(
+        ({item }:any) => <SearchItem title={item} clickFunc={props.nav}/>,[]
+    )
 
     return (
-        <>
+        <View style={styles.outterContainer}>
             <TouchableOpacity style={styles.container} onPress={()=>{props.showItemFunc(props.index,props.showItems)}}>
                 <Image
                     style={styles.image}
@@ -45,11 +45,15 @@ const NavMenuItem = (props:{nav:any,index:number,color:any,title:specType,image:
                 />
                 <Text style={styles.text}>{props.title}</Text>
             </TouchableOpacity>
-            <FlatList
-        data={['1','2','3','4','5']}
-        renderItem={({item}) => <SearchItem title={item} clickFunc={props.nav}/>}
-    />
-        </>
+            {props.showItems ? 
+                <FlatList 
+                horizontal={false}
+                data={items} 
+                renderItem={renderItem}/> 
+            : <></>}
+            
+            
+        </View>
     )
 }
 export default NavMenuItem

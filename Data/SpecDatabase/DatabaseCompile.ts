@@ -29,7 +29,7 @@ const typeObj = { // Mostly used to group titles into categories.
     prep:<string[]>[],
     party:<string[]>[],
     vegan:<string[]>[],
-    veggie:<string[]>[],
+    vegetarian:<string[]>[],
     glutenFree:<string[]>[],
     side:<string[]>[],
     wrap:<string[]>[],
@@ -45,8 +45,7 @@ export const specItemCont = {
             dataNew.forEach((elm,ind)=>{
                 elm.index = ind;
             })
-            DataBase = dataNew;
-            // console.log(DataBase);
+            return dataNew;
         },
         byOrder:{
             alphabet : ()=>{
@@ -61,9 +60,37 @@ export const specItemCont = {
                         }
                     }
                 }
-                DataBase = data;
-                console.log(data);
+                return data;
             }
+        },
+        intoCategories:()=>{
+            const out = { // Mostly used to group titles into categories.
+                burger : <string[]>[],
+                grazer : <string[]>[],
+                kids :<string[]>[],
+                dessert :<string[]>[],
+                brunch :<string[]>[],
+                main:<string[]>[],
+                pizza : <string[]>[],
+                sandwich:<string[]>[],
+                prep:<string[]>[],
+                party:<string[]>[],
+                vegan:<string[]>[],
+                vegetarian:<string[]>[],
+                glutenFree:<string[]>[],
+                side:<string[]>[],
+                wrap:<string[]>[],
+                skinny:<string[]>[],
+                other:<string[]>[]
+            }
+
+
+            DataBase.forEach((item) =>{
+                let propTarget  = typeof(item.type) === 'string' ? item.type : item.type[0]; // Currently only works with 1 category
+                propTarget = propTarget as keyof typeof out;
+                out[propTarget].push(item.title);
+            })
+            return out;
         }
     },
     getItem:{
@@ -160,16 +187,13 @@ export const specItemCont = {
         category:{
             title: (typeObjProp:specType)=>{
                 const out :string[] = []
-                DataBase.forEach(item=>{
-                    const type  = typeof(item.type) === 'string' ? item.type : item.type[0];
-                    const objInd = type as keyof typeof typeObj;
-                    if (objInd === typeObjProp) out.push(item.title);
-                })
-                return out;
+                
+                return ['1','2','3']
             }
         }
     },
 }
 specItemCont.sort.index();
+// specItemCont.sort.intoCategories();
 
 // specItemCont.sort.byOrder.alphabet();

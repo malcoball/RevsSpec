@@ -51,6 +51,9 @@ const SearchBar = (props:{style:{width:number,height:number},items:string[],nav:
         data={filteredItems}
         renderItem={({item}) => <SearchItem title={item} clickFunc={props.nav}/>}
     />
+    const clearSearch = ()=>{
+        setQuery('');
+    }
 
     return (
         <>
@@ -66,6 +69,10 @@ const SearchBar = (props:{style:{width:number,height:number},items:string[],nav:
                     value={query}
                 />
             </View>
+            {filteredItems.length > 0 ? <TouchableOpacity onPress={clearSearch}>
+                <Text>X</Text>
+            </TouchableOpacity> : <></>}
+            
             {itemList}
         </>
     )

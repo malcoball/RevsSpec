@@ -272,7 +272,7 @@ const friedChickenVegan : specInput = {
     ingredients:[
         ...FriedChickIngredientsVeg
     ],
-    type:['vegan','burger']
+    type:['burger','vegan']
 }
 const friedChickenGF : specInput = {
     title:Titles.friedChicken.GF,
