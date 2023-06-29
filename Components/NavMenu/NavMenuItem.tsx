@@ -1,5 +1,5 @@
 import { useCallback, useContext, useEffect, useState } from "react"
-import { Image, View, Text, StyleSheet,TouchableOpacity, FlatList } from "react-native";
+import { Image, View, Text, StyleSheet,TouchableOpacity, FlatList,Dimensions } from "react-native";
 import SearchItem from "../SearchItem";
 import { specType } from "../../Data/@types/types";
 import { AppContext } from "../../Data/Context/AppContext";
@@ -31,7 +31,9 @@ const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:
             textTransform:'capitalize'
         },
         list:{
-            paddingTop:16
+            paddingTop:16,
+            marginBottom:16,
+            height:Dimensions.get('screen').height*.45
         }
     })
     const [items] = useState(props.items);

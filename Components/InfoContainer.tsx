@@ -7,10 +7,13 @@ const ItemDouble = (props:{item:ingredient,style:any},)=>{
     return (
         <View style={{
             flexDirection:'row',
-            justifyContent:'space-between'
+            justifyContent:'space-between',
+            alignItems:'center',
+            marginVertical:2,
+            borderBottomColor:'#0000001a', borderBottomWidth:1
         }}>
-            <Text style={[props.style,sharedStyles.text,{paddingLeft:6}]}>{props.item.name}</Text>
-            <Text style={[props.style,sharedStyles.text,{paddingRight:6}]}>{props.item.amount}</Text>
+            <Text style={[props.style,sharedStyles.text,{paddingLeft:6,maxWidth:'70%'}]}>{props.item.name}</Text>
+            <Text style={[props.style,sharedStyles.text,{paddingRight:6,maxWidth:'50%',textAlign:'right'}]}>{props.item.amount}</Text>
         </View>
     )
 }
@@ -88,5 +91,5 @@ const sharedStyles = StyleSheet.create({
     text:{
         fontSize:10,
         lineHeight:16
-    }
+    },
 })

@@ -7,10 +7,17 @@ import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile";
 import SearchItem from './SearchItem';
 
 const SearchBar = (props:{style:{width:number,height:number},items:string[],nav:any})=>{
-    const context = useContext(AppContext)
+    const color = useContext(AppContext);
+    const colorScheme = {
+        text : color.colorScheme.text1,
+        background : [
+            color.colorScheme.background5,
+            color.colorScheme.background6,
+        ]
+    }
     const styles = StyleSheet.create({
         container:{
-            backgroundColor:context?.colorScheme.background4,
+            backgroundColor:color?.colorScheme.background4,
             width: props.style.width,
             height: props.style.height,
             flexDirection:'row',
@@ -26,7 +33,7 @@ const SearchBar = (props:{style:{width:number,height:number},items:string[],nav:
             marginRight:12
         },
         text:{
-            color:context?.colorScheme.text1,
+            color:color?.colorScheme.text1,
             fontSize:16,
             // textTransform:'capitalize',
             height:'60%',
@@ -49,7 +56,9 @@ const SearchBar = (props:{style:{width:number,height:number},items:string[],nav:
     },[items,query]);
     const itemList = <FlatList
         data={filteredItems}
-        renderItem={({item}) => <SearchItem title={item} clickFunc={props.nav}/>}
+        ItemSeparatorComponent={() => <View style={{height: 8}} />}
+
+        renderItem={({item,index}) => <SearchItem index={index%2} color={colorScheme} title={item} clickFunc={props.nav}/>}
     />
     const clearSearch = ()=>{
         setQuery('');

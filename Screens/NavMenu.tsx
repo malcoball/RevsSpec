@@ -17,7 +17,7 @@ const NavMenu = (props:{nav:any})=>{
     const styles = StyleSheet.create({
         container:{
             backgroundColor:context?.colorScheme.background2,
-            justifyContent:'center',alignItems:'center'
+            justifyContent:'center',alignItems:'center',
         },
     })
     return (

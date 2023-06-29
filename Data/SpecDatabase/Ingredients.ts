@@ -66,6 +66,7 @@ export const Ingredients = {
         garnish:{
             friedOnion:<ingredient>{name:'Crispy fried onion',amount:'10 g'},
             crushedChillis1:<ingredient>{name:'Crushed Chillies',amount:'1 g'},
+            crushedChillis2:<ingredient>{name:'Crushed Chillies',amount:'2 g'},
             jalapenos:{
                 jal5 : <ingredient>{name:'Jalapenos',amount:'5 each (12 g)'},
                 jal8 : <ingredient>{name:'Jalapenos',amount:'8 each (20 g)'},
@@ -103,6 +104,9 @@ export const Ingredients = {
     cheese:{
         blueCheese:{
             slices150 : <ingredient>{name:'Blue Cheese Slices',amount:'150 g'}
+        },
+        vegan:{
+            grated40 : <ingredient>{name:'Vegan Grated Cheddar',amount:'40 g'}
         }
     },
     dessert:{
@@ -136,19 +140,21 @@ export const Ingredients = {
     dip:{
         hummus :{
             hummus : <ingredient> {name:'Hummus',amount:'55 g'},
+            hummus30 : <ingredient> {name:'Hummus',amount:'30 g'},
             hummus300 : <ingredient> {name:'Hummus',amount:'300 g'},
             haissa : <ingredient> {name:'Harissa Hummus',amount:'55 g'},
         },
         saucePot : {
             mayo : <ingredient> {name:'Mayonnaise',amount:'35 g'},
             relish : <ingredient> {name:`Rev's Relish`,amount:'35 g'},
-            bbq : <ingredient> {name:`Bbq`,amount:'35 g'},
+            bbq : <ingredient> {name:`BBQ Sauce`,amount:'35 g'},
             sourCream : <ingredient> {name:'Sour Cream',amount:'35 g'},
             blueCheeseMayo : <ingredient> {name:'Blue Cheese Mayo',amount:'35 g'},
             srirachaMayo : <ingredient> {name:'Sriracha Mayo',amount:'35 g'},
             sriracha : <ingredient> {name:'Sriracha',amount:'35 g'},
             buffalo : <ingredient> {name:'Franks Buffalo Wing sauce',amount:'35 g'},
-            mapleSyrup:<ingredient>{name:'Maple Syrup',amount:'40 ml'}
+            mapleSyrup:<ingredient>{name:'Maple Syrup',amount:'40 ml'},
+            salsa:<ingredient>{name:'Chilli Vodka Salsa',amount:'35 g'}
         },
         ramekin:{
             katsu50:<ingredient>{name:'Katsu Sauce',amount:'50 g'},
@@ -214,7 +220,7 @@ export const Ingredients = {
             mint2g: <ingredient>{name:'Mint', amount:'2 g'},
             mint3g : <ingredient>{name:'Mint', amount:'3 g'}
         },
-        crushedChilli:<ingredient>{name:'Crushed Chillies',amount:'1 g'},
+        crushedChilli1:<ingredient>{name:'Crushed Chillies',amount:'1 g'},
         crushedChilli2:<ingredient>{name:'Crushed Chillies',amount:'2 g'},
         friedOnion:{
             friedOnion025:<ingredient>{name:'Crispy fried onion',amount:'2.5 g'},
@@ -335,7 +341,8 @@ export const Ingredients = {
             }
         },
         limePickle : {
-            limePickle50 : <ingredient>{name:'Lime Pickle',amount:'50 g'}
+            limePickle50 : <ingredient>{name:'Lime Pickle',amount:'50 g'},
+            limePickle30 : <ingredient>{name:'Lime Pickle',amount:'30 g'},
         },
         pizza:{
             bbq80:<ingredient>{name:'BBQ Sauce',amount:'80 g'},
@@ -419,7 +426,7 @@ export const Ingredients = {
             onion6 : <ingredient>{name:'Onion Rings',amount:'120 g (6 each)'},
         },
         jalapenoPopper:{
-            jalapenoPopper4: <ingredient>{name:'Jalapeno Popper',amount:'4 update pls'}
+            jalapenoPopper4: <ingredient>{name:'Jalapeno Popper',amount:'165 g (4 each)'}
         },
         rice: <ingredient>{name:'Rice',amount:'200 g'},
         mushyPeas: <ingredient>{name:'Mushy Peas',amount:'100 g'},
@@ -481,11 +488,14 @@ export const Ingredients = {
             vegan:{
                 veganCheese100 : <ingredient>{name:'Vegan Cheese', amount:'100 g'},
                 veganCheese50 : <ingredient>{name:'Vegan Cheese', amount:'50 g'},
+                veganGrated100:<ingredient>{name:'Vegan Grated Cheddar',amount:'100 g'}
             },
         },
         chilli:{
             beef : <ingredient>{name:'Beef Chilli',amount:'100g'},
+            beef200 : <ingredient>{name:'Beef Chilli',amount:'200g'},
             veggie : <ingredient>{name:'Veggie Chilli', amount:'100g'},
+            veggie200 : <ingredient>{name:'Veggie Chilli', amount:'200g'},
             flakes05: <ingredient>{name:'Chilli Flakes',amount:'0.5g'},
             flakes1: <ingredient>{name:'Chilli Flakes',amount:'1g'},
         },
@@ -632,7 +642,8 @@ export const Ingredients = {
         },
         sourdough:{
             sourdough120 : <ingredient>{name:'Sourdough Bloomer',amount:'120 g (1 slice)'},
-            sourdough70 : <ingredient>{name:'Sourdough Bloomer',amount:'70 g'}
+            sourdough70 : <ingredient>{name:'Sourdough Bloomer',amount:'70 g'},
+            sourdough60 : <ingredient>{name:'Sourdough Bloomer',amount:'60 g'},
         },
         batter:{
             batter100: <ingredient>{name:'Beer Batter Mix',amount:'100 g'},

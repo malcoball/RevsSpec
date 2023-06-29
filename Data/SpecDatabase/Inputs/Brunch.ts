@@ -16,10 +16,10 @@ const AvoToast : {noEgg:specInput,egg:specInput} = {
         title:Titles.avoToast.standard,image:Imgs.avoToast,
         type:'brunch',
         ingredients:[
-            Ingredients.other.sourdough.sourdough70,
+            Ingredients.other.sourdough.sourdough60,
             Ingredients.veg.avo.avocado100,
             Ingredients.veg.avo.smashed.smashed100,
-            Ingredients.garnish.crushedChilli2,
+            Ingredients.garnish.crushedChilli1,
             Ingredients.veg.tomato.plum.plum40,
             Ingredients.sauce.sriracha.sriracha10,
             Ingredients.garnish.leaf.coriander,
@@ -46,7 +46,7 @@ const AvoToast : {noEgg:specInput,egg:specInput} = {
         title:Titles.avoToast.egg,image:Imgs.avoToast,
         type:'brunch',
         ingredients:[
-            Ingredients.other.sourdough.sourdough70,
+            Ingredients.other.sourdough.sourdough60,
             Ingredients.veg.avo.avocado100,
             Ingredients.veg.avo.smashed.smashed100,
             Ingredients.garnish.crushedChilli2,
@@ -198,7 +198,7 @@ const grill : {standard:specInput,GF:specInput} = {
             Ingredients.burger.seasoning.rs2,
             Ingredients.other.hashbrown.hashbrown1,
             Ingredients.other.sausage.sausage,
-            Ingredients.other.sourdough.sourdough70,
+            Ingredients.other.sourdough.sourdough60,
             Ingredients.other.butter.butter15,
             Ingredients.garnish.leaf.parsleyHalf,
             Ingredients.side.beans.beans100
@@ -278,7 +278,7 @@ const grillV : {standard:specInput,GF:specInput} = {
             Ingredients.burger.seasoning.rs2,
             Ingredients.other.hashbrown.hashbrown1,
             Ingredients.other.sausage.vegan.vegan2,
-            Ingredients.other.sourdough.sourdough70,
+            Ingredients.other.sourdough.sourdough60,
             Ingredients.other.butter.butter15,
             Ingredients.garnish.leaf.parsleyHalf,
             Ingredients.side.beans.beans100
@@ -355,7 +355,7 @@ const grillVe : {standard:specInput,GF:specInput} = {
             Ingredients.veg.avo.avocado115,
             Ingredients.other.hashbrown.hashbrown1,
             Ingredients.other.sausage.vegan.vegan2,
-            Ingredients.other.sourdough.sourdough70,
+            Ingredients.other.sourdough.sourdough60,
             Ingredients.other.butter.butter15,
             Ingredients.garnish.leaf.parsleyHalf,
             Ingredients.side.beans.beans100

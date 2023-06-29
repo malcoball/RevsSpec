@@ -33,7 +33,7 @@ const nachos : specInput = {
         Ingredients.sauce.nacho.salsa.salsa50,
         Ingredients.sauce.nacho.avocado.avocado50,
         Ingredients.garnish.jalapenos.jalapenos10,
-        Ingredients.garnish.leaf.coriander
+        Ingredients.garnish.leaf.coriander5
     ],
     type:'sharer'
 }
@@ -54,7 +54,6 @@ const nachosVe : specInput = {
     ],
     image:Images.specs.sharer.vegan,
     crockery:[
-        Crockery.plate.speckledRectangle,
         Crockery.tray.enamel,
         Crockery.stick.vegan
     ],
@@ -64,7 +63,9 @@ const nachosVe : specInput = {
         Ingredients.sauce.nacho.salsa.salsa50,
         Ingredients.sauce.nacho.avocado.avocado50,
         Ingredients.garnish.jalapenos.jalapenos10,
-        Ingredients.garnish.leaf.coriander
+        Ingredients.garnish.leaf.coriander5,
+        Ingredients.topping.cheese.vegan.veganGrated100
+
     ],
     type:['sharer','vegan']
 }
@@ -91,7 +92,7 @@ const nachosBeefChilli : specInput = {
     ],
     ingredients:[
         Ingredients.nachos.nacho150,
-        Ingredients.topping.chilli.beef,
+        Ingredients.topping.chilli.beef200,
         Ingredients.sauce.cheese.cheese120,
         Ingredients.sauce.nacho.sourCream.sourCream50,
         Ingredients.sauce.nacho.salsa.salsa50,
@@ -121,7 +122,7 @@ const nachosBeefChilliV : specInput = {
     ],
     ingredients:[
         Ingredients.nachos.nacho150,
-        Ingredients.topping.chilli.veggie,
+        Ingredients.topping.chilli.veggie200,
         Ingredients.sauce.cheese.cheese120,
         Ingredients.sauce.nacho.sourCream.sourCream50,
         Ingredients.sauce.nacho.salsa.salsa50,
@@ -198,7 +199,7 @@ const houseSharer : specInput = {
     image:Images.specs.sharer.house.meat,
     crockery: [
         Crockery.pizza.paddle,
-        3 + Crockery.dipPot + 's',
+        "3 " + Crockery.dipPot + 's',
         Crockery.bowl.enamelDish,
         Crockery.paper.brandedGreaseProof
     ],
@@ -256,12 +257,12 @@ const houseSharerV : specInput = {
     image:Images.specs.sharer.house.veggie,
     crockery: [
         Crockery.pizza.paddle,
-        3 + Crockery.dipPot + 's',
+        "3 " + Crockery.dipPot + 's',
         Crockery.bowl.enamelDish,
         Crockery.paper.brandedGreaseProof
     ],
     ingredients:[
-        Ingredients.burger.burger.beef.slider2,
+        Ingredients.burger.burger.beef.sliderV2,
         Ingredients.burger.cheese.standardHalf,
         Ingredients.burger.bun.slider2,
         Ingredients.chicken.meat.goujonVe.strips4,
@@ -314,7 +315,7 @@ const houseSharerVe : specInput = {
     image:Images.specs.sharer.house.vegan,
     crockery: [
         Crockery.pizza.paddle,
-        3 + Crockery.dipPot + 's',
+        "3 " + Crockery.dipPot + 's',
         Crockery.bowl.enamelDish,
         Crockery.paper.brandedGreaseProof
     ],
@@ -332,8 +333,8 @@ const houseSharerVe : specInput = {
         Ingredients.side.onionRings.onion6,
         Ingredients.side.jalapenoPopper.jalapenoPopper4,
         Ingredients.dip.saucePot.bbq,
-        Ingredients.dip.saucePot.sourCream,
         Ingredients.dip.saucePot.sriracha,
+        Ingredients.dip.saucePot.salsa,
     ],
     type:['sharer','vegan']
 }

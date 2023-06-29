@@ -8,9 +8,9 @@ const SpecTitles = {
         halloumi : 'Halloumi Fries',
         skewers : {
             bbq : 'BBQ Chicken Skewers',
-            bbqVe: 'BBQ Chicken Skewers '+veggie,
+            bbqVe: 'BBQ Chicken Skewers '+vegan,
             cajun : 'Cajun Chicken Skewers',
-            cajunV: 'Cajun Chicken Skewers'+veggie
+            cajunV: 'Cajun Chicken Skewers '+veggie
         },
         macBites : "Crispy Mac'N'Cheese Bites",
         breadedMushrooms : 'Breaded Mushrooms',
@@ -27,10 +27,10 @@ const SpecTitles = {
         prawns : 'Prawns Tempura',
         jalapenoPoppers : 'Jalapeno Poppers',
         nachos : {
-            standard : 'Nachos',
-            vegan : 'Nachos '+vegan,
-            veggiChilli : 'Nachos Chilli '+veggie,
-            beefChilli:'Nachos Chilli Beef'
+            standard : 'Nachos Grazer',
+            vegan : 'Nachos Grazer '+vegan,
+            veggiChilli : 'Nachos Chilli Grazer '+veggie,
+            beefChilli:'Nachos  Chilli Beef'
         }
     },
     sharer :{
@@ -46,7 +46,7 @@ const SpecTitles = {
                 standard : 'Nachos ' + vegan,
                 chilli: {
                     beef : 'Nachos '+" "+vegan+" "+beefChilli,
-                    veggie: 'Nachos '+" "+vegan+" "+veggieChilli
+                    veggie: 'Nachos '+" "+" "+veggieChilli
                 }
             },
             veggie:{
