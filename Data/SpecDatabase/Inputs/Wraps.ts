@@ -126,7 +126,7 @@ const friedChickenVe : specInput = {
 }
 
 const wrap1 = new SpecItem(avoHalloumi,1);
-const wrap2 = new SpecItem(friedChicken,1);
-const wrap3 = new SpecItem(friedChickenVe,1);
+const wrap2 = new SpecItem(friedChicken,1,['vegan','show']);
+const wrap3 = new SpecItem(friedChickenVe,1,['vegan','active']);
 
 export default [wrap1,wrap2,wrap3];

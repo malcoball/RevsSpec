@@ -582,22 +582,22 @@ const brunchBurger : {standard:specInput,GF:specInput}={
     }
 }
 
-const brunch1 = new SpecItem(AvoToast.noEgg,1);
-const brunch2 = new SpecItem(AvoToast.egg,1);
-const brunch3 = new SpecItem(eggsBenedict.standard,1);
-const brunch4 = new SpecItem(eggsBenedict.GF,1);
+const brunch1 = new SpecItem(AvoToast.noEgg,1,['egg','show']);
+const brunch2 = new SpecItem(AvoToast.egg,1,['egg','active']);
+const brunch3 = new SpecItem(eggsBenedict.standard,1,['glutenFree','show']);
+const brunch4 = new SpecItem(eggsBenedict.GF,1,['glutenFree','active']);
 const brunch5 = new SpecItem(chickenWaffle,1);
 const brunch6 = new SpecItem(pancakes,1);
-const brunch7 = new SpecItem(grill.standard,1)
-const brunch8 = new SpecItem(grill.GF,1);
-const brunch9 = new SpecItem(grillV.standard,1);
-const brunch10 = new SpecItem(grillV.GF,1);
-const brunch11 = new SpecItem(grillVe.standard,1);
-const brunch12 = new SpecItem(grillVe.GF,1);
-const brunch13 = new SpecItem(brunchPizza.standard,1);
-const brunch14 = new SpecItem(brunchPizza.GF,1);
-const brunch15 = new SpecItem(brunchBurger.standard,1);
-const brunch16 = new SpecItem(brunchBurger.GF,1);
+const brunch7 = new SpecItem(grill.standard,1,['glutenFree','show'],['vegetarian','show'],['vegan','show'])
+const brunch8 = new SpecItem(grill.GF,1,['glutenFree','active'],['vegetarian','show'],['vegan','show']);
+const brunch9 = new SpecItem(grillV.standard,1,['glutenFree','show'],['vegetarian','active'],['vegan','show']);
+const brunch10 = new SpecItem(grillV.GF,1,['glutenFree','active'],['vegetarian','active'],['vegan','show']);
+const brunch11 = new SpecItem(grillVe.standard,1,['glutenFree','show'],['vegetarian','show'],['vegan','active']);
+const brunch12 = new SpecItem(grillVe.GF,1,['glutenFree','active'],['vegetarian','show'],['vegan','active']);
+const brunch13 = new SpecItem(brunchPizza.standard,1,['glutenFree','show']);
+const brunch14 = new SpecItem(brunchPizza.GF,1,['glutenFree','active']);
+const brunch15 = new SpecItem(brunchBurger.standard,1,['glutenFree','show']);
+const brunch16 = new SpecItem(brunchBurger.GF,1,['glutenFree','active']);
 
 export default [brunch1,brunch2,brunch3,brunch4,brunch5,brunch6,brunch7,
 brunch8,brunch9,brunch10,brunch11,brunch12,brunch13,brunch14,brunch15,brunch16];

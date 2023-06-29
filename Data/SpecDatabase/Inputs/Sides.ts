@@ -402,9 +402,9 @@ const side6 = new SpecItem(macNCheese,1);
 const side7 = new SpecItem(fries,1);
 const side8 = new SpecItem(saltPepperFries,1);
 const side9 = new SpecItem(blueCheeseFries,1);
-const side10 = new SpecItem(chilliCheeseFriesBeef,1);
-const side11 = new SpecItem(chilliCheeseFriesV,1);
-const side12 = new SpecItem(chilliCheeseFriesVe,1);
+const side10 = new SpecItem(chilliCheeseFriesBeef,1,['vegetarian','show'],['vegan','show']);
+const side11 = new SpecItem(chilliCheeseFriesV,1,['vegetarian','active']);
+const side12 = new SpecItem(chilliCheeseFriesVe,1,['vegan','active']);
 const side13 = new SpecItem(friesCheeseBacon,1);
 const side14 = new SpecItem(chilliCheeseFriesBeefCheeseBacon,1)
 

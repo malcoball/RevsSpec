@@ -338,13 +338,13 @@ const houseSharerVe : specInput = {
     type:['sharer','vegan']
 }
 
-const sharer1 = new SpecItem(nachos,1);
-const sharer2 = new SpecItem(nachosVe,1);
-const sharer3 = new SpecItem(nachosBeefChilli,1);
-const sharer4 = new SpecItem(nachosBeefChilliV,1);
-const sharer5 = new SpecItem(nachosBeefChilliVe,1);
-const sharer6 = new SpecItem(houseSharer,1);
-const sharer7 = new SpecItem(houseSharerV,1);
-const sharer8 = new SpecItem(houseSharerVe,1);
+const sharer1 = new SpecItem(nachos,1,['vegan','show']);
+const sharer2 = new SpecItem(nachosVe,1,['vegan','active']);
+const sharer3 = new SpecItem(nachosBeefChilli,1,['vegetarian','show'],['vegan','show']);
+const sharer4 = new SpecItem(nachosBeefChilliV,1,['vegetarian','active']);
+const sharer5 = new SpecItem(nachosBeefChilliVe,1,['vegan','active']);
+const sharer6 = new SpecItem(houseSharer,1,['vegetarian','show'],['vegan','show']);
+const sharer7 = new SpecItem(houseSharerV,1,['vegetarian','active']);
+const sharer8 = new SpecItem(houseSharerVe,1,['vegan','active']);
 
 export default [sharer1,sharer2,sharer3,sharer4,sharer5,sharer6,sharer7,sharer8];

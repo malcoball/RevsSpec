@@ -514,15 +514,15 @@ const main4 = new SpecItem(flatBreadVe,1);
 const main5 = new SpecItem(flatBreadFalafel,1);
 const main6 = new SpecItem(chickenCaesar,1);
 const main7 = new SpecItem(fishChips,1);
-const main8 = new SpecItem(katsuChicken,1);
-const main9 = new SpecItem(katsuChickenVe,1);
-const main10 = new SpecItem(macNCheese,1);
-const main11 = new SpecItem(macNCheeseTruffle,1);
-const main12 = new SpecItem(macNCheeseChicken,1);
-const main13 = new SpecItem(friedChickenChips,1);
-const main14 = new SpecItem(friedChickenChipsVe,1);
-const main15 = new SpecItem(cajunChickenChips,1);
-const main16 = new SpecItem(cajunChickenChipsVe,1);
+const main8 = new SpecItem(katsuChicken,1,['vegan','show']);
+const main9 = new SpecItem(katsuChickenVe,1,['vegan','active']);
+const main10 = new SpecItem(macNCheese,1,['truffle','show'],['chicken','show']);
+const main11 = new SpecItem(macNCheeseTruffle,1,['truffle','active']);
+const main12 = new SpecItem(macNCheeseChicken,1,['chicken','active']);
+const main13 = new SpecItem(friedChickenChips,1,['vegan','show']);
+const main14 = new SpecItem(friedChickenChipsVe,1,['vegan','active']);
+const main15 = new SpecItem(cajunChickenChips,1,['vegan','show']);
+const main16 = new SpecItem(cajunChickenChipsVe,1,['vegan','active']);
 
 export default [main1,main2,main4,main5,main6,main7,main8,main9,main10,main11,main12,
 main13,main14,main15,main16];

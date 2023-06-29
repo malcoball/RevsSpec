@@ -8,7 +8,7 @@ const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:
     const styles = StyleSheet.create({
         outterContainer:{
             width:props.width,
-            marginHorizontal:12
+            marginHorizontal:12,
         },
         container:{
             height:props.height,
@@ -29,16 +29,23 @@ const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:
             paddingLeft:12,
             fontSize: 16,
             textTransform:'capitalize'
+        },
+        list:{
+            paddingTop:16
         }
     })
     const [items] = useState(props.items);
-    const color = useContext(AppContext)
-    const colorScheme = typeof(color) === "undefined" ? 
-    {text:'white',background:'red'} : 
-    {text:color?.colorScheme.text1, background:color?.colorScheme.background1};
+    const color = useContext(AppContext);
+    const colorScheme = {
+        text : color.colorScheme.text1,
+        background : [
+            color.colorScheme.background5,
+            color.colorScheme.background6,
+        ]
+    }
 
     const renderItem = useCallback(
-        ({item,index }:any) => <SearchItem color={colorScheme} title={item} clickFunc={props.nav}/>,[]
+        ({item,index }:any) => <SearchItem index={index} color={colorScheme} title={item} clickFunc={props.nav}/>,[]
     )
 
     return (
@@ -52,6 +59,8 @@ const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:
             </TouchableOpacity>
             {props.showItems ? 
                 <FlatList 
+                style={styles.list}
+                ItemSeparatorComponent={() => <View style={{height: 8}} />}
                 horizontal={false}
                 data={items} 
                 renderItem={renderItem}/> 

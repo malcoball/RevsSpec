@@ -116,7 +116,7 @@ const beefBurger : specInput = {
     image:Images.specs.burgers.beef,
     crockery:BurgerCroc,
     ingredients:BurgerIngredients,
-    type:'burger'
+    type:'burger',
 }
 
 const beefBurgerVegan : specInput = {
@@ -633,29 +633,29 @@ const chilliCheeseVegan : specInput = {
 }
 
 
-const burger1 = new SpecItem(beefBurger,1);
-const burger2 = new SpecItem(beefBurgerVegan,1);
-const burger3 = new SpecItem(beefBurgerGF,1);
-const burger4 = new SpecItem(beefBurgerGFVegan,1);
-const burger5 = new SpecItem(grilledChicken,1);
-const burger6 = new SpecItem(grilledChickenGF,1);
-const burger7 = new SpecItem(friedChicken,1);
-const burger8 = new SpecItem(friedChickenVegan,1);
-const burger9 = new SpecItem(friedChickenGF,1);
-const burger10 = new SpecItem(friedChickenGFVegan,1);
-const burger11 = new SpecItem(cheeseBaconBurger,1);
-const burger12 = new SpecItem(cheeseBaconBurgerGF,1);
-const burger13 = new SpecItem(blueCheeseTruffle,1)
-const burger14 = new SpecItem(blueCheeseTruffleGF,1)
-const burger15 = new SpecItem(blueCheeseTruffleVeggie,1)
-const burger16 = new SpecItem(blueCheeseTruffleGFVeggie,1)
-const burger17 = new SpecItem(buffaloChicken,1)
-const burger18 = new SpecItem(buffaloChickenVeggie,1)
-const burger19 = new SpecItem(buffaloChickenGF,1)
-const burger20 = new SpecItem(buffaloChickenGFVeggie,1)
-const burger21 = new SpecItem(chilliCheese,1);
-const burger22 = new SpecItem(chilliCheeseVeggie,1);
-const burger23 = new SpecItem(chilliCheeseVegan,1);
+const burger1 = new SpecItem(beefBurger,1,['vegan','show'],['glutenFree','show']);
+const burger2 = new SpecItem(beefBurgerVegan,1,['vegan','active'],['glutenFree','show']);
+const burger3 = new SpecItem(beefBurgerGF,1,['vegan','show'],['glutenFree','active']);
+const burger4 = new SpecItem(beefBurgerGFVegan,1,['vegan','active'],['glutenFree','active']);
+const burger5 = new SpecItem(grilledChicken,1,['glutenFree','show']);
+const burger6 = new SpecItem(grilledChickenGF,1,['glutenFree','active']);
+const burger7 = new SpecItem(friedChicken,1,['glutenFree','show'],['vegan','show']);
+const burger8 = new SpecItem(friedChickenVegan,1,['glutenFree','show'],['vegan','active']);
+const burger9 = new SpecItem(friedChickenGF,1,['glutenFree','active'],['vegan','show']);
+const burger10 = new SpecItem(friedChickenGFVegan,1,['glutenFree','active'],['vegan','active']);
+const burger11 = new SpecItem(cheeseBaconBurger,1,['glutenFree','show']);
+const burger12 = new SpecItem(cheeseBaconBurgerGF,1,['glutenFree','active']);
+const burger13 = new SpecItem(blueCheeseTruffle,1,['glutenFree','show'],['vegetarian','show'])
+const burger14 = new SpecItem(blueCheeseTruffleGF,1,['glutenFree','active'],['vegetarian','show'])
+const burger15 = new SpecItem(blueCheeseTruffleVeggie,1,['glutenFree','show'],['vegetarian','active'])
+const burger16 = new SpecItem(blueCheeseTruffleGFVeggie,1,['glutenFree','active'],['vegetarian','active'])
+const burger17 = new SpecItem(buffaloChicken,1,['glutenFree','active'],['vegetarian','show'])
+const burger18 = new SpecItem(buffaloChickenVeggie,1,['glutenFree','show'],['vegetarian','active'])
+const burger19 = new SpecItem(buffaloChickenGF,1,['glutenFree','active'],['vegetarian','show'])
+const burger20 = new SpecItem(buffaloChickenGFVeggie,1,['glutenFree','active'],['vegetarian','active'])
+const burger21 = new SpecItem(chilliCheese,1,['vegetarian','show'],['vegan','show']);
+const burger22 = new SpecItem(chilliCheeseVeggie,1,['vegetarian','active'],['vegan','show']);
+const burger23 = new SpecItem(chilliCheeseVegan,1,['vegetarian','show'],['vegan','active']);
 
 export default [burger1,burger2,burger3,burger4,burger5,burger6,burger7,burger8,burger9,
 burger10,burger11,burger12,burger13,burger14,burger15,burger16,burger17,burger18,burger19,

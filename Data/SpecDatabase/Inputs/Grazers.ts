@@ -567,22 +567,22 @@ const nachosVegan : specInput = {
 }
 const grazer1 = new SpecItem(calamari,1);
 const grazer2 = new SpecItem(halloumi,1);
-const grazer3 = new SpecItem(bbqChick,1);
-const grazer4 = new SpecItem(cajChick,1);
-const grazer5 = new SpecItem(bbqChickVeg,1);
-const grazer6 = new SpecItem(cajChickV,1);
+const grazer3 = new SpecItem(bbqChick,1,['vegetarian','show']);
+const grazer5 = new SpecItem(bbqChickVeg,1,['vegetarian','active']);
+const grazer4 = new SpecItem(cajChick,1,['vegan','show']);
+const grazer6 = new SpecItem(cajChickV,1,['vegan','active']);
 const grazer7 = new SpecItem(macBites,1);
 const grazer8 = new SpecItem(breadedMushrooms,1);
-const grazer9 = new SpecItem(crispyFriedChicken,1);
-const grazer10 = new SpecItem(crispyFriedChickenVE,1);
+const grazer9 = new SpecItem(crispyFriedChicken,1,['vegetarian','show']);
+const grazer10 = new SpecItem(crispyFriedChickenVE,1,['vegetarian','active']);
 const grazer11 = new SpecItem(doughballs,1);
 const grazer12 = new SpecItem(hummus,1);
-const grazer13 = new SpecItem(falafel,1);
-const grazer14 = new SpecItem(falafelV,1);
+const grazer13 = new SpecItem(falafel,1,['vegan','show']);
+const grazer14 = new SpecItem(falafelV,1,['vegan','active']);
 const grazer15 = new SpecItem(prawns,1);
 const grazer16 = new SpecItem(jalapenoPoppers,1);
-const grazer17 = new SpecItem(nachos,1);
-const grazer18 = new SpecItem(nachosVegan,1)
+const grazer17 = new SpecItem(nachos,1,['vegan','show']);
+const grazer18 = new SpecItem(nachosVegan,1,['vegan','active'])
 
 
 

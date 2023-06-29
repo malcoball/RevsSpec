@@ -4,6 +4,8 @@ export type appContextType = {
         background2 : string,
         background3 : string,
         background4 : string,
+        background5 : string,
+        background6 : string,
         text1 : string,
         text2 : string,
         text3 : string,
@@ -22,7 +24,8 @@ type specInput = {
     image: any;
     crockery: string[];
     ingredients: ingredient[];
-    type : specType | specType[]
+    type : specType | specType[];
+    
 }
 export type specItem = {
     title : string;
@@ -32,7 +35,15 @@ export type specItem = {
     image : string;
     builds : build[];
     index: number;
-    variants : {vegan : variant,vegetarian : variant, glutenFree : variant, skinny : variant, chilli : variant, veggieChilli : variant};
+    variants : {
+        vegan : variant,
+        vegetarian : variant, 
+        glutenFree : variant, 
+        skinny : variant, 
+        chilli : variant, 
+        veggieChilli : variant,
+        egg : variant
+    };
 }
 type variant = "active" | "show" | "hide"
 export type variants ={
@@ -42,6 +53,9 @@ export type variants ={
     skinny      : variant,
     chilli      : variant,
     veggieChilli: variant,
+    egg: variant,
+    truffle : variant,
+    chicken : variant,
 }
 export type build = {
     title : buildTypes,

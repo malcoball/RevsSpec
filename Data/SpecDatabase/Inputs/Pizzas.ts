@@ -537,24 +537,24 @@ const mushroomGF : specInput = {
     type:['pizza','glutenFree']
 }
 
-const pizza1 = new SpecItem(marg,1);
-const pizza2 = new SpecItem(margSkinny,1);
-const pizza3 = new SpecItem(margVe,1);
-const pizza4 = new SpecItem(margGF,1);
-const pizza5 = new SpecItem(margGFVe,1);
-const pizza6 = new SpecItem(buffaloChicken,1);
-const pizza7 = new SpecItem(buffaloChickenVeggie,1);
-const pizza8 = new SpecItem(buffaloChickenSkinny,1);
-const pizza9 = new SpecItem(buffaloChickenVeggieSkinny,1);
-const pizza10 = new SpecItem(bbqMeaty,1);
-const pizza11 = new SpecItem(bbqMeatySkinny,1);
-const pizza12 = new SpecItem(bbqMeatyGF,1);
-const pizza13 = new SpecItem(pepperoni,1);
-const pizza14 = new SpecItem(pepperoniSkinny,1);
-const pizza15 = new SpecItem(pepperoniGF,1);
-const pizza16 = new SpecItem(mushroom,1);
-const pizza17 = new SpecItem(mushroomSkinny,1);
-const pizza18 = new SpecItem(mushroomGF,1);
+const pizza1 = new SpecItem(marg,1,['skinny','show'],['vegan','show'],['glutenFree','show']);
+const pizza2 = new SpecItem(margSkinny,1,['skinny','active']);
+const pizza3 = new SpecItem(margVe,1,['vegan','show'],['glutenFree','show']);
+const pizza4 = new SpecItem(margGF,1,['glutenFree','active'],['vegan','show']);
+const pizza5 = new SpecItem(margGFVe,1,['glutenFree','active'],['vegan','active']);
+const pizza6 = new SpecItem(buffaloChicken,1,['vegetarian','show'],['skinny','show']);
+const pizza7 = new SpecItem(buffaloChickenVeggie,1,['vegetarian','active'],['skinny','show']);
+const pizza8 = new SpecItem(buffaloChickenSkinny,1,['skinny','active'],['vegetarian','show']);
+const pizza9 = new SpecItem(buffaloChickenVeggieSkinny,1,['skinny','active'],['vegetarian','active']);
+const pizza10 = new SpecItem(bbqMeaty,1,['skinny','show'],['glutenFree','show']);
+const pizza11 = new SpecItem(bbqMeatySkinny,1,['skinny','active']);
+const pizza12 = new SpecItem(bbqMeatyGF,1,['glutenFree','active']);
+const pizza13 = new SpecItem(pepperoni,1,['skinny','show'],['glutenFree','show']);
+const pizza14 = new SpecItem(pepperoniSkinny,1,['skinny','active']);
+const pizza15 = new SpecItem(pepperoniGF,1,['glutenFree','active']);
+const pizza16 = new SpecItem(mushroom,1,['skinny','show'],['glutenFree','show']);
+const pizza17 = new SpecItem(mushroomSkinny,1,['skinny','active']);
+const pizza18 = new SpecItem(mushroomGF,1,['glutenFree','active']);
 
 export default [pizza1,pizza2,pizza3,pizza4,pizza5,pizza6,pizza7,pizza8,pizza9,
 pizza10,pizza11,pizza12,pizza13,pizza14,pizza15,pizza16,pizza17,pizza18];
