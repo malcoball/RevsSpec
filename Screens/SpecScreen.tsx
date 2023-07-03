@@ -5,14 +5,13 @@ import { AppContext } from "../Data/Context/AppContext"
 import AllergenContainer from "../Components/Allergen/AllergenContainer"
 import {InfoContainerDouble, InfoContainerSingle} from "../Components/InfoContainer";
 import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile"
-import { variant, variantType, variants } from "../Data/@types/types"
+import { variant, variantType, variants, allergenIcon } from "../Data/@types/types"
 
 import SpecBuild from "../Components/SpecBuild"
 const SpecScreen = (props:{title:string})=>{
     const [title,setTitle] = useState(props.title);
     const data = specItemCont.getItem.byName(title);
     const context = useContext(AppContext);
-
     const styles = StyleSheet.create({
         container:{
             backgroundColor:context?.colorScheme.background2,
@@ -43,16 +42,20 @@ const SpecScreen = (props:{title:string})=>{
 
         setTitle(newItem.title);
     }
+    const variants :allergenIcon[] = [
+        {type:'vegan',pressFunc:variantFunc,active:data.variants.vegan},
+        {type:'vegetarian',pressFunc:variantFunc,active:data.variants.vegetarian},
+        {type:'glutenFree',pressFunc:variantFunc,active:data.variants.glutenFree},
+        {type:'skinny',pressFunc:variantFunc,active:data.variants.skinny},
+        {type:'chilli',pressFunc:variantFunc,active:data.variants.chilli},
+        {type:'veggieChilli',pressFunc:variantFunc,active:data.variants.veggieChilli},
+        {type:'egg',pressFunc:variantFunc,active:data.variants.egg},
+    ]
 
     return (
         <ScrollView style={styles.container}>
             <SpecTitle title={data.title} leftArrowFunc={()=>{changePage(false)}} rightArrowFunc={()=>{changePage(true)}}/>
-            <AllergenContainer style={styles.allergenCont} 
-                vegan={{active:data.variants.vegan,         pressFunc:variantFunc}} 
-                veget={{active:data.variants.vegetarian,    pressFunc:variantFunc}} 
-                gluten={{active:data.variants.glutenFree,   pressFunc:variantFunc}}
-                skinny={{active:data.variants.skinny,       pressFunc:variantFunc}} 
-                />
+            <AllergenContainer style={styles.allergenCont} allergens={variants}/>
             <View style={styles.infoCont}>
                 <InfoContainerDouble title={"Ingredients"} items={data.ingredients}/>
                 <InfoContainerSingle title={"Crockery"} items={data.crockery}/>

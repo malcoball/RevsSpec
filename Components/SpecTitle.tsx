@@ -1,5 +1,5 @@
 import {useContext} from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
 import Images from "../Data/Images";
 import GlobalStyles from '../GlobalStyles';
 import { AppContext } from "../Data/Context/AppContext";
@@ -21,7 +21,9 @@ const SpecTitle = (props:{title:string,leftArrowFunc:()=>void,rightArrowFunc:()=
         },
         text:{
             fontSize:20,
-            color:context?.colorScheme.text1
+            color:context?.colorScheme.text1,
+            width:Dimensions.get('window').width * 0.6,
+            textAlign:'center',
         },
         borderBottom:{
             borderBottomColor:context?.colorScheme.text1,

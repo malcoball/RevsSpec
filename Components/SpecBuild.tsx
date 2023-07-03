@@ -1,5 +1,5 @@
-import {useContext} from 'react';
-import {View,Image, StyleSheet, Text} from 'react-native';
+import {useContext, useCallback} from 'react';
+import {View,Image, StyleSheet, Text, FlatList} from 'react-native';
 import { AppContext } from '../Data/Context/AppContext';
 import Images from '../Data/Images';
 import { appContextType,build } from '../Data/@types/types';
@@ -19,18 +19,25 @@ const BuildList = (props:{title:string,items:string[],context:appContextType | n
 }
 const SpecBuild = (props:{builds:build[],image:any})=>{
     const context = useContext(AppContext);
-    const Builds = props.builds.map((elm,ind)=>{
-        const style = ind === 0 ? styles.leftSide : styles.rightSide;
-        return <BuildList key={`buildList${Math.random()}`} title={elm.title} context={context} items={elm.items} style={style}/>})
+    const renderItem = useCallback(
+        ({item}:any)=><BuildList key={Math.random()} title={item.title}
+        context={context} items={item.items} style={styles.leftSide}/>,[]
+    )
     return (
         <View style={styles.container}>
             <Image 
             source={props.image}
             style={styles.image}
             />
-            <View style={styles.listContainer}>
+            {/* <View style={styles.listContainer}>
                 {Builds}
-            </View>
+            </View> */}
+            <FlatList
+                renderItem={renderItem}
+                data={props.builds}
+                numColumns={2}
+                style={styles.listStyle}
+            />
         </View>
     )
 }
@@ -54,6 +61,9 @@ const styles = StyleSheet.create({
     },
     rightSide : {
         borderTopRightRadius: 16,
+    },
+    listStyle : {
+        justifyContent:'center'
     }
 })
 export default SpecBuild;

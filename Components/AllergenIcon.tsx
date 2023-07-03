@@ -8,9 +8,12 @@ const VariantIcon = (props:{type:variantType,active:variant,pressFunc:(vartiantT
     const info = {text : 'Null',image:Images.allergen.null};
     switch(props.type){
         case "vegan" : info.text = 'Vegan';info.image = Images.allergen.vegan; break;
-        case "vegetarian" : info.text = 'Veget';info.image = Images.allergen.veget; break;
+        case "vegetarian" : info.text = 'Veg';info.image = Images.allergen.veget; break;
         case "glutenFree" : info.text = 'Gluten Free';info.image = Images.allergen.gluten; break;
         case "skinny" : info.text = 'Skinny';info.image = Images.allergen.null; break;
+        case "chilli" : info.text = 'Chilli';info.image = Images.allergen.null; break;
+        case "veggieChilli" : info.text = 'ChilliVeg';info.image = Images.allergen.null; break;
+        case "egg" : info.text = 'Egg';info.image = Images.allergen.null; break;
         default : console.log(props.type, " not recognised");
     }
     

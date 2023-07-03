@@ -5,6 +5,14 @@ import { specType } from "../../Data/@types/types";
 import { AppContext } from "../../Data/Context/AppContext";
 
 const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:specType,image:any,imageSize:number,width:number,height:number,showItems:boolean,showItemFunc:(index:number,close:boolean)=>void})=>{
+    const color = useContext(AppContext);
+    const colorScheme = {
+        text : color.colorScheme.text1,
+        background : [
+            color.colorScheme.background5,
+            color.colorScheme.background6,
+        ]
+    }
     const styles = StyleSheet.create({
         outterContainer:{
             width:props.width,
@@ -36,15 +44,26 @@ const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:
             height:Dimensions.get('screen').height*.45
         }
     })
+    const activeStyles = props.showItems ? 
+    StyleSheet.create({
+        // Active
+        container:{
+            backgroundColor:color.colorScheme.background4
+        },
+        text:{
+            textTransform:'uppercase',
+            textAlign:'center',
+            width:'100%',
+        }
+    }) :
+    StyleSheet.create({
+        container:{
+            backgroundColor:color.colorScheme.background2
+
+        }, text:{}
+    }) 
     const [items] = useState(props.items);
-    const color = useContext(AppContext);
-    const colorScheme = {
-        text : color.colorScheme.text1,
-        background : [
-            color.colorScheme.background5,
-            color.colorScheme.background6,
-        ]
-    }
+
 
     const renderItem = useCallback(
         ({item,index }:any) => <SearchItem index={index} color={colorScheme} title={item} clickFunc={props.nav}/>,[]
@@ -52,15 +71,16 @@ const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:
 
     return (
         <View style={styles.outterContainer}>
-            <TouchableOpacity style={styles.container} onPress={()=>{props.showItemFunc(props.index,props.showItems)}}>
-                <Image
+            <TouchableOpacity style={[styles.container,activeStyles.container]} onPress={()=>{props.showItemFunc(props.index,props.showItems)}}>
+                {props.showItems ? <></> : <Image
                     style={styles.image}
                     source={props.image}
-                />
-                <Text style={styles.text}>{props.title}</Text>
+                />  }
+                <Text style={[styles.text,activeStyles.text]}>{props.title}</Text>
             </TouchableOpacity>
             {props.showItems ? 
                 <FlatList 
+                contentContainerStyle={{paddingBottom:32}}
                 style={styles.list}
                 ItemSeparatorComponent={() => <View style={{height: 8}} />}
                 horizontal={false}

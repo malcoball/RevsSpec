@@ -3,7 +3,7 @@ import { StringMethods } from "../StringMethods";
 
 let index = 0;
 const specItems :any[]  = [];
-const variantDefault : variants = {vegan:'hide',vegetarian:'hide',glutenFree:'hide',skinny:'hide',chilli:'hide',veggieChilli:'hide'}
+const variantDefault : variants = {vegan:'hide',vegetarian:'hide',glutenFree:'hide',skinny:'hide',chilli:'hide',veggieChilli:'hide',egg:'hide',truffle:'hide',chicken:'hide'}
 type variantKey = keyof variants;
 export class SpecItem {
     title : string;

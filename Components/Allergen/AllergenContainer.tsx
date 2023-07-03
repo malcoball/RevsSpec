@@ -1,27 +1,15 @@
 import {View} from 'react-native';
 import AllergenIcon from '../AllergenIcon';
-import { variantType,variant } from '../../Data/@types/types';
-type allergenIcon = {
-    active : variant,
-    pressFunc : (vartiantType:variantType,add:boolean)=>void,
-}
-const AllergenContainer = (props:{vegan:allergenIcon,veget:allergenIcon,gluten:allergenIcon,skinny:allergenIcon,style:any})=>{
-    const {vegan,veget,gluten,skinny} = props;
+import { variantType,variant, allergenIcon } from '../../Data/@types/types';
+
+const AllergenContainer = (props:{allergens:allergenIcon[],style:any})=>{
+    // const {vegan,veget,gluten,skinny} = props.allergens;
+    const Icons = props.allergens.map(item =>{
+        return item.active !== "hide" ?  
+        <AllergenIcon key={Math.random()} type={item.type} active={item.active} pressFunc={item.pressFunc}/> : <></>})
     return (
             <View style={props.style}>
-                <AllergenIcon type="vegan" active={vegan.active}
-                    pressFunc={vegan.pressFunc}
-                />
-                <AllergenIcon type="glutenFree" active={gluten.active}
-                    pressFunc={gluten.pressFunc}
-                />
-                <AllergenIcon type="vegetarian" active={veget.active}
-                    pressFunc={veget.pressFunc}
-                />
-                <AllergenIcon type="skinny" active={skinny.active}
-                    pressFunc={skinny.pressFunc}
-                />
-                
+                {Icons}
             </View>
     )
 }

@@ -16,7 +16,7 @@ export type ingredient = {
     name : string,
     amount : string
 }
-export type variantType = "vegan" | "vegetarian" | "glutenFree" | "skinny";
+export type variantType = "vegan" | "vegetarian" | "glutenFree" | "skinny" | "chilli" | "veggieChilli" | "egg";
 export type specType = "burger" | "grazer" | "kids" | "dessert" | "brunch" | "pizza" | "party" | "prep" | "other" | "side" |"main" | "sharer"|"sandwich" | "wrap" |variantType;
 type specInput = {
     title:string;
@@ -24,8 +24,12 @@ type specInput = {
     image: any;
     crockery: string[];
     ingredients: ingredient[];
-    type : specType | specType[];
-    
+    type : specType | specType[];  
+}
+type allergenIcon = {
+    type : variantType,
+    active : variant,
+    pressFunc : (vartiantType:variantType,add:boolean)=>void,
 }
 export type specItem = {
     title : string;
