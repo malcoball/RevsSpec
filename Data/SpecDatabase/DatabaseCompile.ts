@@ -11,11 +11,12 @@ import Sandwiches from "./Inputs/Sandwiches";
 import Sharers from "./Inputs/Sharers";
 import Sides from "./Inputs/Sides";
 import Wraps from "./Inputs/Wraps";
+import Prep from "./Inputs/Prep";
 import { StringMethods } from "../StringMethods";
 
 
-let DataBase = [...Brunch,...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Pizzas,...Sandwiches,
-...Sides,...Pizzas,...Wraps,...Sharers];
+let DataBase = [...Brunch,...Burgers,...Desserts,...Grazers,...Kids,...Mains,...Other,...Sandwiches,
+...Sides,...Pizzas,...Wraps,...Sharers,...Prep];
 
 const typeObj = { // Mostly used to group titles into categories.
     burger : <string[]>[],
@@ -201,6 +202,54 @@ export const specItemCont = {
             }
         }
     },
+    multiply:{
+        ingredients :{
+            multiplyIngredients(ingredients:ingredient[],amount:number|string):ingredient[]{
+                // Turn ingredient amounts:string in numbers
+
+                let amounts = [...ingredients];
+                let mutlipleAmount = typeof(amount) === "string" ? parseInt(amount) : amount;
+                let out :ingredient[] = [];
+                amounts.forEach(elm=>{
+                    out.push(this.multiplyIngredient(elm,mutlipleAmount));
+                })
+                return out;
+            },
+            multiplyIngredient(ingredient:ingredient|string,multiplyAmount:number):ingredient{
+                // Extract the numbers, multiply them
+                // let str = ingredient.amount;
+                let name = typeof(ingredient) === "string" ? "" : ingredient.name;
+                let str = typeof(ingredient) === "string" ? ingredient : ingredient.amount;
+                let multiplies :string[] = []; // Holds all the numbers
+                const length = str.length;
+                let num = "";
+                let strOut = "";
+                for (let i = 0; i < length; i++){
+                    const target = str.charAt(i);
+                    const next = str.charAt(i+1);
+                    if (isNaN(parseInt(target)) === false){
+                        num += target;
+                        if (isNaN(parseInt(next)) === true){ // Finished
+                            let numMulti = Math.floor((parseInt(num) * multiplyAmount));
+                            multiplies.push(numMulti + "");
+                            num = "";
+                        }
+                    } else {
+                        strOut += target;
+                        if ((next === "") || (typeof(parseInt(next)) === "number")){
+                            multiplies.push(strOut);
+                            strOut = "";
+                        }
+                    }
+                }
+                let out = "";
+                multiplies.forEach(element => {
+                    out+= element
+                });
+                return {amount : out,name : name};
+            }
+        }
+    }
 }
 specItemCont.sort.index();
 // specItemCont.sort.intoCategories();

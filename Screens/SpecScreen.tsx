@@ -1,4 +1,4 @@
-import { useContext,useState} from "react"
+import { useContext,useEffect,useState} from "react"
 import { StyleSheet, View, ScrollView, SafeAreaView } from "react-native"
 import SpecTitle from "../Components/SpecTitle"
 import { AppContext } from "../Data/Context/AppContext"
@@ -8,9 +8,12 @@ import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile"
 import { variant, variantType, variants, allergenIcon } from "../Data/@types/types"
 
 import SpecBuild from "../Components/SpecBuild"
+import PrepYield from "../Components/PrepYield"
 const SpecScreen = (props:{title:string})=>{
     const [title,setTitle] = useState(props.title);
     const data = specItemCont.getItem.byName(title);
+    const [yieldData,setYield] = useState("1")
+    const [yieldAmount,setYieldAmount] = useState(data.yieldAmount);
     const context = useContext(AppContext);
     const styles = StyleSheet.create({
         container:{
@@ -42,6 +45,8 @@ const SpecScreen = (props:{title:string})=>{
 
         setTitle(newItem.title);
     }
+    const ingredients = specItemCont.multiply.ingredients.multiplyIngredients(data.ingredients,yieldData);
+    // let yieldAmount = specItemCont.multiply.ingredients.multiplyIngredient(data.yieldAmount+"",parseInt(yieldData));
     const variants :allergenIcon[] = [
         {type:'vegan',pressFunc:variantFunc,active:data.variants.vegan},
         {type:'vegetarian',pressFunc:variantFunc,active:data.variants.vegetarian},
@@ -51,14 +56,25 @@ const SpecScreen = (props:{title:string})=>{
         {type:'veggieChilli',pressFunc:variantFunc,active:data.variants.veggieChilli},
         {type:'egg',pressFunc:variantFunc,active:data.variants.egg},
     ]
+    useEffect(()=>{
+        setYield("1");
+    },[title])
+    useEffect(()=>{
+        let yieldNew = yieldData === "1" ? data.yieldAmount : specItemCont.multiply.ingredients.multiplyIngredient(data.yieldAmount+"",parseInt(yieldData)).amount;
+        setYieldAmount(yieldNew);
+    },[title,yieldData])
+
 
     return (
         <ScrollView style={styles.container}>
             <SpecTitle title={data.title} leftArrowFunc={()=>{changePage(false)}} rightArrowFunc={()=>{changePage(true)}}/>
             <AllergenContainer style={styles.allergenCont} allergens={variants}/>
             <View style={styles.infoCont}>
-                <InfoContainerDouble title={"Ingredients"} items={data.ingredients}/>
-                <InfoContainerSingle title={"Crockery"} items={data.crockery}/>
+                <InfoContainerDouble title={"Ingredients"} items={ingredients}/>
+
+                {data.type=== "prep" ? <PrepYield yieldTotal={yieldAmount} multiply={{data:yieldData,setData:setYield}}/> : 
+                <InfoContainerSingle title={"Crockery"} items={data.crockery}/>}
+                
             </View>
             <SpecBuild builds={data.builds} image={data.image}/>
         </ScrollView>

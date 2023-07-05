@@ -37,6 +37,7 @@ export type specItem = {
     ingredients : ingredient[];
     crockery : string[];
     image : string;
+    yieldAmount : number | string;
     builds : build[];
     index: number;
     variants : {

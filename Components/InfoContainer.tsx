@@ -3,24 +3,18 @@ import { Dimensions, StyleSheet, Text, View } from "react-native"
 import { AppContext } from '../Data/Context/AppContext';
 import { ingredient } from '../Data/@types/types';
 
-const ItemDouble = (props:{item:ingredient,style:any},)=>{
+const ItemDouble = (props:{item:ingredient,containerStyle:any,textStyle:any},)=>{
     return (
-        <View style={{
-            flexDirection:'row',
-            justifyContent:'space-between',
-            alignItems:'center',
-            marginVertical:2,
-            borderBottomColor:'#0000001a', borderBottomWidth:1
-        }}>
-            <Text style={[props.style,sharedStyles.text,{paddingLeft:6,maxWidth:'70%'}]}>{props.item.name}</Text>
-            <Text style={[props.style,sharedStyles.text,{paddingRight:6,maxWidth:'50%',textAlign:'right'}]}>{props.item.amount}</Text>
+        <View style={props.containerStyle}>
+            <Text style={[props.textStyle,sharedStyles.text,{paddingLeft:6,maxWidth:'60%'}]}>{props.item.name}</Text>
+            <Text style={[props.textStyle,sharedStyles.text,{paddingRight:6,maxWidth:'40%',textAlign:'right'}]}>{props.item.amount}</Text>
         </View>
     )
 }
-const ItemSingle = (props:{text : string,style:any})=>{
+const ItemSingle = (props:{text : string,containerStyle:any,textStyle:any})=>{
     return (
-        <View>
-            <Text style={[sharedStyles.text,{textAlign:'center'},props.style]}>{props.text}</Text>
+        <View style={[props.containerStyle,{flexDirection:'column'}]}>
+            <Text style={[sharedStyles.text,{textAlign:'center'},props.textStyle]}>{props.text}</Text>
         </View>
     )
 }
@@ -44,7 +38,7 @@ export const InfoContainerDouble = (props:{title:string,items:ingredient[]})=>{
     })
     const list = props.items.map((elm,ind)=>{
         const item : ingredient = elm;
-        return <ItemDouble style={styles.text} key={`infoKey${ind}`} item={item}/>
+        return <ItemDouble containerStyle={sharedStyles.textContainer} textStyle={styles.text} key={`infoKey${ind}`} item={item}/>
     })
 
     return (
@@ -69,7 +63,7 @@ export const InfoContainerSingle = (props:{title:string,items:string[]})=>{
             color:context?.colorScheme.text2
         }
     })
-    const list = props.items.map((elm,ind)=>{return <ItemSingle style={styles.text} key={`infoKey${ind}`} text={elm}/>})
+    const list = props.items.map((elm,ind)=>{return <ItemSingle containerStyle={sharedStyles.textContainer} textStyle={styles.text} key={`infoKey${ind}`} text={elm}/>})
     return (
         <View style={[sharedStyles.container,styles.container]}>
             <Text style={[sharedStyles.title,styles.title]}>{props.title}</Text>
@@ -90,6 +84,13 @@ const sharedStyles = StyleSheet.create({
     },
     text:{
         fontSize:10,
-        lineHeight:16
+        lineHeight:16,
     },
+    textContainer:{
+        flexDirection:'row',
+            justifyContent:'space-between',
+            alignItems:'center',
+            marginVertical:2,
+            borderBottomColor:'#0000001a', borderBottomWidth:1,
+    }
 })

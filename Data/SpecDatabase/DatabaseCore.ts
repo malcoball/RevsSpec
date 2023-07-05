@@ -9,18 +9,18 @@ export class SpecItem {
     title : string;
     type : specType[] | specType;
     ingredients : ingredient[];
-    amount : number;
+    yieldAmount : string | number;
     crockery : string[];
     image : string;
     variants : variants;
     builds : build[];
     index : number;
-    constructor(specInfo:specInput,amount:number,...variantsInp:[variantKey,variant][]){
+    constructor(specInfo:specInput,yieldAmount:string | number,...variantsInp:[variantKey,variant][]){
     // constructor(title:string,ingredients:ingredient[],amount:number,type:specType[] | specType,crockery : string[],image : string,builds: build[],...variantsInp:[variantKey,variant][]){
         const {title,ingredients,crockery,image,builds,type} = specInfo;
         this.title = StringMethods.case.capitalizeFirstLetter(title),
-        this.amount = amount;
-        this.ingredients = this.multiplyIngredients(ingredients,this.amount),
+        this.yieldAmount = yieldAmount;
+        this.ingredients = ingredients,
         this.crockery = crockery,
         this.image = image,
         this.builds = builds,
