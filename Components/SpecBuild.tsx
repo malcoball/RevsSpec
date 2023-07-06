@@ -6,12 +6,14 @@ import { appContextType,build } from '../Data/@types/types';
 const BuildList = (props:{title:string,items:string[],context:appContextType | null,style:any})=>{
     const titleColor = props.context?.colorScheme.text3;
     const textColor = props.context?.colorScheme.text4;
-    const backColor = props.context?.colorScheme.background4;
+    const backColor = props.context?.colorScheme.background1;
     const list = props.items.map((elm,ind)=>{return<Text 
         style={{textAlign:'center',color:textColor,paddingBottom:4,width:Dimensions.get('screen').width*.75,paddingHorizontal:8}} 
         key={`listItem1.;l${ind}`}>{elm}</Text>})
     return (
-        <View style={[{backgroundColor:backColor,paddingBottom:12,marginHorizontal:Dimensions.get('screen').width*.03,borderRadius:12},props.style]}>
+        <View style={[{backgroundColor:backColor,paddingBottom:12,
+        marginHorizontal:Dimensions.get('screen').width*.03,borderRadius:12,
+        borderBottomWidth:2,borderColor:'#000000a0'},props.style]}>
             <Text style={{color:titleColor,textAlign:'center',fontSize:20,paddingVertical:16}}>{props.title}</Text>
             {list}
         </View>
@@ -61,6 +63,6 @@ const styles = StyleSheet.create({
     },
     listBorder:{
         // borderColor:'black',borderWidth:4,borderStyle:'solid'
-    }
+    },
 })
 export default SpecBuild;

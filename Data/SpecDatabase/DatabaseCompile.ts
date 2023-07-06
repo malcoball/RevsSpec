@@ -182,7 +182,7 @@ export const specItemCont = {
                     DataBase.forEach(elm=>out.push(elm.title));
                     return out;
                 },
-                objTypes : ()=>{
+                objTypes : (exclude:string[] = [])=>{
                     const out = {...typeObj};
                     DataBase.forEach(item=>{
                         const type  = typeof(item.type) === 'string' ? item.type : item.type[0];

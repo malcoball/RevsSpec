@@ -11,7 +11,7 @@ import { specItemCont } from '../../Data/SpecDatabase/DatabaseCompile';
 const NavMenuContainer = (props:{style:{width:number,height:number},nav:any,itemsData:any})=>{
     const [menuItemShow,setMenuItemShow] = useState <boolean[]>([])
     const context = useContext(AppContext);
-    const [foodTypes] = useState(specItemCont.getItem.all.name.objTypes());
+    // const [foodTypes] = useState(specItemCont.getItem.all.name.objTypes());
     
     const menuItemToggle = (index:number,close:boolean)=>{
         let listNew = [...menuItemShow];

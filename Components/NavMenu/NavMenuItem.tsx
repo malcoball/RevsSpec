@@ -48,11 +48,13 @@ const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:
     StyleSheet.create({
         // Active
         container:{
-            backgroundColor:color.colorScheme.background4
+            backgroundColor:color.colorScheme.background4,
         },
         text:{
-            textTransform:'uppercase',
-            textAlign:'center',
+            color:color.colorScheme.text4,
+            // textTransform:'uppercase',
+            // textAlign:'center',
+            fontSize:18,
             width:'100%',
         }
     }) :
@@ -72,10 +74,11 @@ const NavMenuItem = (props:{items:string[],nav:any,index:number,color:any,title:
     return (
         <View style={styles.outterContainer}>
             <TouchableOpacity style={[styles.container,activeStyles.container]} onPress={()=>{props.showItemFunc(props.index,props.showItems)}}>
-                {props.showItems ? <></> : <Image
+                {props.showItems ? <></> : <></>  }
+                <Image
                     style={styles.image}
                     source={props.image}
-                />  }
+                />
                 <Text style={[styles.text,activeStyles.text]}>{props.title}</Text>
             </TouchableOpacity>
             {props.showItems ? 
