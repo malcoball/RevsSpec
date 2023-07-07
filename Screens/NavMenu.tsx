@@ -10,7 +10,7 @@ const NavMenu = (props:{nav:any})=>{
     const [width] = useState(0.8);
     const [height] = useState(64);
     const context = useContext(AppContext);
-    const titlesData = useMemo(()=>specItemCont.getItem.all.name.string(),[])
+    const titlesData = useMemo(()=>specItemCont.getItem.all.name.string("vegan",'gf','v'),[]) // Controls what the search bar returns
     const titleObjs = useMemo(()=>specItemCont.sort.intoCategories(),[]);
 
 
