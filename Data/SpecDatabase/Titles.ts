@@ -258,7 +258,8 @@ const SpecTitles = {
         salad:'Salad',
         dessert:{
             brownie:'Chocolate Brownie',
-            iceCream:'Ice Cream (1 or 2 scoops)'
+            iceCream1:'Ice Cream (1 scoop)',
+            iceCream2:'Ice Cream (2 scoop)',
         },
         milk:{
             chocolate:'Chocolate Milk',

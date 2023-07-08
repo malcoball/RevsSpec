@@ -344,7 +344,7 @@ const grillV : {standard:specInput,GF:specInput} = {
 }
 const grillVe : {standard:specInput,GF:specInput} = {
     standard :{
-        title:Titles.grill.veggie, type:['brunch','vegan'],
+        title:Titles.grill.vegan, type:['brunch','vegan'],
         crockery:[
             Crockery.plate.speckledRectangle,
             Crockery.ramekin
@@ -382,7 +382,7 @@ const grillVe : {standard:specInput,GF:specInput} = {
         image:Images.specs.brunch.grill.vegan
     },
     GF :{
-        title:Titles.grill.veggieGF, type:['brunch','vegan','glutenFree'],
+        title:Titles.grill.veganGF, type:['brunch','vegan','glutenFree'],
         crockery:[
             Crockery.plate.speckledRectangle,
             Crockery.ramekin

@@ -545,7 +545,7 @@ const truffleGravy : specInput = {
     ]}]
 };
 const doughBalls : specInput = {
-    title:Titles.gravy.truffle, image:Images.specs.default, crockery:[], type:'prep',
+    title:Titles.doughballs.standard, image:Images.specs.default, crockery:[], type:'prep',
     ingredients:[
         Ingredients.dough.half,
         Ingredients.sauce.garlicButter.garlicButter30
@@ -559,7 +559,7 @@ const doughBalls : specInput = {
     ]
 }
 const doughBallsVe : specInput = {
-    title:Titles.gravy.truffle, image:Images.specs.default, crockery:[], type:'prep',
+    title:Titles.doughballs.vegan, image:Images.specs.default, crockery:[], type:'prep',
     ingredients:[
         Ingredients.dough.half,
         Ingredients.garnish.oil.olive30,

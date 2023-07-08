@@ -301,7 +301,7 @@ const brownie : specInput = {
     type:['kids','dessert']
 };
 const iceCream1 : specInput = {
-    title:SpecTitles.kids.dessert.iceCream,
+    title:SpecTitles.kids.dessert.iceCream1,
     builds:[
         {title:'Plating',items:[
             'Scoop ice cream into speckled triangle bowl'
@@ -316,7 +316,8 @@ const iceCream1 : specInput = {
     ],
     type:['kids','dessert']
 }
-const iceCream2 = {...iceCream1}; iceCream2.ingredients = [Ingredients.dessert.iceCream.iceCream2];
+const iceCream2 = {...iceCream1}; 
+iceCream2.ingredients = [Ingredients.dessert.iceCream.iceCream2]; iceCream2.title = SpecTitles.kids.dessert.iceCream2;
 
 const chocMilk : specInput = {
     title:SpecTitles.kids.milk.chocolate,
@@ -338,6 +339,7 @@ const chocMilk : specInput = {
     type:['dessert','kids']
 }
 const strawberryMilk = {...chocMilk};
+strawberryMilk.title = SpecTitles.kids.milk.strawberry;
 strawberryMilk.ingredients[0] = Ingredients.sauce.strawberry.strawberry25;
 strawberryMilk.builds[0].items[0] = 'Ice up a boston tin, then add the strawberry puree and milk';
 

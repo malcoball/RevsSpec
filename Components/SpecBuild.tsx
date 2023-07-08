@@ -37,6 +37,7 @@ const SpecBuild = (props:{builds:build[],image:any})=>{
                 data={props.builds}
                 contentContainerStyle={styles.listStyle}
                 style={styles.listBorder}
+                keyExtractor={(item)=>item.title+Math.random()}
             />
         </View>
     )
