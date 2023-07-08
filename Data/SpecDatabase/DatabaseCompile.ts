@@ -177,9 +177,22 @@ export const specItemCont = {
         },
         all:{
             name:{
-                string : () : string[] =>{
+                string : (...exclude:string[]) : string[] =>{
                     const out : string[] = [];
-                    DataBase.forEach(elm=>out.push(elm.title));
+                    DataBase.forEach((elm)=>{
+                        const titleIn = elm.title.toLowerCase();
+                        let match = false;
+                        // let compare = exclude[0].toLowerCase();
+                        // if (titleIn.includes(compare) === true) match = true;
+                        // compare = exclude[1].toLowerCase();
+                        // if (titleIn.includes(compare) === true) match = true;
+                        for (let i = 0; i<exclude.length; i++){
+                            const compare = exclude[i].toLowerCase();
+                            if (titleIn.includes(compare) === true) match = true;
+                        }
+                        if (match === false) out.push(elm.title);
+
+                    });
                     return out;
                 },
                 objTypes : (exclude:string[] = [])=>{

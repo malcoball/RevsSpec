@@ -602,7 +602,7 @@ const sliders : {meat:specInput,veggie:specInput,vegan:specInput} = {
         ]
     },
     veggie : {
-        title:Titles.sliders.beef, image:Images.specs.default, crockery:[], type:'prep',
+        title:Titles.sliders.veggie, image:Images.specs.default, crockery:[], type:'prep',
         ingredients:[
             Ingredients.burger.bun.slider1,
             Ingredients.burger.sauce.relish10,
@@ -628,7 +628,7 @@ const sliders : {meat:specInput,veggie:specInput,vegan:specInput} = {
         ]
     },
     vegan : {
-        title:Titles.sliders.beef, image:Images.specs.default, crockery:[], type:'prep',
+        title:Titles.sliders.vegan, image:Images.specs.default, crockery:[], type:'prep',
         ingredients:[
             Ingredients.burger.bun.slider1,
             Ingredients.burger.sauce.relish10,
@@ -689,8 +689,8 @@ const prep31 = new SpecItem(truffleGravy,"205 g");
 const prep32 = new SpecItem(doughBalls,"12 g",['vegan','show']);
 const prep33 = new SpecItem(doughBallsVe,"12 g",['vegan','active']);
 const prep34 = new SpecItem(sliders.meat,"1 sliders",['vegan','show'],['vegetarian','show']);
-const prep35 = new SpecItem(sliders.veggie,"1 sliders",['vegan','show'],['vegetarian','active']);
-const prep36 = new SpecItem(sliders.vegan,"1 sliders",['vegan','active'],['vegetarian','show']);
+const prep35 = new SpecItem(sliders.veggie,"1 sliders",['vegetarian','active']);
+const prep36 = new SpecItem(sliders.vegan,"1 sliders",['vegan','active']);
 
 export default [prep1,prep2,prep3,prep4,prep5,prep6,prep7,prep8,prep9,
 prep10,prep11,prep12,prep13,prep14,prep15,prep16,prep17,prep18,prep19,
