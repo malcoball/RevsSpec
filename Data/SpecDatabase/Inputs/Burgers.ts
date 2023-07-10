@@ -427,7 +427,7 @@ const blueCheeseTruffleVeggie : specInput = {
     image:Images.specs.default,
     crockery:BurgerCrocVeggie,
     ingredients:BlueCheeseTruffleIngredientsVeggie,
-    type:'burger'
+    type:['burger','vegetarian']
 }
 const blueCheeseTruffleGFVeggie : specInput = {
     title:Titles.blueCheese.veggieGF,

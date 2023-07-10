@@ -65,7 +65,7 @@ export const specItemCont = {
                 return data;
             }
         },
-        intoCategories:()=>{
+        intoCategories:(...excludes:variantType[])=>{
             const out = { // Mostly used to group titles into categories.
                 burger : <string[]>[],
                 grazer : <string[]>[],
@@ -89,15 +89,21 @@ export const specItemCont = {
 
 
             DataBase.forEach((item) =>{
-                let propTargets  = typeof(item.type) === 'string' ? [item.type] : item.type; // Converts the into arrays
-                propTargets.forEach((item2)=>{
-                    let propTarget = item2 as keyof typeof out;
-                    out[propTarget].push(item.title) 
+                let propTargets  = typeof(item.type) === 'string' ? [item.type] : item.type; // Converts them into arrays
+                let skip = false;
+                propTargets.forEach((propTarget)=>{
+                    excludes.forEach(exclude=>{
+                        if (propTarget === exclude) skip = true;
+                    })
                 })
-                // Old code, just keep it as I updated this whilst drunk so there may be an error
-                // let propTarget  = typeof(item.type) === 'string' ? item.type : item.type[0]; // Currently only works with 1 category
-                // propTarget = propTarget as keyof typeof out;
-                // out[propTarget].push(item.title);
+                if (skip === false){
+                    console.log("prop targets : ",propTargets);
+                    console.log("Title : ",item.title);
+                    propTargets.forEach((item2)=>{
+                        let propTarget = item2 as keyof typeof out;
+                        out[propTarget].push(item.title);
+                    })
+                }
             })
             return out;
         }
@@ -118,20 +124,32 @@ export const specItemCont = {
             console.error(`'${name}' not recognised`);
             return DataBase[DataBase.length-1];
         },
-        byNext:(currentItem:specItem):specItem=>{
+        byNext:(currentItem:specItem,ignoreVariants:boolean):specItem=>{
 
             const num = currentItem.index;
+            const title = currentItem.title;
 
             // There's an error component at the end, hence the length - 1
             let next = num === DataBase.length-1 ? 0 : num + 1 ;
+            if (ignoreVariants === true){
+                while (DataBase[next].title.includes(title)){
+                    next ++;
+                }
+            }
             return DataBase[next];
         },
-        byPrevious:(currentItem:specItem):specItem=>{
+        byPrevious:(currentItem:specItem,ignoreVariants:boolean):specItem=>{
 
             const num = currentItem.index;
+            const title = currentItem.title;
 
             // There's an error component at the end, hence the length - 1
             let next = num === 0 ? DataBase.length - 1 : num - 1 ;
+            if (ignoreVariants === true){
+                while (DataBase[next-1].title.includes(DataBase[next-2].title)){
+                    next --;
+                }
+            }
             return DataBase[next];
         },
         byVariant:(currentItem:specItem,variant:variantType,add:boolean):specItem=>{
