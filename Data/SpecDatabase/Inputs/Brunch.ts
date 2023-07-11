@@ -422,7 +422,7 @@ const grillVe : {standard:specInput,GF:specInput} = {
 const brunchPizza : {standard:specInput,GF:specInput}={
     standard:{
         title:Titles.pizza.standard, crockery:[Crockery.pizza.paddle,Crockery.cutlery.pizza],
-        type:['pizza','brunch'],image:Imgs.pizza.standard,
+        type:['brunch'],image:Imgs.pizza.standard,
         ingredients:[
             Ingredients.dough.full,
             Ingredients.other.flour.flour10,
@@ -461,7 +461,7 @@ const brunchPizza : {standard:specInput,GF:specInput}={
     },
     GF:{
         title:Titles.pizza.GF, crockery:[Crockery.pizza.paddle,Crockery.cutlery.pizza,Crockery.stick.GF],
-        type:['pizza','brunch','glutenFree'],image:Imgs.pizza.standard,
+        type:['brunch','glutenFree'],image:Imgs.pizza.standard,
         ingredients:[
             Ingredients.dough.gf,
             Ingredients.other.flour.flour10,
@@ -501,7 +501,7 @@ const brunchPizza : {standard:specInput,GF:specInput}={
 
 const brunchBurger : {standard:specInput,GF:specInput}={
     standard:{
-        title:Titles.burger.standard, type:['brunch','burger'],
+        title:Titles.burger.standard, type:['brunch'],
         image:Imgs.burger, 
         crockery:[Crockery.plate.blueRim,Crockery.bowl.enamelDish,Crockery.stick.small],
         ingredients:[
@@ -541,7 +541,7 @@ const brunchBurger : {standard:specInput,GF:specInput}={
         ]
     },
     GF:{
-        title:Titles.burger.GF, type:['brunch','burger','glutenFree'],
+        title:Titles.burger.GF, type:['brunch','glutenFree'],
         image:Imgs.burger, 
         crockery:[Crockery.plate.blueRim,Crockery.bowl.enamelDish,Crockery.stick.small],
         ingredients:[

@@ -45,6 +45,7 @@ export const specItemCont = {
             // console.log(DataBase);
             let dataNew = [...DataBase];
             dataNew.forEach((elm,ind)=>{
+
                 elm.index = ind;
             })
             return dataNew;
@@ -97,8 +98,6 @@ export const specItemCont = {
                     })
                 })
                 if (skip === false){
-                    console.log("prop targets : ",propTargets);
-                    console.log("Title : ",item.title);
                     propTargets.forEach((item2)=>{
                         let propTarget = item2 as keyof typeof out;
                         out[propTarget].push(item.title);
@@ -141,15 +140,10 @@ export const specItemCont = {
         byPrevious:(currentItem:specItem,ignoreVariants:boolean):specItem=>{
 
             const num = currentItem.index;
-            const title = currentItem.title;
 
             // There's an error component at the end, hence the length - 1
             let next = num === 0 ? DataBase.length - 1 : num - 1 ;
-            if (ignoreVariants === true){
-                while (DataBase[next-1].title.includes(DataBase[next-2].title)){
-                    next --;
-                }
-            }
+
             return DataBase[next];
         },
         byVariant:(currentItem:specItem,variant:variantType,add:boolean):specItem=>{
@@ -239,7 +233,7 @@ export const specItemCont = {
                 // Turn ingredient amounts:string in numbers
 
                 let amounts = [...ingredients];
-                let mutlipleAmount = typeof(amount) === "string" ? parseInt(amount) : amount;
+                let mutlipleAmount = typeof(amount) === "string" ? parseFloat(amount) : amount;
                 let out :ingredient[] = [];
                 amounts.forEach(elm=>{
                     out.push(this.multiplyIngredient(elm,mutlipleAmount));

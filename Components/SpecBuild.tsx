@@ -22,7 +22,7 @@ const BuildList = (props:{title:string,items:string[],context:appContextType | n
 const SpecBuild = (props:{builds:build[],image:any})=>{
     const context = useContext(AppContext);
     const renderItem = useCallback(
-        ({item}:any)=><BuildList key={Math.random()} title={item.title}
+        ({item}:any)=><BuildList key={item.title+Math.random()} title={item.title}
         context={context} items={item.items} style=""/>,[]
     )
     return (
@@ -37,7 +37,6 @@ const SpecBuild = (props:{builds:build[],image:any})=>{
                 data={props.builds}
                 contentContainerStyle={styles.listStyle}
                 style={styles.listBorder}
-                keyExtractor={(item)=>item.title+Math.random()}
             />
         </View>
     )

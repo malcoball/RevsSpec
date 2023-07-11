@@ -1,14 +1,15 @@
 import {useEffect} from 'react';
 import { StyleSheet, Text, TouchableOpacity } from "react-native"
 
-const SearchItem = (props:{title:string,color:{text:string,background:string[]},index:number,clickFunc:(target:string)=>void})=>{
+const SearchItem = (props:{title:string,color:{text:string,background:string[]},index:number,width:number|string,clickFunc:(target:string)=>void})=>{
     const {title,clickFunc} = props;
     const styles = StyleSheet.create({
         container:{
             backgroundColor:props.color.background[props.index%2],
             alignItems:'center', justifyContent:'center',
             height:64,
-            borderRadius:16
+            borderRadius:16,
+            width:props.width,
         },
         text:{
             textAlign:'center',

@@ -6,6 +6,7 @@ import AllergenContainer from "../Components/Allergen/AllergenContainer"
 import {InfoContainerDouble, InfoContainerSingle} from "../Components/InfoContainer";
 import { specItemCont } from "../Data/SpecDatabase/DatabaseCompile"
 import { variant, variantType, variants, allergenIcon } from "../Data/@types/types"
+import { useSwipe } from "../Components/Hooks/useSwipe"
 
 import SpecBuild from "../Components/SpecBuild"
 import PrepYield from "../Components/PrepYield"
@@ -45,6 +46,15 @@ const SpecScreen = (props:{title:string})=>{
 
         setTitle(newItem.title);
     }
+    const onSwipeLeft = ()=>{
+        changePage(true);
+    }
+    const onSwipeRight = ()=>{
+        changePage(false);
+    }
+    const {onTouchStart,onTouchEnd} = useSwipe(onSwipeLeft,onSwipeRight,6);
+
+
     const ingredients = specItemCont.multiply.ingredients.multiplyIngredients(data.ingredients,yieldData);
     // let yieldAmount = specItemCont.multiply.ingredients.multiplyIngredient(data.yieldAmount+"",parseInt(yieldData));
     const variants :allergenIcon[] = [
@@ -66,9 +76,9 @@ const SpecScreen = (props:{title:string})=>{
 
 
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
             <SpecTitle title={data.title} leftArrowFunc={()=>{changePage(false)}} rightArrowFunc={()=>{changePage(true)}}/>
-            <AllergenContainer style={styles.allergenCont} allergens={variants}/>
+            {/* <AllergenContainer style={styles.allergenCont} allergens={variants}/> */}
             <View style={styles.infoCont}>
                 <InfoContainerDouble title={"Ingredients"} items={ingredients}/>
 

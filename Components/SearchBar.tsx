@@ -58,7 +58,7 @@ const SearchBar = (props:{style:{width:number,height:number},items:string[],nav:
         data={filteredItems}
         ItemSeparatorComponent={() => <View style={{height: 8}} />}
 
-        renderItem={({item,index}) => <SearchItem index={index%2} color={colorScheme} title={item} clickFunc={props.nav}/>}
+        renderItem={({item,index}) => <SearchItem width={styles.container.width} index={index%2} color={colorScheme} title={item} clickFunc={props.nav}/>}
     />
     const clearSearch = ()=>{
         setQuery('');
