@@ -45,7 +45,9 @@ const marg : specInput = {
         Ingredients.garnish.leaf.basil,
         Ingredients.topping.pizza.mozzarella.mozzarella70
     ],
-    type:'pizza'
+    type:'pizza',
+    variant : false,
+
 }
 const margSkinny : specInput = {
     title: Titles.marg.standard.skinny,
@@ -73,7 +75,9 @@ const margSkinny : specInput = {
         Ingredients.topping.pizza.mozzarella.mozzarella35,
         Ingredients.side.houseSalad
     ],
-    type:['skinny','pizza']
+    type:['skinny','pizza'],
+    variant : true,
+
 }
 const margVe : specInput = {
     title: Titles.marg.standard.full,
@@ -98,7 +102,9 @@ const margVe : specInput = {
         Ingredients.garnish.leaf.basil,
         Ingredients.topping.pizza.veganCheddar.vegan70
     ],
-    type:'pizza'
+    type:'pizza',
+    variant : true,
+
 }
 const margGF : specInput = {
     title: Titles.marg.GF.standard,
@@ -120,7 +126,9 @@ const margGF : specInput = {
         Ingredients.garnish.leaf.basil,
         Ingredients.topping.pizza.mozzarella.mozzarella60
     ],
-    type:['glutenFree','pizza']
+    type:['glutenFree','pizza'],
+    variant : true,
+
 }
 const margGFVe : specInput = {
     title: Titles.marg.GF.vegan,
@@ -142,7 +150,9 @@ const margGFVe : specInput = {
         Ingredients.garnish.leaf.basil,
         Ingredients.topping.pizza.veganCheddar.vegan60
     ],
-    type:['glutenFree','pizza','vegan']
+    type:['glutenFree','pizza','vegan'],
+    variant : true,
+
 }
 
 const buffaloChicken : specInput = {
@@ -182,7 +192,9 @@ const buffaloChicken : specInput = {
         Ingredients.topping.pizza.veg.friedOnion,
         Ingredients.topping.pizza.veg.jalapenos
     ],
-    type:'pizza'
+    type:'pizza',
+    variant : false,
+
 }
 const buffaloChickenVeggie : specInput = {
     title: Titles.buffaloChicken.veggie.full,
@@ -203,7 +215,9 @@ const buffaloChickenVeggie : specInput = {
         Ingredients.topping.pizza.veg.friedOnion,
         Ingredients.topping.pizza.veg.jalapenos
     ],
-    type:['pizza','vegetarian']
+    type:['pizza','vegetarian'],
+    variant : true,
+
 }
 const buffaloChickenSkinny : specInput = {
     title: Titles.buffaloChicken.standard.skinny,
@@ -244,7 +258,9 @@ const buffaloChickenSkinny : specInput = {
         Ingredients.side.houseSalad
 
     ],
-    type:'pizza'
+    type:'pizza',
+    variant : true,
+
 }
 const buffaloChickenVeggieSkinny : specInput = {
     title: Titles.buffaloChicken.veggie.skinny,
@@ -269,7 +285,9 @@ const buffaloChickenVeggieSkinny : specInput = {
         Ingredients.topping.pizza.veg.friedOnionHalf,
         Ingredients.topping.pizza.veg.jalapenosHalf
     ],
-    type:['pizza','vegetarian']
+    type:['pizza','vegetarian'],
+    variant : true,
+
 }
 const bbqMeaty : specInput = {
     title: Titles.bbqMeaty.full,
@@ -303,7 +321,9 @@ const bbqMeaty : specInput = {
         Ingredients.topping.pizza.veg.redOnion,
         Ingredients.other.bacon.bacon5
     ],
-    type:'pizza'
+    type:'pizza',
+    variant : false,
+
 }
 const bbqMeatySkinny : specInput = {
     title: Titles.bbqMeaty.skinny,
@@ -339,7 +359,9 @@ const bbqMeatySkinny : specInput = {
         Ingredients.side.houseSalad
 
     ],
-    type:['pizza','skinny']
+    type:['pizza','skinny'],
+    variant : true,
+
 }
 const bbqMeatyGF : specInput = {
     title: Titles.bbqMeaty.GF,
@@ -370,7 +392,9 @@ const bbqMeatyGF : specInput = {
         Ingredients.topping.pizza.veg.redOnion,
         Ingredients.other.bacon.bacon5
     ],
-    type:['pizza','glutenFree']
+    type:['pizza','glutenFree'],
+    variant : true,
+
 }
 const pepperoni : specInput = {
     title: Titles.pepperoni.full,
@@ -395,7 +419,8 @@ const pepperoni : specInput = {
         Ingredients.topping.pizza.mozzarella.mozzarella70,
         Ingredients.topping.pizza.pepperoni.pepperoni20
     ],
-    type:'pizza'
+    type:'pizza',
+    variant : false,
 }
 const pepperoniSkinny : specInput = {
     title: Titles.pepperoni.skinny,
@@ -421,7 +446,9 @@ const pepperoniSkinny : specInput = {
         Ingredients.topping.pizza.pepperoni.pepperoni10,
         Ingredients.side.houseSalad
     ],
-    type:['pizza','skinny']
+    type:['pizza','skinny'],
+    variant : true,
+
 }
 const pepperoniGF : specInput = {
     title: Titles.pepperoni.GF,
@@ -443,7 +470,9 @@ const pepperoniGF : specInput = {
         Ingredients.topping.pizza.mozzarella.mozzarella60,
         Ingredients.topping.pizza.pepperoni.pepperoni15
     ],
-    type:['pizza','glutenFree']
+    type:['pizza','glutenFree'],
+    variant : true,
+
 }
 const mushroom : specInput = {
     title:Titles.mushroom.full,
@@ -474,7 +503,9 @@ const mushroom : specInput = {
         Ingredients.garnish.blackPepper,
         Ingredients.garnish.hardCheese
     ],
-    type:'pizza'
+    type:'pizza',
+    variant : false,
+
 }
 const mushroomSkinny : specInput = {
     title:Titles.mushroom.skinny,
@@ -506,7 +537,9 @@ const mushroomSkinny : specInput = {
         Ingredients.garnish.hardCheeseHalf,
         Ingredients.side.houseSalad
     ],
-    type:['pizza','skinny']
+    type:['pizza','skinny'],
+    variant : true,
+
 }
 const mushroomGF : specInput = {
     title:Titles.mushroom.GF,
@@ -534,7 +567,9 @@ const mushroomGF : specInput = {
         Ingredients.garnish.blackPepper,
         Ingredients.garnish.hardCheeseHalf
     ],
-    type:['pizza','glutenFree']
+    type:['pizza','glutenFree'],
+    variant : true,
+
 }
 
 const pizza1 = new SpecItem(marg,1,['skinny','show'],['vegan','show'],['glutenFree','show']);

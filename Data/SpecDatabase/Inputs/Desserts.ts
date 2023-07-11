@@ -33,7 +33,8 @@ const brownie : specInput = {
         Ingredients.dessert.iceCream.iceCream1,
         Ingredients.fruit.strawberry.strawberry20
     ],
-    type:'dessert'
+    type:'dessert',
+    variant : false,
 }
 const cookieDough : specInput = {
     title:Titles.smore,
@@ -65,7 +66,8 @@ const cookieDough : specInput = {
         Ingredients.dessert.iceCream.iceCream2,
         Ingredients.garnish.icingSugar
     ],
-    type:'dessert'
+    type:'dessert',
+    variant : false,
 }
 const iceCream : specInput = {
     title:Titles.iceCream,
@@ -75,7 +77,8 @@ const iceCream : specInput = {
     image:Images.specs.dessert.icecream,
     crockery:[Crockery.bowl.triangle],
     ingredients:[Ingredients.dessert.iceCream.iceCream3],
-    type:'dessert'
+    type:'dessert',
+    variant : false,
 }
 const waffle : specInput = {
     title:Titles.waffles,
@@ -97,7 +100,8 @@ const waffle : specInput = {
         Ingredients.sauce.caramel.caramel20,
         Ingredients.dessert.iceCream.iceCream1
     ],
-    type:'dessert'
+    type:'dessert',
+    variant : false,
 }
 const torte : specInput = {
     title:Titles.torte,
@@ -115,7 +119,8 @@ const torte : specInput = {
         Ingredients.garnish.mint.mint2g,
         Ingredients.sauce.chocolate.chocolate10
     ],
-    type:'dessert'
+    type:'dessert',
+    variant : false,
 }
 
 const dessert1 = new SpecItem(brownie,1);

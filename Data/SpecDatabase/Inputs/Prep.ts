@@ -24,7 +24,8 @@ const beerBbq : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    variant : false,
+    type:'prep',
 }
 const beerBatter : specInput = {
     title:Titles.batter,
@@ -42,7 +43,9 @@ const beerBatter : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    type:'prep',
+    variant : false,
+
 };
 const bbqMustardMayo : specInput = {
     title:Titles.sauce.bbqMustardMayo,
@@ -59,7 +62,9 @@ const bbqMustardMayo : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    type:'prep',
+    variant : false,
+
 }
 const bbqBeans : specInput = {
     title:Titles.bbqBeans,
@@ -75,7 +80,9 @@ const bbqBeans : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    type:'prep',
+    variant : false,
+
 };
 const beerMacNCheeseBBQ : specInput = {
     title:Titles.beerMacCheese,
@@ -92,7 +99,9 @@ const beerMacNCheeseBBQ : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    type:'prep',
+    variant : false,
+
 };
 const blueCheeseMayo : specInput = {
     title:Titles.sauce.blueCheeseMayo,
@@ -108,7 +117,9 @@ const blueCheeseMayo : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    type:'prep',
+    variant : false,
+
 };
 const croutons : specInput = {
     title:Titles.croutons,
@@ -127,7 +138,9 @@ const croutons : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    type:'prep',
+    variant : false,
+
 };
 const cookedPulledChicken : specInput = {
     title:Titles.chicken.pulledChicken,
@@ -148,7 +161,9 @@ const cookedPulledChicken : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    type:'prep',
+    variant : false,
+
 };
 const chilliVodkaSalsa : specInput = {
     title:Titles.sauce.salsa,
@@ -168,7 +183,9 @@ const chilliVodkaSalsa : specInput = {
     ],
     image:Images.specs.default,
     crockery:[],
-    type:'prep'
+    type:'prep',
+    variant : false,
+
 };
 const cajunMarinatedChicken = {
     main : <specInput>{
@@ -191,6 +208,7 @@ const cajunMarinatedChicken = {
                 'Transfer to a tray if not cooked through to finish in the oven.'
             ]}
         ],
+        variant : false,
     },
     burgers : <specInput> {
         title:Titles.chicken.cajunChicken.burger, image:Images.specs.default, crockery:[], type:'prep',
@@ -212,6 +230,8 @@ const cajunMarinatedChicken = {
                 'Transfer to a tray if not cooked through to finish in the oven.'
             ]}
         ],
+        variant : false,
+
     },
     strip : <specInput> {
         title:Titles.chicken.cajunChicken.strip, image:Images.specs.default, crockery:[], type:'prep',
@@ -232,6 +252,7 @@ const cajunMarinatedChicken = {
                 'Transfer to a tray if not cooked through to finish in the oven.'
             ]}
         ],
+    variant : false,
     },
     veMain : <specInput>{
         title:Titles.chicken.cajunChickenVe.main, image:Images.specs.default, crockery:[], type:'prep',
@@ -252,6 +273,8 @@ const cajunMarinatedChicken = {
                 'Transfer to a tray if not cooked through to finish in the oven.'
             ]}
         ],
+    variant : false,
+
     },
     veStrip : <specInput>{
         title:Titles.chicken.cajunChickenVe.strip, image:Images.specs.default, crockery:[], type:'prep',
@@ -272,6 +295,8 @@ const cajunMarinatedChicken = {
                 'Transfer to a tray if not cooked through to finish in the oven.'
             ]}
         ],
+    variant : false,
+
     },
 }
 
@@ -288,6 +313,8 @@ const coleslaw ={
             Ingredients.seasoning.salt05,
             Ingredients.seasoning.crackedBlackPepper05
         ],
+    variant : false,
+
     },
     ve : <specInput> {
         title:Titles.coleslaw.vegan, image:Images.specs.default, crockery:[],type:'prep',
@@ -301,6 +328,8 @@ const coleslaw ={
             Ingredients.seasoning.salt05,
             Ingredients.seasoning.crackedBlackPepper05
         ],
+    variant : false,
+
     },
 };
 const cookedBacon : specInput = {
@@ -313,7 +342,9 @@ const cookedBacon : specInput = {
         'Keep whole for burgers, brunch',
         'Chop into small bacon bits for bacon bits',
         Finish
-    ]}]
+    ]}],
+    variant : false,
+
 }
 const flatBread : specInput = {
     title:Titles.flatBread, image:Images.specs.default, crockery:[], type:'prep',
@@ -330,7 +361,9 @@ const flatBread : specInput = {
     ]},
         {title:'Cooking',items:[
         'Bake in the pizza oven for 2-3 minutes turning regularly'
-        ]}]
+        ]}],
+    variant : false,
+
 };
 const friedChicken : {main:specInput,burger:specInput,strips:specInput} = {
     main: {
@@ -353,7 +386,9 @@ const friedChicken : {main:specInput,burger:specInput,strips:specInput} = {
         ]},
         {title:'Cooking',items:[
             'Fry at 180°C for 3-4 mins until golden and crispy. Ensure a core temperature of 75°C (82°C in Scotland) is achieved. Do not season.'
-        ]}]
+        ]}],
+    variant : false,
+
     },
     burger: {
         title:Titles.chicken.friedChicken.breast, image:Images.specs.default, crockery:[], type:'prep',
@@ -375,7 +410,9 @@ const friedChicken : {main:specInput,burger:specInput,strips:specInput} = {
         ]},
         {title:'Cooking',items:[
             'Fry at 180°C for 3-4 mins until golden and crispy. Ensure a core temperature of 75°C (82°C in Scotland) is achieved. Do not season.'
-        ]}]
+        ]}],
+    variant : false,
+
     },
     strips: {
         title:Titles.chicken.friedChicken.strip, image:Images.specs.default, crockery:[], type:'prep',
@@ -396,7 +433,9 @@ const friedChicken : {main:specInput,burger:specInput,strips:specInput} = {
         ]},
         {title:'Cooking',items:[
             'Fry at 180°C for 3-4 mins until golden and crispy. Ensure a core temperature of 75°C (82°C in Scotland) is achieved. Do not season.'
-        ]}]
+        ]}],
+    variant : false,
+
     },
 }
 const friedChickenVE : {main:specInput,strips:specInput}={
@@ -416,7 +455,9 @@ const friedChickenVE : {main:specInput,strips:specInput}={
         ]},
             {title:'Cooking',items:[
             ' Fry at 180°C for 3-4 mins until golden and crispy. Ensure a core temperature of 75°C (82°C in Scotland) is achieved. Do not season.'
-            ]}]
+            ]}],
+    variant : false,
+
     },
     strips:{
         title:Titles.chicken.friedChickenVe.strip, image:Images.specs.default, crockery:[],type:'prep',
@@ -434,7 +475,9 @@ const friedChickenVE : {main:specInput,strips:specInput}={
         ]},
             {title:'Cooking',items:[
             ' Fry at 180°C for 3-4 mins until golden and crispy. Ensure a core temperature of 75°C (82°C in Scotland) is achieved. Do not season.'
-            ]}]
+            ]}],
+    variant : false,
+
     },
 }
 const gravy : specInput = {
@@ -449,7 +492,9 @@ const gravy : specInput = {
             'Whisk regularly until it boils and thickens (this is for a thick gravy).',
             Finish
         ]}
-    ]
+    ],
+    variant : false,
+
 }
 const harissaHummus : specInput = {
     title:Titles.harissaHummus, image:Images.specs.default, crockery:[], type:'prep',
@@ -464,7 +509,9 @@ const harissaHummus : specInput = {
             'Mix ingredients well',
             Finish
         ]}
-    ]
+    ],
+    variant : false,
+
 };
 const limePickleMayo : specInput = {
     title:Titles.sauce.limePickleMayo, image:Images.specs.default, crockery:[], type:'prep',
@@ -484,7 +531,9 @@ const limePickleMayo : specInput = {
             'Mix all the ingredients together',
             Finish
         ]}
-    ]
+    ],
+    variant : false,
+
 }
 const macNCheeseCrumb : specInput = {
     title:Titles.macCheeseCrumb, image:Images.specs.default, crockery:[], type:'prep',
@@ -495,7 +544,9 @@ const macNCheeseCrumb : specInput = {
     builds:[{title:'Prep',items:[
         'Combine ingredients together well',
         Finish
-    ]}]
+    ]}],
+    variant : false,
+
 };
 const roastedRedPepper : specInput = {
     title:Titles.pepper, image:Images.specs.default, crockery:[], type:'prep',
@@ -510,7 +561,9 @@ const roastedRedPepper : specInput = {
         'Allow to cool',
         'Slice into 2cm strips',
         Finish
-    ]}]
+    ]}],
+    variant : false,
+
 };
 const saltPepperSeasoning : specInput = {
     title:Titles.saltPepperFrySeasoning, image:Images.specs.default, crockery:[], type:'prep',
@@ -522,7 +575,9 @@ const saltPepperSeasoning : specInput = {
     builds:[{title:'Prep',items:[
         'Mix all ingredients together well',
         Finish
-    ]}]
+    ]}],
+    variant : false,
+
 };
 const srirachaMayo : specInput = {
     title:Titles.sauce.srirachaMayo, image:Images.specs.default, crockery:[], type:'prep',
@@ -532,7 +587,9 @@ const srirachaMayo : specInput = {
     ],
     builds:[{title:'Prep',items:[
         Mix,Finish
-    ]}]
+    ]}],
+    variant : false,
+
 };
 const truffleGravy : specInput = {
     title:Titles.gravy.truffle, image:Images.specs.default, crockery:[], type:'prep',
@@ -542,7 +599,9 @@ const truffleGravy : specInput = {
     ],
     builds:[{title:'Prep',items:[
         Mix,Finish
-    ]}]
+    ]}],
+    variant : false,
+
 };
 const doughBalls : specInput = {
     title:Titles.doughballs.standard, image:Images.specs.default, crockery:[], type:'prep',
@@ -556,7 +615,9 @@ const doughBalls : specInput = {
             'Bake in the pizza oven for 2-3 mins at 300°c in a round enamel dish',
             ' Toss in the garlic butter towards the end and finish the balls back in the oven for 30-60 secs.'
         ]}
-    ]
+    ],
+    variant : false,
+
 }
 const doughBallsVe : specInput = {
     title:Titles.doughballs.vegan, image:Images.specs.default, crockery:[], type:'prep',
@@ -572,7 +633,9 @@ const doughBallsVe : specInput = {
             'Bake in the pizza oven for 2-3 mins at 300°c in a round enamel dish',
             'When the doughballs are nearly done, toss in olive oil and seasoning, then finish for final 30-60 secs.'
         ]}
-    ]
+    ],
+    variant : false,
+
 }
 const sliders : {meat:specInput,veggie:specInput,vegan:specInput} = {
     meat : {
@@ -599,7 +662,9 @@ const sliders : {meat:specInput,veggie:specInput,vegan:specInput} = {
                 'Cheese',
                 'Lid & Skewer'
             ]}
-        ]
+        ],
+    variant : false,
+
     },
     veggie : {
         title:Titles.sliders.veggie, image:Images.specs.default, crockery:[], type:'prep',
@@ -625,7 +690,9 @@ const sliders : {meat:specInput,veggie:specInput,vegan:specInput} = {
                 'Cheese',
                 'Lid & Skewer'
             ]}
-        ]
+        ],
+    variant : false,
+
     },
     vegan : {
         title:Titles.sliders.vegan, image:Images.specs.default, crockery:[], type:'prep',
@@ -651,7 +718,9 @@ const sliders : {meat:specInput,veggie:specInput,vegan:specInput} = {
                 'Cheese',
                 'Lid & Skewer'
             ]}
-        ]
+        ],
+    variant : false,
+
     },
 }
 

@@ -15,9 +15,10 @@ export class SpecItem {
     variants : variants;
     builds : build[];
     index : number;
+    variant:boolean;
     constructor(specInfo:specInput,yieldAmount:string | number,...variantsInp:[variantKey,variant][]){
     // constructor(title:string,ingredients:ingredient[],amount:number,type:specType[] | specType,crockery : string[],image : string,builds: build[],...variantsInp:[variantKey,variant][]){
-        const {title,ingredients,crockery,image,builds,type} = specInfo;
+        const {title,ingredients,crockery,image,builds,type,variant} = specInfo;
         this.title = StringMethods.case.capitalizeFirstLetter(title),
         this.yieldAmount = yieldAmount;
         this.ingredients = ingredients,
@@ -30,6 +31,7 @@ export class SpecItem {
         variantsInp.forEach(elm=>{
             this.variants[elm[0]] = elm[1];
         })
+        this.variant = variant;
         specItems.push(this); // Is this needed?
     };
     multiplyIngredients(ingredients:ingredient[],amount:number):ingredient[]{

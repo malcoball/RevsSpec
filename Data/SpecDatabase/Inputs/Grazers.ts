@@ -36,7 +36,8 @@ const calamari : specInput = {
         Ingredients.dip.saucePot.mayo,
         Ingredients.garnish.leaf.parsley
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
 }
 const halloumi: specInput  = {
     title: Titles.halloumi,
@@ -63,7 +64,9 @@ const halloumi: specInput  = {
         Ingredients.dip.saucePot.relish,
         
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
+
 }
 const bbqChick : {meat:specInput,vegan:specInput} = {
     meat : {
@@ -100,7 +103,8 @@ const bbqChick : {meat:specInput,vegan:specInput} = {
             Ingredients.seasoning.salt05,
             Ingredients.dip.saucePot.bbq,
         ],
-        type:'grazer'
+        type:'grazer',
+        variant : false,
     },
     vegan:{
         title:Titles.skewers.bbqVe,
@@ -136,7 +140,8 @@ const bbqChick : {meat:specInput,vegan:specInput} = {
             Ingredients.seasoning.salt05,
             Ingredients.dip.saucePot.bbq,
         ],
-        type:['grazer','vegan']
+        type:['grazer','vegan'],
+        variant : true,
     }
 }
 const cajChick : {meat:specInput,veggie:specInput} = {
@@ -172,7 +177,8 @@ const cajChick : {meat:specInput,veggie:specInput} = {
             Ingredients.sauce.garlicButter.garlicButter10,
             Ingredients.dip.saucePot.sourCream,
         ],
-        type:'grazer'
+        type:'grazer',
+        variant : false,
     },
     veggie:{
         title:Titles.skewers.cajunV,
@@ -206,7 +212,8 @@ const cajChick : {meat:specInput,veggie:specInput} = {
             Ingredients.sauce.garlicButter.garlicButter10,
             Ingredients.dip.saucePot.sourCream
         ],
-        type:['grazer','vegetarian']
+        type:['grazer','vegetarian'],
+        variant : true,
     }
 }
 
@@ -237,7 +244,8 @@ const macBites: specInput  = {
         Ingredients.garnish.sourCream,
         Ingredients.garnish.leaf.parsley
     ],
-    type:'grazer' 
+    type:'grazer' ,
+    variant : false,
 }
 const breadedMushrooms : specInput = {
     title:Titles.breadedMushrooms,
@@ -265,7 +273,8 @@ const breadedMushrooms : specInput = {
         Ingredients.garnish.oil.rapeseed13g,
         Ingredients.garnish.leaf.parsleyHalf
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
 }
 const crispyFriedChicken : specInput = {
     title:Titles.friedChicken.meat,
@@ -293,7 +302,8 @@ const crispyFriedChicken : specInput = {
         Ingredients.dip.saucePot.bbq,
         Ingredients.side.coleslaw.md.mayo
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
 }
 const crispyFriedChickenVE : specInput = {
     title:Titles.friedChicken.vegan,
@@ -321,7 +331,8 @@ const crispyFriedChickenVE : specInput = {
         Ingredients.dip.saucePot.bbq,
         Ingredients.side.coleslaw.md.noMayo
     ],
-    type:['grazer','vegan']
+    type:['grazer','vegan'],
+    variant : true,
 }
 
 const doughballs : specInput = {
@@ -352,7 +363,8 @@ const doughballs : specInput = {
         Ingredients.sauce.garlicButter.garlicButter30,
         Ingredients.sauce.salsa.salsa50
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
 }
 
 const hummus : specInput = {
@@ -388,7 +400,8 @@ const hummus : specInput = {
         Ingredients.garnish.oil.olive,
         Ingredients.garnish.nigellaSeeds05
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
 }
 
 const falafel :specInput = {
@@ -420,7 +433,8 @@ const falafel :specInput = {
         Ingredients.garnish.pomegranate.pomegranate5,
         Ingredients.sauce.limePickle.limePickle30
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
 }
 const falafelV :specInput = {
     title:Titles.falafel.vegan,
@@ -451,7 +465,8 @@ const falafelV :specInput = {
         Ingredients.garnish.pomegranate.pomegranate5,
         Ingredients.dip.hummus.hummus30
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : true,
 }
 
 const prawns : specInput = {
@@ -480,7 +495,8 @@ const prawns : specInput = {
         Ingredients.garnish.lemon.wedge,
         Ingredients.garnish.leaf.corianderHalf
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
 }
 const jalapenoPoppers : specInput = {
     title:Titles.jalapenoPoppers,
@@ -505,7 +521,9 @@ const jalapenoPoppers : specInput = {
         Ingredients.grazer.jalapoenoPoppers,
         Ingredients.dip.saucePot.buffalo
     ],
-    type:'grazer'
+    type:'grazer',
+    variant : false,
+
 }
 // const nachos : specInput = {
 //     title:Titles.nachos.standard,
@@ -571,7 +589,8 @@ const nachos : {regular:specInput,beefChilli:specInput} = {
             Ingredients.garnish.jalapenos.jalapenos5,
             Ingredients.garnish.leaf.corianderGrazer
         ],
-        type:'grazer'
+        type:'grazer',
+        variant : false,
     },
     beefChilli:{
         title:Titles.nachos.beefChilli,
@@ -604,7 +623,8 @@ const nachos : {regular:specInput,beefChilli:specInput} = {
             Ingredients.garnish.jalapenos.jalapenos5,
             Ingredients.garnish.leaf.corianderGrazer
         ],
-        type:'grazer'
+        type:'grazer',
+        variant : true,
     }
 }
 const nachosVegan : {regular:specInput,chilli:specInput} = {
@@ -643,7 +663,8 @@ const nachosVegan : {regular:specInput,chilli:specInput} = {
             Ingredients.garnish.jalapenos.jalapenos5,
             Ingredients.garnish.leaf.corianderGrazer
         ],
-        type:['grazer','vegan']
+        type:['grazer','vegan'],
+        variant : true,
     },
     chilli:{
         title:Titles.nachos.veggiChilli,
@@ -681,7 +702,8 @@ const nachosVegan : {regular:specInput,chilli:specInput} = {
             Ingredients.garnish.jalapenos.jalapenos5,
             Ingredients.garnish.leaf.corianderGrazer
         ],
-        type:['grazer','vegan']
+        type:['grazer','vegan'],
+        variant : true,
     },
     
 }

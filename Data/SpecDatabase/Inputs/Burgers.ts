@@ -117,6 +117,7 @@ const beefBurger : specInput = {
     crockery:BurgerCroc,
     ingredients:BurgerIngredients,
     type:'burger',
+    variant : false,
 }
 
 const beefBurgerVegan : specInput = {
@@ -142,7 +143,9 @@ const beefBurgerVegan : specInput = {
     image:Images.specs.default,
     crockery:BurgerCrocVeg,
     ingredients:BurgerIngredientsVeg,
-    type:['burger','vegan']
+    type:['burger','vegan'],
+    variant : true,
+
 }
 
 const beefBurgerGF : specInput = {
@@ -158,7 +161,9 @@ const beefBurgerGF : specInput = {
     image:Images.specs.default,
     crockery:BurgerCrocGF,
     ingredients:BurgerIngredientsGF,
-    type:['burger','glutenFree']
+    type:['burger','glutenFree'],
+    variant : true,
+
 }
 const beefBurgerGFVegan : specInput = {
     title:Titles.classic.veganGF,
@@ -173,7 +178,9 @@ const beefBurgerGFVegan : specInput = {
     image:Images.specs.default,
     crockery:BurgerCrocGFVeg,
     ingredients:BurgerIngredientsGFVeg,
-    type:['burger','glutenFree','vegan']
+    type:['burger','glutenFree','vegan'],
+    variant : true,
+
 }
 
 const grilledChicken : specInput = {
@@ -201,7 +208,8 @@ const grilledChicken : specInput = {
     ingredients:[
         ...ChickenIngredients,
     ],
-    type: 'burger'
+    type: 'burger',
+    variant : false,
 }
 const grilledChickenGF : specInput = {
     title:Titles.grilledChicken.GF,
@@ -218,7 +226,9 @@ const grilledChickenGF : specInput = {
     ingredients:[
         ...ChickenIngredientsGF
     ],
-    type:['burger','glutenFree']
+    type:['burger','glutenFree'],
+    variant : true,
+
 }
 const friedChicken : specInput = {
     title:Titles.friedChicken.standard,
@@ -245,7 +255,8 @@ const friedChicken : specInput = {
     ingredients:[
         ...FriedChickIngredients
     ],
-    type:'burger'
+    type:'burger',
+    variant : false,
 }
 const friedChickenVegan : specInput = {
     title:Titles.friedChicken.vegan,
@@ -272,7 +283,8 @@ const friedChickenVegan : specInput = {
     ingredients:[
         ...FriedChickIngredientsVeg
     ],
-    type:['burger','vegan']
+    type:['burger','vegan'],
+    variant : true,
 }
 const friedChickenGF : specInput = {
     title:Titles.friedChicken.GF,
@@ -289,7 +301,8 @@ const friedChickenGF : specInput = {
     ingredients:[
         ...FriedChickIngredientsGF
     ],
-    type:['glutenFree','burger']
+    type:['glutenFree','burger'],
+    variant : true,
 }
 const friedChickenGFVegan : specInput = {
     title:Titles.friedChicken.veganGF,
@@ -306,7 +319,9 @@ const friedChickenGFVegan : specInput = {
     ingredients:[
         ...FriedChickIngredientsVegGF
     ],
-    type:['vegan','burger','glutenFree']
+    type:['vegan','burger','glutenFree'],
+    variant : true,
+
 }
 const cheeseBaconBurger : specInput = {
     title:Titles.cheeseBacon.standard,
@@ -335,7 +350,8 @@ const cheeseBaconBurger : specInput = {
     image:Images.specs.burgers.cheeseBacon,
     crockery:BurgerCroc,
     ingredients:CheeseBaconBurgerIngredients,
-    type:'burger'
+    type:'burger',
+    variant : false,
 }
 const cheeseBaconBurgerGF : specInput = {
     title:Titles.cheeseBacon.GF,
@@ -352,7 +368,8 @@ const cheeseBaconBurgerGF : specInput = {
     image:Images.specs.default,
     crockery:BurgerCrocGF,
     ingredients:CheeseBaconBurgerIngredientsGF,
-    type:['burger','glutenFree']
+    type:['burger','glutenFree'],
+    variant : true,
 }
 
 const blueCheeseTruffle : specInput = {
@@ -381,7 +398,8 @@ const blueCheeseTruffle : specInput = {
     image:Images.specs.burgers.blueCheeseTruffle,
     crockery:BurgerCroc,
     ingredients:BlueCheeseTruffleIngredients,
-    type:'burger'
+    type:'burger',
+    variant : false,
 };
 const blueCheeseTruffleGF : specInput = {
     title:Titles.blueCheese.GF,
@@ -399,7 +417,8 @@ const blueCheeseTruffleGF : specInput = {
     image:Images.specs.default,
     crockery:BurgerCrocGF,
     ingredients:BlueCheeseTruffleIngredientsGF,
-    type:['burger','glutenFree']
+    type:['burger','glutenFree'],
+    variant : true,
 }
 const blueCheeseTruffleVeggie : specInput = {
     title:Titles.blueCheese.veggie,
@@ -427,7 +446,8 @@ const blueCheeseTruffleVeggie : specInput = {
     image:Images.specs.default,
     crockery:BurgerCrocVeggie,
     ingredients:BlueCheeseTruffleIngredientsVeggie,
-    type:['burger','vegetarian']
+    type:['burger','vegetarian'],
+    variant : true,
 }
 const blueCheeseTruffleGFVeggie : specInput = {
     title:Titles.blueCheese.veggieGF,
@@ -455,7 +475,8 @@ const blueCheeseTruffleGFVeggie : specInput = {
     image:Images.specs.default,
     crockery:BurgerCrocGFVeggie,
     ingredients:BlueCheeseTruffleIngredientsGFVeggie,
-    type:['burger','glutenFree','vegetarian']
+    type:['burger','glutenFree','vegetarian'],
+    variant : true,
 }
 
 
@@ -484,7 +505,9 @@ const buffaloChicken : specInput = {
     image:Images.specs.burgers.buffaloChicken,
     crockery:BurgerCroc,
     ingredients:BuffaloChickenIngredients,
-    type:'burger'
+    type:'burger',
+    variant : false,
+
 }
 const buffaloChickenVeggie : specInput = {
     title:Titles.buffaloChicken.veggie,
@@ -501,7 +524,9 @@ const buffaloChickenVeggie : specInput = {
     image:Images.specs.burgers.buffaloChicken,
     crockery:BurgerCrocVeggie,
     ingredients:BuffaloChickenVeggieIngredients,
-    type:['burger','vegetarian']
+    type:['burger','vegetarian'],
+    variant : true,
+
 }
 const buffaloChickenGF : specInput = {
     title:Titles.buffaloChicken.GF,
@@ -518,7 +543,8 @@ const buffaloChickenGF : specInput = {
     image:Images.specs.burgers.buffaloChicken,
     crockery:BurgerCrocGF,
     ingredients:BuffaloChickenGFIngredients,
-    type:['burger','glutenFree']
+    type:['burger','glutenFree'],
+    variant : true,
 }
 const buffaloChickenGFVeggie : specInput = {
     title:Titles.buffaloChicken.veggieGF,
@@ -534,7 +560,8 @@ const buffaloChickenGFVeggie : specInput = {
     image:Images.specs.burgers.buffaloChicken,
     crockery:BurgerCrocGFVeggie,
     ingredients:BuffaloChickenGFVeggieIngredients,
-    type:['burger','glutenFree','vegetarian']
+    type:['burger','glutenFree','vegetarian'],
+    variant : true,
 }
 const chilliCheese : specInput = {
     title:Titles.chilliCheese.standard,
@@ -566,7 +593,8 @@ const chilliCheese : specInput = {
     image:Images.specs.burgers.chilliCheese,
     crockery:BurgerCroc,
     ingredients:ChilliCheeseIngredients,
-    type:'burger'
+    type:'burger',
+    variant : false,
 }
 const chilliCheeseVeggie : specInput = {
     title:Titles.chilliCheese.veggie,
@@ -598,7 +626,8 @@ const chilliCheeseVeggie : specInput = {
     image:Images.specs.burgers.chilliCheese,
     crockery:BurgerCrocVeggie,
     ingredients:ChilliCheeseVeggieIngredients,
-    type:['burger','vegetarian']
+    type:['burger','vegetarian'],
+    variant : true,
 }
 const chilliCheeseVegan : specInput = {
     title:Titles.chilliCheese.vegan,
@@ -629,7 +658,8 @@ const chilliCheeseVegan : specInput = {
     image:Images.specs.burgers.chilliCheese,
     crockery:BurgerCrocVeggie,
     ingredients:ChilliCheeseVeganIngredients,
-    type:['burger','vegetarian']
+    type:['burger','vegetarian'],
+    variant : true,
 }
 
 

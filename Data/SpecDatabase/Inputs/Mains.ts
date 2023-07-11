@@ -52,7 +52,9 @@ const grainBowl : specInput = {
         Ingredients.garnish.lime.wedge,
         Ingredients.dough.half
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 }
 const asainSalad : specInput = {
     title:Titles.salad.asian,
@@ -86,7 +88,9 @@ const asainSalad : specInput = {
         Ingredients.garnish.leaf.coriander2,
         Ingredients.garnish.nigellaSeeds1
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 }
 const flatBreadVe : specInput = {
     title: Titles.flatBread.vegan,
@@ -128,7 +132,9 @@ const flatBreadVe : specInput = {
         Ingredients.garnish.leaf.coriander2,
         Ingredients.side.fries.standard
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 }
 const flatBreadFalafel : specInput = {
     title: Titles.flatBread.falafel,
@@ -170,7 +176,9 @@ const flatBreadFalafel : specInput = {
         Ingredients.garnish.leaf.coriander2,
         Ingredients.side.fries.standard
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 }
 const chickenCaesar : specInput = {
     title:Titles.salad.chickenCaesar,
@@ -198,7 +206,9 @@ const chickenCaesar : specInput = {
         Ingredients.topping.bacon.baconBits.bits15,
         Ingredients.topping.croutons.croutons20
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 };
 const fishChips : specInput = {
     title:Titles.fish,
@@ -231,7 +241,9 @@ const fishChips : specInput = {
         Ingredients.dip.ramekin.katsu50,
         Ingredients.garnish.lemon.half
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 }
 const katsuChicken : specInput = {
     title:Titles.katsuCurry.chicken,
@@ -263,7 +275,9 @@ const katsuChicken : specInput = {
         Ingredients.garnish.lime.wedge,
         Ingredients.garnish.leaf.coriander
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 };
 const katsuChickenVe : specInput = {
     title:Titles.katsuCurry.vegan,
@@ -295,7 +309,9 @@ const katsuChickenVe : specInput = {
         Ingredients.garnish.lime.wedge,
         Ingredients.garnish.leaf.coriander
     ],
-    type:'main'
+    type:'main',
+    variant : true,
+
 };
 const macNCheese : specInput = {
     title:Titles.macCheese.standard,
@@ -323,7 +339,9 @@ const macNCheese : specInput = {
         Ingredients.other.macNCheese.mac450,
         Ingredients.topping.cheese.macCrumb
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 }
 const macNCheeseTruffle : specInput = {
     title:Titles.macCheese.mushroom,
@@ -355,7 +373,9 @@ const macNCheeseTruffle : specInput = {
         Ingredients.garnish.friedOnion.friedOnion10,
         Ingredients.garnish.leaf.parsley
     ],
-    type:'main'
+    type:'main',
+    variant : true,
+
 }
 const macNCheeseChicken : specInput = {
     title:Titles.macCheese.chicken,
@@ -388,7 +408,8 @@ const macNCheeseChicken : specInput = {
         Ingredients.burger.sauce.relish,
         Ingredients.topping.bacon.bacon10
     ],
-    type:'main'
+    type:'main',
+    variant : true,
 }
 const friedChickenChips : specInput = {
     title:Titles.chickenChips.fried.meat,
@@ -417,7 +438,8 @@ const friedChickenChips : specInput = {
         Ingredients.veg.slaw.coleslaw.coleslaw80,
         Ingredients.burger.gravy75
     ],
-    type:'main'
+    type:'main',
+    variant : false,
 }
 const friedChickenChipsVe : specInput = {
     title:Titles.chickenChips.fried.vegan,
@@ -447,7 +469,9 @@ const friedChickenChipsVe : specInput = {
         Ingredients.veg.slaw.slaw.slaw80,
         Ingredients.burger.gravy75
     ],
-    type:'main'
+    type:'main',
+    variant : true,
+
 }
 const cajunChickenChips : specInput = {
     title:Titles.chickenChips.cajun.meat,
@@ -476,7 +500,9 @@ const cajunChickenChips : specInput = {
         Ingredients.veg.slaw.coleslaw.coleslaw80,
         Ingredients.burger.gravy75
     ],
-    type:'main'
+    type:'main',
+    variant : false,
+
 }
 const cajunChickenChipsVe : specInput = {
     title:Titles.chickenChips.cajun.vegan,
@@ -505,7 +531,9 @@ const cajunChickenChipsVe : specInput = {
         Ingredients.veg.slaw.coleslaw.coleslaw80,
         Ingredients.burger.gravy75
     ],
-    type:'main'
+    type:'main',
+    variant : true,
+
 }
 
 const main1 = new SpecItem(grainBowl,1);

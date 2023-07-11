@@ -38,7 +38,8 @@ const burger : specInput = {
         Ingredients.burger.sauce.relish10,
         Ingredients.burger.veg.iceberg5
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
 };
 const chickenBurger : specInput = {
     title:SpecTitles.kids.burger.friedChicken.standard,
@@ -70,7 +71,9 @@ const chickenBurger : specInput = {
         Ingredients.burger.sauce.relish10,
         Ingredients.burger.veg.iceberg5
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
+
 };
 const macNCheese : specInput = {
     title:SpecTitles.kids.macCheese,
@@ -97,7 +100,9 @@ const macNCheese : specInput = {
         Ingredients.dough.half,
         Ingredients.sauce.garlicButter.garlicButter30
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
+
 }
 const fishFingers : specInput = {
     title:SpecTitles.kids.fishFingers,
@@ -117,7 +122,9 @@ const fishFingers : specInput = {
         Ingredients.garnish.oil.rapeseed50g,
         Ingredients.fish.fingers.fingers4
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
+
 }
 const friedChicken : specInput = {
     title:SpecTitles.kids.friedChicken,
@@ -137,7 +144,9 @@ const friedChicken : specInput = {
     ingredients:[
         Ingredients.chicken.meat.goujon.strips2
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
+
 }
 const sausages : specInput = {
     title:SpecTitles.kids.sausages,
@@ -156,7 +165,9 @@ const sausages : specInput = {
     ingredients:[
         Ingredients.other.sausage.sausage2
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
+
 }
 const margherita : specInput = {
     title:SpecTitles.kids.pizza.marg.standard,
@@ -189,7 +200,9 @@ const margherita : specInput = {
         Ingredients.garnish.leaf.basil,
         Ingredients.topping.pizza.mozzarella.mozzarella35
     ],
-    type:['kids','pizza']
+    type:['kids','pizza'],
+    variant : false,
+
 }
 const pepperoni : specInput = {
     title:SpecTitles.kids.pizza.pepperoni.standard,
@@ -222,7 +235,9 @@ const pepperoni : specInput = {
         Ingredients.topping.pizza.mozzarella.mozzarella35,
         Ingredients.topping.pizza.pepperoni.pepperoni10
     ],
-    type:['kids','pizza']
+    type:['kids','pizza'],
+    variant : false,
+
 };
 const fries : specInput = {
     title:SpecTitles.kids.fries,
@@ -242,7 +257,9 @@ const fries : specInput = {
         Ingredients.side.fries.fries100,
         Ingredients.garnish.oil.rapeseed10
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
+
 };
 const sweetcorn : specInput = {
     title:SpecTitles.kids.sweetcorn,
@@ -261,7 +278,9 @@ const sweetcorn : specInput = {
     ingredients:[
         Ingredients.veg.sweetcorn.sweetcorn50
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
+
 }
 const salad : specInput = {
     title:SpecTitles.kids.salad,
@@ -277,7 +296,9 @@ const salad : specInput = {
     ingredients:[
 
     ],
-    type:'kids'
+    type:'kids',
+    variant : false,
+
 }
 const brownie : specInput = {
     title:SpecTitles.kids.dessert.brownie,
@@ -298,7 +319,9 @@ const brownie : specInput = {
         Ingredients.dessert.iceCream.iceCream1,
         Ingredients.sauce.chocolate.chocolate10
     ],
-    type:['kids','dessert']
+    type:['kids','dessert'],
+    variant : false,
+
 };
 const iceCream1 : specInput = {
     title:SpecTitles.kids.dessert.iceCream1,
@@ -314,7 +337,9 @@ const iceCream1 : specInput = {
     ingredients:[
         Ingredients.dessert.iceCream.iceCream1
     ],
-    type:['kids','dessert']
+    type:['kids','dessert'],
+    variant : false,
+
 }
 const iceCream2 = {...iceCream1}; 
 iceCream2.ingredients = [Ingredients.dessert.iceCream.iceCream2]; iceCream2.title = SpecTitles.kids.dessert.iceCream2;
@@ -336,7 +361,9 @@ const chocMilk : specInput = {
     crockery:[
         Crockery.jamJar
     ],
-    type:['dessert','kids']
+    type:['dessert','kids'],
+    variant : false,
+
 }
 const strawberryMilk = {...chocMilk};
 strawberryMilk.title = SpecTitles.kids.milk.strawberry;

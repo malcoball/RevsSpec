@@ -126,13 +126,14 @@ export const specItemCont = {
         byNext:(currentItem:specItem,ignoreVariants:boolean):specItem=>{
 
             const num = currentItem.index;
-            const title = currentItem.title;
 
             // There's an error component at the end, hence the length - 1
             let next = num === DataBase.length-1 ? 0 : num + 1 ;
-            if (ignoreVariants === true){
-                while (DataBase[next].title.includes(title)){
+            let nextVariant = DataBase[next].variant;
+            if (ignoreVariants === true) {
+                while (nextVariant === true){
                     next ++;
+                    nextVariant = DataBase[next].variant;
                 }
             }
             return DataBase[next];
@@ -143,6 +144,13 @@ export const specItemCont = {
 
             // There's an error component at the end, hence the length - 1
             let next = num === 0 ? DataBase.length - 1 : num - 1 ;
+            let nextVariant = DataBase[next].variant;
+            if (ignoreVariants === true) {
+                while (nextVariant === true){
+                    next --;
+                    nextVariant = DataBase[next].variant;
+                }
+            }
 
             return DataBase[next];
         },

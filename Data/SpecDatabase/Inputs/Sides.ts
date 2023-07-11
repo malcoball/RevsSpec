@@ -33,7 +33,9 @@ const garlicBread : specInput = {
         Ingredients.sauce.garlicButter.garlicButter30,
         Ingredients.topping.pizza.mozzarella.mozzarella40
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 
 }
 const cheeseGarlicBread : specInput = {
@@ -55,7 +57,9 @@ const cheeseGarlicBread : specInput = {
         Ingredients.sauce.garlicButter.garlicButter30,
         Ingredients.topping.pizza.mozzarella.mozzarella40
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const sideSalad : specInput = {
     title:Titles.sideSalad,
@@ -82,7 +86,9 @@ const sideSalad : specInput = {
         Ingredients.side.coleslaw.md.noMayo,
         Ingredients.sauce.dressing.french15
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 };
 const onionRings : specInput = {
     title:Titles.onionRings,
@@ -102,7 +108,9 @@ const onionRings : specInput = {
         Ingredients.garnish.oil.rapeseed10,
         Ingredients.seasoning.salt
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const rice : specInput = {
     title:Titles.rice,
@@ -119,7 +127,9 @@ const rice : specInput = {
     ingredients:[
         Ingredients.side.rice
     ],
-    type:'side'    
+    type:'side',
+    variant : false,
+
 }
 const macNCheese : specInput = {
     title:Titles.macNCheese,
@@ -143,7 +153,9 @@ const macNCheese : specInput = {
     ingredients:[
         Ingredients.other.macCheese.half
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 };
 const fries : specInput = {
     title:Titles.fries.standard,
@@ -165,7 +177,9 @@ const fries : specInput = {
         Ingredients.garnish.oil.rapeseed20g,
         Ingredients.seasoning.salt
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const saltPepperFries : specInput = {
     title:Titles.fries.saltPepper,
@@ -188,7 +202,9 @@ const saltPepperFries : specInput = {
         Ingredients.sauce.garlicButter.garlicButter10,
         Ingredients.garnish.wedge.lime
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const blueCheeseFries : specInput = {
     title:Titles.fries.blueCheese,
@@ -217,7 +233,9 @@ const blueCheeseFries : specInput = {
         Ingredients.garnish.leaf.parsleyHalf,
         Ingredients.garnish.friedOnion.friedOnion025
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const chilliCheeseFriesBeef : specInput = {
     title:Titles.fries.chilliCheese.beef,
@@ -253,7 +271,9 @@ const chilliCheeseFriesBeef : specInput = {
         Ingredients.seasoning.cajun.cajun1,
         Ingredients.garnish.jalapenos.jalapenos5
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const chilliCheeseFriesV : specInput = {
     title:Titles.fries.chilliCheese.veggie,
@@ -290,7 +310,9 @@ const chilliCheeseFriesV : specInput = {
         Ingredients.seasoning.cajun.cajun1,
         Ingredients.garnish.jalapenos.jalapenos5
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const chilliCheeseFriesVe : specInput = {
     title:Titles.fries.chilliCheese.vegan,
@@ -327,7 +349,9 @@ const chilliCheeseFriesVe : specInput = {
         Ingredients.seasoning.cajun.cajun1,
         Ingredients.garnish.jalapenos.jalapenos5
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const friesCheeseBacon : specInput = {
     title:Titles.fries.bacon,
@@ -352,7 +376,9 @@ const friesCheeseBacon : specInput = {
         Ingredients.sauce.cheese.cheese60,
         Ingredients.topping.bacon.bacon10
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 const chilliCheeseFriesBeefCheeseBacon : specInput = {
     title:Titles.fries.chilliCheese.cheeseBacon.beef,
@@ -390,7 +416,9 @@ const chilliCheeseFriesBeefCheeseBacon : specInput = {
         Ingredients.sauce.cheese.cheese60,
         Ingredients.topping.bacon.bacon10
     ],
-    type:'side'
+    type:'side',
+    variant : false,
+
 }
 
 const side1 = new SpecItem(garlicBread,1);

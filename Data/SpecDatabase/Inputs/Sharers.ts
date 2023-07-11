@@ -35,7 +35,9 @@ const nachos : specInput = {
         Ingredients.garnish.jalapenos.jalapenos10,
         Ingredients.garnish.leaf.coriander5
     ],
-    type:'sharer'
+    type:'sharer',
+    variant : false,
+
 }
 const nachosVe : specInput = {
     title:Titles.nachos.vegan.standard,
@@ -67,7 +69,9 @@ const nachosVe : specInput = {
         Ingredients.topping.cheese.vegan.veganGrated100
 
     ],
-    type:['sharer','vegan']
+    type:['sharer','vegan'],
+    variant : true,
+
 }
 const nachosBeefChilli : specInput = {
     title:Titles.nachos.standard.chilli.beef,
@@ -100,7 +104,9 @@ const nachosBeefChilli : specInput = {
         Ingredients.garnish.jalapenos.jalapenos10,
         Ingredients.garnish.leaf.coriander
     ],
-    type:'sharer'
+    type:'sharer',
+    variant : true,
+
 }
 const nachosBeefChilliV : specInput = {
     title:Titles.nachos.veggie.chilli.veggie,
@@ -130,7 +136,9 @@ const nachosBeefChilliV : specInput = {
         Ingredients.garnish.jalapenos.jalapenos10,
         Ingredients.garnish.leaf.coriander
     ],
-    type:['sharer','vegetarian']
+    type:['sharer','vegetarian'],
+    variant : true,
+
 }
 const nachosBeefChilliVe : specInput = {
     title:Titles.nachos.vegan.chilli.veggie,
@@ -165,7 +173,9 @@ const nachosBeefChilliVe : specInput = {
         Ingredients.dip.saucePot.sourCream,
         Ingredients.dip.saucePot.relish,
     ],
-    type:['sharer','vegan']
+    type:['sharer','vegan'],
+    variant : true,
+
 }
 const houseSharer : specInput = {
     title:Titles.houseSharer.meat,
@@ -223,7 +233,9 @@ const houseSharer : specInput = {
         Ingredients.dip.saucePot.sourCream,
         Ingredients.dip.saucePot.relish,
     ],
-    type:'sharer'
+    type:'sharer',
+    variant : false,
+
 }
 const houseSharerV : specInput = {
     title:Titles.houseSharer.veggie,
@@ -281,7 +293,9 @@ const houseSharerV : specInput = {
         Ingredients.dip.saucePot.sourCream,
         Ingredients.dip.saucePot.relish,
     ],
-    type:['sharer','vegetarian']
+    type:['sharer','vegetarian'],
+    variant : true,
+
 }
 const houseSharerVe : specInput = {
     title:Titles.houseSharer.vegan,
@@ -336,7 +350,9 @@ const houseSharerVe : specInput = {
         Ingredients.dip.saucePot.sriracha,
         Ingredients.dip.saucePot.salsa,
     ],
-    type:['sharer','vegan']
+    type:['sharer','vegan'],
+    variant : true,
+
 }
 
 const sharer1 = new SpecItem(nachos,1,['vegan','show']);

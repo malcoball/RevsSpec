@@ -54,7 +54,9 @@ const avoHalloumi : specInput = {
         Ingredients.veg.cucumber.cucumber10,
         Ingredients.side.coleslaw.md.mayo
     ],
-    type:'wrap'
+    type:'wrap',
+    variant : false,
+
 }
 const friedChicken : specInput = {
     title:SpecTitles.wrap.chicken,
@@ -88,7 +90,9 @@ const friedChicken : specInput = {
         Ingredients.veg.tomato.plum.plum30,
         Ingredients.side.coleslaw.md.mayo
     ],
-    type:'wrap'
+    type:'wrap',
+    variant : false,
+
 }
 const friedChickenVe : specInput = {
     title:SpecTitles.wrap.chickenVe,
@@ -122,7 +126,9 @@ const friedChickenVe : specInput = {
         Ingredients.veg.tomato.plum.plum30,
         Ingredients.side.coleslaw.md.mayo
     ],
-    type:['wrap','vegan']
+    type:['wrap','vegan'],
+    variant : true,
+
 }
 
 const wrap1 = new SpecItem(avoHalloumi,1);

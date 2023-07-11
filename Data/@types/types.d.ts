@@ -25,6 +25,7 @@ type specInput = {
     crockery: string[];
     ingredients: ingredient[];
     type : specType | specType[];  
+    variant : boolean;
 }
 type allergenIcon = {
     type : variantType,

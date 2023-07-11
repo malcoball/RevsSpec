@@ -37,7 +37,7 @@ const SpecScreen = (props:{title:string})=>{
     const changePage = (next:boolean)=>{
 
         // const newTitle = specItemCont.getItem.byNext(data);
-        const newTitle = next ? specItemCont.getItem.byNext(data,true) : specItemCont.getItem.byPrevious(data,false)
+        const newTitle = next ? specItemCont.getItem.byNext(data,true) : specItemCont.getItem.byPrevious(data,true)
         setTitle(newTitle.title);
     }
     const variantFunc = (vartiantType:variantType,add:boolean)=>{

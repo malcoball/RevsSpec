@@ -40,7 +40,8 @@ const AvoToast : {noEgg:specInput,egg:specInput} = {
         ],
         crockery:[
             Crockery.plate.speckledRectangle
-        ]
+        ],
+        variant : false
     },
     egg : {
         title:Titles.avoToast.egg,image:Imgs.avoToast,
@@ -72,7 +73,9 @@ const AvoToast : {noEgg:specInput,egg:specInput} = {
         ],
         crockery:[
             Crockery.plate.speckledRectangle
-        ]
+        ],
+        variant : true
+
     },
 }
 const eggsBenedict : {standard : specInput,GF : specInput} = {
@@ -102,7 +105,9 @@ const eggsBenedict : {standard : specInput,GF : specInput} = {
                 'Hollandaise',
                 'Black pepper'
             ]}
-        ]
+        ],
+        variant : false
+
     },
     GF:{
         title:Titles.eggsBenedict.GF, image:Images.specs.brunch.eggsBenedict.eggsBenedictGF,
@@ -130,7 +135,8 @@ const eggsBenedict : {standard : specInput,GF : specInput} = {
                 'Hollandaise',
                 'Black pepper'
             ]}
-        ]
+        ],
+        variant : true
     },
 }
 
@@ -158,7 +164,8 @@ const chickenWaffle : specInput = {
             'Top with fried chicken strips and season with parsley',
             'Serve with a dip pot of maple syrup.'
         ]}
-    ]
+    ],
+    variant : false,
 }
 const pancakes : specInput = {
     title:Titles.pancakes, type:'brunch',
@@ -181,7 +188,8 @@ const pancakes : specInput = {
             'Stack them with sliced banana and strawberries',
             'Garnish with whipped cream and dust with icing sugar'
         ]}
-    ]
+    ],
+    variant : false,
 }
 const grill : {standard:specInput,GF:specInput} = {
     standard :{
@@ -223,7 +231,9 @@ const grill : {standard:specInput,GF:specInput} = {
                 'Season the eggs with salt and pepper and garnish with parsley'
             ]}
         ],
-        image:Images.specs.brunch.grill.standard
+        image:Images.specs.brunch.grill.standard,
+        variant : false,
+
     },
     GF :{
         title:Titles.grill.GF, type:['brunch','glutenFree'],
@@ -261,7 +271,8 @@ const grill : {standard:specInput,GF:specInput} = {
                 'Season the eggs with salt and pepper and garnish with parsley'
             ]}
         ],
-        image:Images.specs.brunch.grill.GF
+        image:Images.specs.brunch.grill.GF,
+        variant : true,
     },
 }
 const grillV : {standard:specInput,GF:specInput} = {
@@ -302,7 +313,8 @@ const grillV : {standard:specInput,GF:specInput} = {
                 'Season the eggs with salt and pepper and garnish with parsley'
             ]}
         ],
-        image:Images.specs.brunch.grill.veggie
+        image:Images.specs.brunch.grill.veggie,
+        variant : true,
     },
     GF :{
         title:Titles.grill.veggieGF, type:['brunch','vegetarian','glutenFree'],
@@ -338,7 +350,8 @@ const grillV : {standard:specInput,GF:specInput} = {
                 'Season the eggs with salt and pepper and garnish with parsley'
             ]}
         ],
-        image:Images.specs.default
+        image:Images.specs.default,
+        variant : true,
     },
     
 }
@@ -379,7 +392,8 @@ const grillVe : {standard:specInput,GF:specInput} = {
                 'Season the eggs with salt and pepper and garnish with parsley'
             ]}
         ],
-        image:Images.specs.brunch.grill.vegan
+        image:Images.specs.brunch.grill.vegan,
+        variant : true,
     },
     GF :{
         title:Titles.grill.veganGF, type:['brunch','vegan','glutenFree'],
@@ -414,7 +428,8 @@ const grillVe : {standard:specInput,GF:specInput} = {
                 'Season the eggs with salt and pepper and garnish with parsley'
             ]}
         ],
-        image:Images.specs.default
+        image:Images.specs.default,
+        variant : true,
     },
     
 }
@@ -457,7 +472,8 @@ const brunchPizza : {standard:specInput,GF:specInput}={
             {title:'Plating',items:[
                 'Serve on a pizza paddle with a pizza wheel'
             ]}
-        ]
+        ],
+        variant : true,
     },
     GF:{
         title:Titles.pizza.GF, crockery:[Crockery.pizza.paddle,Crockery.cutlery.pizza,Crockery.stick.GF],
@@ -495,7 +511,8 @@ const brunchPizza : {standard:specInput,GF:specInput}={
             {title:'Plating',items:[
                 'Serve on a pizza paddle with a pizza wheel'
             ]}
-        ]
+        ],
+        variant : true,
     },
 }
 
@@ -538,7 +555,8 @@ const brunchBurger : {standard:specInput,GF:specInput}={
                 'Serve burger on plate',
                 'Serve fries on plate'
             ]}
-        ]
+        ],
+        variant : false,
     },
     GF:{
         title:Titles.burger.GF, type:['brunch','glutenFree'],
@@ -578,7 +596,8 @@ const brunchBurger : {standard:specInput,GF:specInput}={
                 'Serve burger on plate',
                 'Serve fries on plate'
             ]}
-        ]
+        ],
+        variant : true,
     }
 }
 

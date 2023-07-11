@@ -44,7 +44,9 @@ const chickenBacon : specInput = {
         Ingredients.veg.lettuce.cos.cos40,
         Ingredients.side.coleslaw.md.mayo
     ],
-    type:'sandwich'
+    type:'sandwich',
+    variant : false,
+
 }
 const fishFinger : specInput = {
     title:SpecTitles.sandwhich.fishFinger,
@@ -75,7 +77,9 @@ const fishFinger : specInput = {
         Ingredients.sauce.tartare.tartare20,
         Ingredients.side.coleslaw.md.mayo
     ],
-    type:'sandwich'
+    type:'sandwich',
+    variant : false,
+
 }
 const sandwich1 = new SpecItem(chickenBacon,1);
 const sandwich2 = new SpecItem(fishFinger,1);

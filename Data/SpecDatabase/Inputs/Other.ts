@@ -10,7 +10,9 @@ const other1 : specInput = {
     ingredients:[
         {name:'nuke canon', amount:'1 each'}
     ],
-    type:'other'
+    type:'other',
+    variant : false,
+
 }
 
 const otherOut = new SpecItem(other1,1);
