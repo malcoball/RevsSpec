@@ -4,7 +4,6 @@ import { Dimensions, StyleSheet, Text, View } from "react-native";
 import SearchBar from "../Components/SearchBar";
 import NavMenuContainer from "../Components/NavMenu/NavMenuContainer";
 import { specItemCont } from '../Data/SpecDatabase/DatabaseCompile';
-import { Button } from 'react-native';
 
 const NavMenu = (props:{nav:any})=>{
     const [width] = useState(0.8);

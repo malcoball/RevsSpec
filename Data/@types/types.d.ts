@@ -41,6 +41,7 @@ export type specItem = {
     yieldAmount : number | string;
     builds : build[];
     index: number;
+    variant:boolean;
     variants : {
         vegan : variant,
         vegetarian : variant, 

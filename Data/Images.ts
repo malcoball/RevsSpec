@@ -12,6 +12,11 @@ import search from '../assets/images/icons/nav/search.png'
 import navBurger from '../assets/images/icons/nav/burger.png'
 import navGrazer from '../assets/images/icons/nav/grazer.png'
 import navKid from '../assets/images/icons/nav/kids.png';
+import navBrunch from '../assets/images/icons/nav/brunch.png';
+import navDessert from '../assets/images/icons/nav/dessert.png';
+import navOther   from '../assets/images/icons/nav/other.png';
+import navPizza from '../assets/images/icons/nav/pizza.png';
+import navSpec from '../assets/images/icons/nav/spec.png';
 
 import blueCheeseTruffle from '../assets/images/specExamples/Burger/BlueCheeseTruffle.png';
 import classBurger from '../assets/images/specExamples/Burger/ClassicBurger.png';
@@ -123,6 +128,11 @@ const Images = {
     },
     nav:{
         burger : navBurger,
+        brunch:navBrunch,
+        dessert:navDessert,
+        other:navOther,
+        pizza:navPizza,
+        spec:navSpec,
         grazer : navGrazer,
         kid    : navKid
     },

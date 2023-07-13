@@ -1,19 +1,27 @@
-import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
+import {View, Text, StyleSheet, Image, Dimensions, TouchableOpacity} from 'react-native';
 import {useContext} from 'react';
 import { AppContext } from '../../Data/Context/AppContext';
 import Images from '../../Data/Images';
+import { useNavigation } from '@react-navigation/native';
+import {useFonts} from 'expo-font';
 
 
-const Header = ()=>{
+const Header = (props:{showBack:boolean})=>{
+    const nav = useNavigation();
     const context = useContext(AppContext);
     const colours = context?.colorScheme;
     const styles = StyleSheet.create({
         container:{
-            paddingTop:16,
+            width:Dimensions.get('screen').width,
+            height:92,
             backgroundColor:colours?.background1,
-            height:96,
             flexDirection:'row',
             justifyContent:'space-around',
+            paddingTop:12,
+            borderColor:'#0000005a',
+            borderBottomWidth:2,
+            borderStyle:'solid',
+            
         },
         textShared:{
             color:colours?.text1,
@@ -31,23 +39,33 @@ const Header = ()=>{
         },
         icons :{
             width: 32, 
-            height:32
+            height:32,
+            paddingTop:12
+        },
+        backBtn:{
+            transform:[{rotate:'180deg'}],
+            height:24,
         }
     
     })
+    const goBack = ()=>{
+        nav.goBack();
+    }
     return (
-        <View style={[styles.container,{width:Dimensions.get('screen').width}]}>
-            <View style={styles.contentContainers}>
+        <View style={styles.container}>
+            {props.showBack?
+            <TouchableOpacity style={styles.contentContainers} onPress={goBack}>
                 <Image
-                    style={styles.icons}
-                    source={Images.other.hamburger.open}
+                    style={[styles.icons,styles.backBtn]}
+                    source={Images.other.arrow}
                 />
-            </View>
+            </TouchableOpacity> : <View></View>}
+            
             <View style={styles.contentContainers}>
                 <Text style={[styles.textShared,styles.title]}>Kitchen Specs</Text>
                 <Text style={[styles.textShared,styles.subTitle]}>April 2023</Text>
             </View>
-            <View style={styles.contentContainers}>
+            <View style={[styles.contentContainers]}>
                 <Image
                     style={styles.icons}
                     source={Images.logos.revs}

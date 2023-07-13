@@ -126,21 +126,41 @@ export const specItemCont = {
         byNext:(currentItem:specItem,ignoreVariants:boolean):specItem=>{
 
             const num = currentItem.index;
-
+            const category = typeof(currentItem.type) === "string" ? currentItem.type : currentItem.type[0]
             // There's an error component at the end, hence the length - 1
             let next = num === DataBase.length-1 ? 0 : num + 1 ;
             let nextVariant = DataBase[next].variant;
+
             if (ignoreVariants === true) {
                 while (nextVariant === true){
                     next ++;
                     nextVariant = DataBase[next].variant;
                 }
             }
+            // When it's at the end of a category, might be worth turning this into a function
+            const categoryNext = typeof(DataBase[next].type) === "string" ? DataBase[next].type : DataBase[next].type[0];
+            if (categoryNext !== category) {
+                let change = false;
+                while (change === false){
+                    next--;
+                    if (next > 0){
+                        let test = typeof(DataBase[next].type) === "string" ? DataBase[next].type : DataBase[next].type[0];
+                        if (test !== category){
+                            next++;
+                            change = true;
+                        }
+                    } else {
+                        change = true;
+                    }
+                }
+            }
+            
             return DataBase[next];
         },
         byPrevious:(currentItem:specItem,ignoreVariants:boolean):specItem=>{
 
             const num = currentItem.index;
+
 
             // There's an error component at the end, hence the length - 1
             let next = num === 0 ? DataBase.length - 1 : num - 1 ;
@@ -151,6 +171,7 @@ export const specItemCont = {
                     nextVariant = DataBase[next].variant;
                 }
             }
+            
 
             return DataBase[next];
         },

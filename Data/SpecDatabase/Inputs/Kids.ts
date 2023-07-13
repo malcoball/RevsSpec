@@ -361,7 +361,7 @@ const chocMilk : specInput = {
     crockery:[
         Crockery.jamJar
     ],
-    type:['dessert','kids'],
+    type:['kids','dessert'],
     variant : false,
 
 }

@@ -1,6 +1,7 @@
 // Follows order of the spec book really
 const vegan = 'Vegan'; const veggie = 'V';
 const beefChilli = 'Beef Chilli'; const veggieChilli = 'Veggie Chilli';
+const kids = 'Kids';
 const glutenFree = 'GF'; const skinny = 'Skinny';
 const SpecTitles = {
     grazer:{
@@ -240,39 +241,39 @@ const SpecTitles = {
     kids:{
         burger:{
             beef:{
-                slider:'Classic Burger Slider',
-                standard:'Classic Burger',
+                slider:kids + ' Classic Burger Slider',
+                standard:kids +' Classic Burger',
             },
             friedChicken:{
-                slider:'Fried Chicken Slider',
-                standard:'Fried Chicken Burger'
+                slider:kids +' Fried Chicken Slider',
+                standard:kids +' Fried Chicken Burger'
             },
         },
-        macCheese:`Mac'N'Cheese`,
-        fishFingers:'Fish Fingers',
-        friedChicken:'Fried Chicken',
-        sausages:'Sausages',
+        macCheese:`${kids} Mac'N'Cheese`,
+        fishFingers:kids + ' Fish Fingers',
+        friedChicken:kids + ' Fried Chicken',
+        sausages:kids + ' Sausages',
         
-        fries:'Fries',
-        sweetcorn:'Sweetcorn',
-        salad:'Salad',
+        fries:kids + ' Fries',
+        sweetcorn:kids + ' Sweetcorn',
+        salad:kids + ' Salad',
         dessert:{
-            brownie:'Chocolate Brownie',
-            iceCream1:'Ice Cream (1 scoop)',
-            iceCream2:'Ice Cream (2 scoop)',
+            brownie:kids + ' Chocolate Brownie',
+            iceCream1:kids + ' Ice Cream (1 scoop)',
+            iceCream2:kids + ' Ice Cream (2 scoop)',
         },
         milk:{
-            chocolate:'Chocolate Milk',
-            strawberry:'Strawberry Milk'
+            chocolate:kids + ' Chocolate Milk',
+            strawberry:kids + ' Strawberry Milk'
         },
         pizza:{
             marg:{
-                standard : 'Margherita',
-                GF : `Margherita ${glutenFree}`
+                standard : kids + ' Margherita',
+                GF : `${kids} Margherita ${glutenFree}`
             },
             pepperoni:{
-                standard : 'Pepperoni',
-                GF : `Pepperoni ${glutenFree}`
+                standard :kids + ' Pepperoni',
+                GF : `${kids} Pepperoni ${glutenFree}`
             },
         }
         

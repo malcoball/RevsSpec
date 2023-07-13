@@ -301,7 +301,7 @@ const friedChickenGF : specInput = {
     ingredients:[
         ...FriedChickIngredientsGF
     ],
-    type:['glutenFree','burger'],
+    type:['burger','glutenFree'],
     variant : true,
 }
 const friedChickenGFVegan : specInput = {
@@ -319,7 +319,7 @@ const friedChickenGFVegan : specInput = {
     ingredients:[
         ...FriedChickIngredientsVegGF
     ],
-    type:['vegan','burger','glutenFree'],
+    type:['burger','vegan','glutenFree'],
     variant : true,
 
 }
@@ -679,7 +679,7 @@ const burger13 = new SpecItem(blueCheeseTruffle,1,['glutenFree','show'],['vegeta
 const burger14 = new SpecItem(blueCheeseTruffleGF,1,['glutenFree','active'],['vegetarian','show'])
 const burger15 = new SpecItem(blueCheeseTruffleVeggie,1,['glutenFree','show'],['vegetarian','active'])
 const burger16 = new SpecItem(blueCheeseTruffleGFVeggie,1,['glutenFree','active'],['vegetarian','active'])
-const burger17 = new SpecItem(buffaloChicken,1,['glutenFree','active'],['vegetarian','show'])
+const burger17 = new SpecItem(buffaloChicken,1,['glutenFree','show'],['vegetarian','show'])
 const burger18 = new SpecItem(buffaloChickenVeggie,1,['glutenFree','show'],['vegetarian','active'])
 const burger19 = new SpecItem(buffaloChickenGF,1,['glutenFree','active'],['vegetarian','show'])
 const burger20 = new SpecItem(buffaloChickenGFVeggie,1,['glutenFree','active'],['vegetarian','active'])

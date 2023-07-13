@@ -78,7 +78,7 @@ const SpecScreen = (props:{title:string})=>{
     return (
         <ScrollView style={styles.container} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
             <SpecTitle title={data.title} leftArrowFunc={()=>{changePage(false)}} rightArrowFunc={()=>{changePage(true)}}/>
-            {/* <AllergenContainer style={styles.allergenCont} allergens={variants}/> */}
+            <AllergenContainer style={styles.allergenCont} allergens={variants}/>
             <View style={styles.infoCont}>
                 <InfoContainerDouble title={"Ingredients"} items={ingredients}/>
 

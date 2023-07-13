@@ -1,25 +1,14 @@
-import Header from './Components/Header/Header';
 import AppContextProvider from './Data/Context/AppContext';
-import { NavigationContainer, DefaultTheme  } from '@react-navigation/native';
+import { NavigationContainer, useNavigation  } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SpecScreen from './Screens/SpecScreen';
 import NavMenu from './Screens/NavMenu';
-import { Button, Text, View } from 'react-native';
+import { Button, Text, View, TouchableOpacity } from 'react-native';
+import { useState } from 'react';
+import { darkTheme, defaultTheme, lightTheme } from './Data/ColorThemes';
+import Header from './Components/Header/Header';
 
 const Stack = createNativeStackNavigator();
-
-const MyTheme = { // Not properly implemented tbf
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: 'blue',
-    background: '#363B73', // Behind the content
-    card: '#657BC9', // Background on the navbar
-    text: '#FFF',
-    border: 'blue',
-    notification: 'blue',
-  },
-};
 
 const Screen1 = ({navigation})=>{
   return (
@@ -43,20 +32,38 @@ const Screen2 = ({route,navigation})=>{
     </View>
   )
 }
+const ColorChange = (props:{onPress:()=>void})=>{
+  return (
+    <TouchableOpacity onPress={props.onPress}>
+      <Text>Change col</Text>
+    </TouchableOpacity>
+  )
+}
 
 export default function App() {
+  const [themes] = useState([
+    darkTheme,
+    defaultTheme,
+    lightTheme
+  ])
+  const [currentTheme,setCurrentTheme] = useState(1);
+  const changeTheme = ()=>{
+    let next = currentTheme === themes.length-1 ? 0 : currentTheme+1;
+    setCurrentTheme(next);
+  }
   return (
-        <NavigationContainer theme={MyTheme} >
+        <NavigationContainer theme={themes[currentTheme]} >
           <AppContextProvider>
             <Stack.Navigator initialRouteName='Screen1'>
               <Stack.Screen 
                 name="Screen1" 
                 component={Screen1}
-                options={{title:'Nav Menu'}}/>
-              <Stack.Screen name="Screen2" component={Screen2}/>
-              {/* <Header/>
-              <NavMenu/>
-              <SpecScreen/> */}
+                options={{title:'Nav Menu',header:()=><Header showBack={false}/>}}/>
+              <Stack.Screen 
+                name="Screen2" 
+                component={Screen2}
+                options={{title:'Spec Screen',header:()=><Header showBack={true}/>}}
+                />
             </Stack.Navigator>
           </AppContextProvider>
         </NavigationContainer>
